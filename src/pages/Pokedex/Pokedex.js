@@ -59,7 +59,7 @@ const Home = () => {
       setLoading(false);
     }
   };
-
+console.log("hello!")
   const getAllPokemon = async () => {
     setLoading(true);
     const pokemonList = await P.getPokemonsList({
