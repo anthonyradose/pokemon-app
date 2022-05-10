@@ -10,7 +10,7 @@ const App = () => {
     <div className="appContentContainer">
       <Nav />
       <div className="appRoutesContainer">
-        <Router>
+        <Router basename="/pokemon-app/">
           <Routes>
             <Route path="/" element={<Pokedex />} />
             <Route path="/:name" element={<Pokemon />} />
