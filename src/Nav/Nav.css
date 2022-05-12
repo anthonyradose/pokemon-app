@@ -123,3 +123,14 @@ a.nav-link:active { text-decoration: none;
 #news-tab:hover {
   background-color: #1b53ba;
 }
+
+.home-tab-img{
+  width: 30px;
+}
+
+.nav-div:hover{
+  color: white;
+}
+.nav-div:hover > a > div{
+color: white;
+}
