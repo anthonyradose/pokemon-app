@@ -1,4 +1,4 @@
-Pokémon Pokedex App
+# Pokémon Pokedex App
 
 # Getting Started with Create React App
 
