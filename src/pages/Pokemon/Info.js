@@ -33,6 +33,7 @@ const Info = ({ pokemonItem }) => {
           </li>
           <li className="info-li">
             <span className="info-label">Gender</span>
+            <div className="info-gender-div">
             {pokemonItem.canBeMale ? (
               <span className="info-value">    <MaleIcon className="malePokemon"></MaleIcon>
               </span>
@@ -44,6 +45,7 @@ const Info = ({ pokemonItem }) => {
             {pokemonItem.unknown ? (
               <span className="info-value">Unknown</span>
             ) : null}
+            </div>
           </li>
         </ul>
       </div>

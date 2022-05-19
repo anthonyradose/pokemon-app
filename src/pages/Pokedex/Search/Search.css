@@ -86,25 +86,3 @@
     font-family: Exo;
   }
   
-  .pokemon {
-    list-style: none;
-    margin: 10px 0;
-    padding: 10px;
-    background: #eee;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .pokemon-id {
-    color: red;
-    margin-right: 20px;
-  }
-  
-  .pokemon-name {
-    color: blue;
-  }
-  
- 
-  .green {
-    display: none;
-  }

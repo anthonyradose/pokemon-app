@@ -17,14 +17,14 @@ const Nav = () => {
             src="https://icon-library.com/images/pikachu-icon/pikachu-icon-14.jpg"
           ></img>
           <a className="nav-link">
-            <div>Home</div>
+            <div className="nav-link-label">Home</div>
           </a>
         </div>
         <div className="nav-div" id="pokedex-tab">
           <CatchingPokemonIcon className="pokedex-tab-icon">
           </CatchingPokemonIcon>
           <a className="nav-link">
-            <div>Pokédex</div>
+            <div className="nav-link-label">Pokédex</div>
           </a>
         </div>
         <div className="nav-div" id="games-tab">
@@ -33,7 +33,7 @@ const Nav = () => {
             className="nav-link"
             href="https://www.pokemon.com/uk/pokemon-video-games/"
           >
-            <div>Video Games & Apps</div>
+            <div className="nav-link-label">Video Games & Apps</div>
           </a>
         </div>
         <div className="nav-div" id="trading-tab">
@@ -42,7 +42,7 @@ const Nav = () => {
             className="nav-link"
             href="https://www.pokemon.com/uk/pokemon-tcg/"
           >
-            <div>Trading Card Game</div>
+            <div className="nav-link-label">Trading Card Game</div>
           </a>
         </div>
         <div className="nav-div" id="tv-tab">
@@ -51,7 +51,7 @@ const Nav = () => {
             className="nav-link"
             href="https://www.pokemon.com/uk/pokemon-episodes/"
           >
-            <div>Pokémon TV</div>
+            <div className="nav-link-label">Pokémon TV</div>
           </a>
         </div>
         <div className="nav-div" id="play-tab">
@@ -60,7 +60,7 @@ const Nav = () => {
             className="nav-link"
             href="https://www.pokemon.com/uk/play-pokemon/"
           >
-            <div>Play! Pokémon Events</div>
+            <div className="nav-link-label">Play! Pokémon Events</div>
           </a>
         </div>
         <div className="nav-div" id="news-tab">
@@ -69,7 +69,7 @@ const Nav = () => {
             className="nav-link"
             href="https://www.pokemon.com/uk/pokemon-news/"
           >
-            <div>News</div>
+            <div className="nav-link-label">News</div>
           </a>
         </div>
       </div>

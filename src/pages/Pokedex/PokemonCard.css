@@ -5,6 +5,7 @@
   .pokemonCardContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
 @media (min-width: 600px) {
@@ -47,6 +48,7 @@
   font-size: 16px;
   padding-left: 3%;
   text-transform: capitalize;
+  width: 100%;
 }
 .cardTypeContainer {
   width: 100%;

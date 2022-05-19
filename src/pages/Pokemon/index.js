@@ -12,7 +12,7 @@ import Evolution from "./Evolution";
 import Versions from "./Versions";
 import Weakness from "./Weakness";
 import { getTypeArray } from "../../utils";
-import Explore from "./Explore"
+import Explore from "./Explore";
 
 const P = new Pokedex();
 
@@ -113,24 +113,35 @@ const Pokemon = () => {
   return (
     <div className="pokemon-page">
       <Pagination pokemonItem={pokemon} />
+      <div className="pokemon-container-div">
       <div className="pokemon-container">
         <Heading pokemonItem={pokemon} />
         <div className="main-contents">
-          <div className="row3" pokemonItem={pokemon}>
+          <div className="left-column">
             <Image
               src={pokemon.sprites?.other?.["official-artwork"]?.front_default}
             />
+            <Stats pokemonItem={pokemon} />
+          </div>
+          <div className="right-column">
+            <div className="versions-and-info-container">
             <Versions blue={blue} red={red} />
             <Info pokemonItem={pokemon} />
+            </div>
+            <div className="type-and-weaknesses-container">
+            <div className="type-div">
+            <h3 className="type-h3">Type</h3>
             <Type typesArray={typesArray} isLarge={true} />
+            </div>
             <Weakness damageStuff1={damageStuff1} damageStuff2={damageStuff2} />
+            </div>
           </div>
-          <Stats pokemonItem={pokemon} />
         </div>
 
         <Evolution pokemonItem={pokemon} />
+        <Explore />
+        </div>
       </div>
-      <Explore />
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { formatName, formatNumber } from "../../utils";
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import "./pokemon.css";
 
 const Pagination = ({ pokemonItem }) => {
@@ -18,9 +20,9 @@ const Pagination = ({ pokemonItem }) => {
           onClick={() => navigate(`/${pokemonItem.prevPokemon.name}`)}
         >
           <div className="left">
-            <span className="icon icon_arrow_sm_left" />
-            <span className="pokemon-number">{prevId}</span>
-            <span className="pokemon-name">{previous}</span>
+          <ArrowCircleLeftIcon></ArrowCircleLeftIcon>
+            <span className="pokemon-pagination-number">{prevId}</span>
+            <span className="pokemon-pagination-name">{previous}</span>
           </div>
         </div>
         <div
@@ -28,9 +30,10 @@ const Pagination = ({ pokemonItem }) => {
           onClick={() => navigate(`/${pokemonItem.nextPokemon.name}`)}
         >
           <div className="right">
-            <span className="icon icon_arrow_sm_right" />
-            <span className="pokemon-name">{next}</span>
-            <span className="pokemon-number">{nextId}</span>
+            
+            <span className="pokemon-pagination-name">{next}</span>
+            <span className="pokemon-pagination-number">{nextId}</span>
+            <ArrowCircleRightIcon></ArrowCircleRightIcon>
           </div>
         </div>
       </div>

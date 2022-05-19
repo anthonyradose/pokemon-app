@@ -1,13 +1,17 @@
 .type-container-small {
   display: flex;
-  width: 100%;
+
   text-align: center;
+
 }
+
 .type-container-large {
   display: flex;
   width: 100%;
-  text-align: center;
+  height: 30%;
+
 }
+
 
 .types-card-small {
   border-radius: 3px;
@@ -20,15 +24,31 @@
   font-size: 11px;
   text-align: center;
   width: 100%;
+  font-family: "Exo", sans-serif;
+  height: 21px;
+  margin: 1%;
 }
 .types-card-large {
   text-transform: capitalize;
-  margin-right: 1%;
-  text-align: center;
-  width: 32.29%;
+
+  width: 35%;
+  height: 100%;
   border-radius: 5px;
+  font-family: "Exo", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  margin-right: 2%;
 }
 
+
+.type-h3{
+  width: 90%;
+font-size: 125%;
+    font-family: 'Exo';
+    font-weight: 400;
+}
 .grass {
   background-color: #9bcc50;
   color: #212121;

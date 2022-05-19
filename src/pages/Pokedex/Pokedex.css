@@ -11,24 +11,20 @@
   width: 100%;
 }
 
-@media (min-width: 900px) {
-  .titleContainer {
-    padding-left: 16px;
-  }
-}
 
 .titleH1 {
   font-family: Exo;
   font-weight: 100;
   font-size: 30px;
   color: #919191;
+  padding-left: 16px;
 }
 .pokedexResultsContainer {
   padding: 8px;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
-  width: 100%
+  width: 85.49%
 }
 
 @media (min-width: 0px) {
@@ -37,19 +33,19 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 481px) {
   .pokedexResultsContainer {
     grid-template-columns: 1fr 1fr;
     width: 96.6%;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 769px) {
   .pokedexResultsContainer {
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
   .pokedexResultsContainer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
