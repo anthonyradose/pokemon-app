@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/pokemon-app/static/css/main.aa73ee4b.chunk.css",
-    "main.js": "/pokemon-app/static/js/main.67116e5a.chunk.js",
-    "main.js.map": "/pokemon-app/static/js/main.67116e5a.chunk.js.map",
+    "main.css": "/pokemon-app/static/css/main.37a2be21.chunk.css",
+    "main.js": "/pokemon-app/static/js/main.6d99acde.chunk.js",
+    "main.js.map": "/pokemon-app/static/js/main.6d99acde.chunk.js.map",
     "runtime-main.js": "/pokemon-app/static/js/runtime-main.1e4b4ef4.js",
     "runtime-main.js.map": "/pokemon-app/static/js/runtime-main.1e4b4ef4.js.map",
     "static/css/2.1adcd791.chunk.css": "/pokemon-app/static/css/2.1adcd791.chunk.css",
-    "static/js/2.056343f3.chunk.js": "/pokemon-app/static/js/2.056343f3.chunk.js",
-    "static/js/2.056343f3.chunk.js.map": "/pokemon-app/static/js/2.056343f3.chunk.js.map",
+    "static/js/2.152c85b2.chunk.js": "/pokemon-app/static/js/2.152c85b2.chunk.js",
+    "static/js/2.152c85b2.chunk.js.map": "/pokemon-app/static/js/2.152c85b2.chunk.js.map",
     "index.html": "/pokemon-app/index.html",
     "static/css/2.1adcd791.chunk.css.map": "/pokemon-app/static/css/2.1adcd791.chunk.css.map",
-    "static/css/main.aa73ee4b.chunk.css.map": "/pokemon-app/static/css/main.aa73ee4b.chunk.css.map",
-    "static/js/2.056343f3.chunk.js.LICENSE.txt": "/pokemon-app/static/js/2.056343f3.chunk.js.LICENSE.txt",
+    "static/css/main.37a2be21.chunk.css.map": "/pokemon-app/static/css/main.37a2be21.chunk.css.map",
+    "static/js/2.152c85b2.chunk.js.LICENSE.txt": "/pokemon-app/static/js/2.152c85b2.chunk.js.LICENSE.txt",
     "static/media/App.css": "/pokemon-app/static/media/roboto-vietnamese-700-normal.3096f18a.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.1e4b4ef4.js",
     "static/css/2.1adcd791.chunk.css",
-    "static/js/2.056343f3.chunk.js",
-    "static/css/main.aa73ee4b.chunk.css",
-    "static/js/main.67116e5a.chunk.js"
+    "static/js/2.152c85b2.chunk.js",
+    "static/css/main.37a2be21.chunk.css",
+    "static/js/main.6d99acde.chunk.js"
   ]
 }
