@@ -38,7 +38,6 @@
     background-color: white;
     top: 40%;
     right: 35%;
-    /* margin:auto; */
     border-radius: 50%;
     border: 1px solid #36454F;
     background-image: radial-gradient(
@@ -46,4 +45,5 @@
       white 50%
     );
   }
+  
   

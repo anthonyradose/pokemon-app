@@ -7,11 +7,12 @@ const Versions = ({ blue, red }) => {
   const [showBlue, setShowBlue] = useState(true);
 
   return (
-    <div className="Test">
+    <div className="version-container">
+      <div className="version-div">
       <div>
         <p className="versions-p">{showBlue ? blue : red} </p>
       </div>
-      <div>
+      <div className="versions-heading">
         Versions:{" "}
         <span className="version-span">
         <CatchingPokemonIcon className="version-blue" onClick={() => setShowBlue(true)}>
@@ -23,6 +24,7 @@ const Versions = ({ blue, red }) => {
           Red
         </CatchingPokemonIcon>
         </span>
+      </div>
       </div>
     </div>
   );

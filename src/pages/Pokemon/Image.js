@@ -7,8 +7,7 @@ const Image = ({ src, name }) => {
       {src && (
         <img
           className="pokemon-image"
-          height={400}
-          width={400}
+      
           alt={name}
           src={src}
         />
