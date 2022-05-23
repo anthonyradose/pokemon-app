@@ -24,25 +24,17 @@
   background-color: white;
   display: grid;
   grid-template-columns: 1fr;
-  width: 85.49%
 }
 
-@media (min-width: 0px) {
-  .pokedexResultsContainer {
-    width: 95.3%;
-  }
-}
 
 @media (min-width: 481px) {
   .pokedexResultsContainer {
     grid-template-columns: 1fr 1fr;
-    width: 96.6%;
   }
 }
 @media (min-width: 769px) {
   .pokedexResultsContainer {
     grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
   }
 }
 @media (min-width: 1025px) {
@@ -53,10 +45,7 @@
 
 .filtersContainer {
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-around;
-  /* align-items: center; */
-  width: 100%;
   background-color: white;
   padding-bottom: 28px;
 }
