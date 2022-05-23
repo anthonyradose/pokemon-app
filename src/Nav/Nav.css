@@ -10,6 +10,9 @@ Nav {
   color: #464646;
   display: flex;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  top: -35px
 }
 a.nav-link{
   text-decoration: none;
@@ -52,18 +55,21 @@ a.nav-link:active { text-decoration: none;
   }
 }
 
-#home-tab,
-#pokedex-tab,
-#games-tab,
-#trading-tab,
-#tv-tab,
-#play-tab,
-#news-tab {
+.nav-div{
   border-bottom: 5px solid;
   display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    height: 86px;
+}
+.nav-div-2point0{
+  border-bottom: 5px solid;
+  display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  height: 81px;
 }
 
 .content-wrapper {
@@ -79,6 +85,12 @@ a.nav-link:active { text-decoration: none;
   transition: 100ms ease 100ms;
   cursor: pointer;
   border-radius: 0% 0% 0% 5%;
+}
+#home-tab-2point0{
+  border-color: #919191;
+  transition: 100ms ease 100ms;
+  cursor: pointer;
+  height: 81px;
 }
 #home-tab:hover {
   background-color: #919191;
@@ -129,12 +141,23 @@ a.nav-link:active { text-decoration: none;
   cursor: pointer;
   border-radius: 0% 0% 5% 0%;
 }
+#news-tab-2point0{
+  border-color: #1b53ba;
+  transition: 100ms ease 100ms;
+  cursor: pointer;
+  height: 81px;
+}
 #news-tab:hover {
   background-color: #1b53ba;
 }
 
-.home-tab-img{
+.nav-tab-img{
   width: 30px;
+}
+.nav-tab-img-none{
+  visibility: hidden;
+  height: 30px;
+
 }
 
 .nav-div:hover{
