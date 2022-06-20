@@ -12,7 +12,7 @@ const Weakness = ({ damageStuff1, damageStuff2 }) => {
   return (
     <div className="weakness-card">
       <h3 className="weakness-h3">Weaknesses</h3>
-      <Type typesArray={beta} />
+      <Type typesArray={beta} isLarge={true} />
     </div>
   );
 };

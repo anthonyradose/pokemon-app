@@ -52,6 +52,10 @@ const Search = () => {
 
   return (
     <div className="search-container">
+      <div className="conditional-search-div">
+      <div className="search-div1">
+        <h2 className="search-h2">Name or Number</h2>
+        <div className="search-input-container-div">
       <div className="search-input-container">
         <input
           type="search"
@@ -91,6 +95,12 @@ const Search = () => {
             ))}
           </OutsideClickHandler>
         ) : null}
+      </div>
+      </div>
+      </div>
+      <div className="search-div2">
+        <div className="green-banner"><h3 className="green-bannerh3">Search for a Pokémon by name or using its National Pokédex number.</h3></div>
+      </div>
       </div>
     </div>
   );

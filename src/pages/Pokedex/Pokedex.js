@@ -4,6 +4,9 @@ import PokemonCard from "./PokemonCard";
 import "./Pokedex.css";
 import Pokeball from "../../components/Pokeball/Pokeball";
 import Search from "./Search/Search";
+import LoopRoundedIcon from '@mui/icons-material/LoopRounded';
+import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
+
 
  
 
@@ -169,7 +172,7 @@ console.log("hello!")
           type="button"
           alt="Surprise me!"
           onClick={getRandomPokemon}
-        >
+        > <LoopRoundedIcon></LoopRoundedIcon>
           Surprise Me!
         </button>
         <div className="selectWrapper">

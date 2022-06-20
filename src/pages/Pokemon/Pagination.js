@@ -15,9 +15,11 @@ const Pagination = ({ pokemonItem }) => {
   return (
     <section className=" pagination section pokedex-pokemon-header">
       <div className="pokedex-pokemon-pagination">
+        <div className="pagination-container">
+        <div className="previous-container"    onClick={() => navigate(`/${pokemonItem.prevPokemon.name}`)}
+>
         <div
           className="previous"
-          onClick={() => navigate(`/${pokemonItem.prevPokemon.name}`)}
         >
           <div className="left">
           <ArrowCircleLeftIcon></ArrowCircleLeftIcon>
@@ -25,6 +27,9 @@ const Pagination = ({ pokemonItem }) => {
             <span className="pokemon-pagination-name">{previous}</span>
           </div>
         </div>
+        </div>
+
+        <div className="next-container" onClick={() => navigate(`/${pokemonItem.nextPokemon.name}`)}>
         <div
           className="next"
           onClick={() => navigate(`/${pokemonItem.nextPokemon.name}`)}
@@ -35,6 +40,8 @@ const Pagination = ({ pokemonItem }) => {
             <span className="pokemon-pagination-number">{nextId}</span>
             <ArrowCircleRightIcon></ArrowCircleRightIcon>
           </div>
+        </div>
+        </div>
         </div>
       </div>
     </section>

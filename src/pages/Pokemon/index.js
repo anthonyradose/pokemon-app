@@ -113,9 +113,10 @@ const Pokemon = () => {
   return (
     <div className="pokemon-page">
       <Pagination pokemonItem={pokemon} />
+      <Heading pokemonItem={pokemon} />
+
       <div className="pokemon-container-div">
       <div className="pokemon-container">
-        <Heading pokemonItem={pokemon} />
         <div className="main-contents">
           <div className="left-column">
             <Image
@@ -133,7 +134,7 @@ const Pokemon = () => {
             <h3 className="type-h3">Type</h3>
             <Type typesArray={typesArray} isLarge={true} />
             </div>
-            <Weakness damageStuff1={damageStuff1} damageStuff2={damageStuff2} />
+            <Weakness damageStuff1={damageStuff1} damageStuff2={damageStuff2} isLarge={true} />
             </div>
           </div>
         </div>

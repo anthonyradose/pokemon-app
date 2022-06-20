@@ -1,18 +1,15 @@
-.pokemonCardContainer {
-  margin: 16px;
-}
+
 @media (min-width: 0px) {
   .pokemonCardContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10%;
   }
 }
-@media (min-width: 600px) {
-  .pokemonCardContainer {
-    width: 88%;
-  }
-}
+
+
+
 @media (min-width: 900px) {
   .pokemonCardContainer {
     display: flex;
@@ -38,31 +35,43 @@
 
 .copyContainer {
   display: flex;
-  width: auto;
-  background-color: white;
-  flex: 1;
+  width: 70%;
   flex-direction: column;
-  text-align: left;
-  justify-content: flex-start;
-  align-items: flex-start;
-  font-size: 16px;
-  padding-left: 3%;
   text-transform: capitalize;
-  width: 100%;
+  font-family: "Exo", sans-serif;
+  color: #919191;
+  font-size: 80%;
+  padding-top: 2px;
+  font-weight: 500;
+  margin-top: 1%;
 }
+
+
+
+
+
+
 .cardTypeContainer {
   width: 100%;
 }
 
 .pokemonImage {
-  width: 100%;
-  height: auto;
+  width: 70%;
   background-color: #f2f2f2;
   border-radius: 3%;
   cursor: pointer;
-  height: 200px;
-  width: 200px;
 }
+@media(min-width: 480px){
+  .pokemonImage{
+    width: 85%;
+  }
+  .copyContainer{
+    width: 85%;
+  }
+}
+
+
+
 
 .pokemonId {
   font-family: "Exo";
@@ -75,10 +84,14 @@
 .pokemonName {
   font-family: "Exo";
   font-size: 22px;
-  margin-top: 5%;
+  margin-top: 3%;
   font-weight: 500;
   color: #313131;
 }
+
+
+
+
 
 .typesContainer {
   display: flex;
