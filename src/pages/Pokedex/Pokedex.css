@@ -1,5 +1,3 @@
-
-
 .pokedexResultsContainer {
   background-color: white;
   display: grid;
@@ -9,23 +7,19 @@
   margin: auto;
 }
 
-@media( min-width: 480px){
-  .pokedexResultsContainer{
+@media (min-width: 480px) {
+  .pokedexResultsContainer {
     grid-template-columns: 1fr 1fr;
-    }
   }
+}
 
-@media(max-width: 319px){
-  .title-h1{
+@media (max-width: 319px) {
+  .title-h1 {
     text-align: center;
     width: 100%;
     padding-left: 0;
   }
 }
-
-
-
-
 
 .pokedexContainer {
   max-width: 1280px;
@@ -40,9 +34,6 @@
   max-width: 895px;
 }
 
-
-
-
 .titleH1 {
   font-family: Exo;
   font-weight: 100;
@@ -51,11 +42,6 @@
   padding-left: 18px;
   max-width: 1024px;
 }
-
-
-
-
-
 
 @media (min-width: 768px) {
   .pokedexResultsContainer {
@@ -76,40 +62,39 @@
   max-width: 895px;
 }
 
-  .filtersContainer {
-    padding-top: 32px;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    width: 90%;
-    margin: auto;
-  }
-  
-  .randomizer {
-    background-color: #30a7d7;
-    color: white;
-    width: 80%;
-    font-size: 1.1rem;
-    font-family: "Exo";
-    font-weight: 500;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: 100ms ease-in;
-    margin-bottom: 24px;
-    padding: 12px;
-    display: flex;
-    justify-content: center;
+.filtersContainer {
+  padding-top: 32px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 90%;
+  margin: auto;
 }
 
-.selectWrapper{
+.randomizer {
+  background-color: #30a7d7;
+  color: white;
+  width: 80%;
+  font-size: 1.1rem;
+  font-family: "Exo";
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 100ms ease-in;
+  margin-bottom: 24px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.selectWrapper {
   width: 80%;
 }
 
-
-@media (min-width: 900px){
-  .filtersContainer{
+@media (min-width: 900px) {
+  .filtersContainer {
     justify-content: space-between;
     padding: 32px 0 0;
     flex-direction: unset;
@@ -118,24 +103,22 @@
   .selectWrapper {
     width: 40%;
     margin-right: 18px;
+  }
+  .randomizer {
+    background-color: #30a7d7;
+    color: white;
+    width: 40%;
+    font-size: 1.1rem;
+    font-family: "Exo";
+    font-weight: 500;
+    padding: 1.4%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 100ms ease-in;
+    margin-left: 18px;
+  }
 }
-.randomizer {
-
-  background-color: #30a7d7;
-  color: white;
-  width: 40%;
-  font-size: 1.1rem;
-  font-family: "Exo";
-  font-weight: 500;
-  padding: 1.4%;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: 100ms ease-in;
-  margin-left: 18px;
-}
-}
-
 
 .randomizer:hover {
   background-color: #1b82b1;
@@ -148,14 +131,9 @@
   padding-right: 3%;
 }
 
-
 .custom-select-wrapper .custom-select-menu > ul {
   background-color: #616161;
 }
-
-
-
-
 
 #sortOrder {
   background-color: #313131;
@@ -167,17 +145,6 @@
   font-size: 16px;
   font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .load-more-button-container {
   display: flex;
@@ -228,23 +195,21 @@
   color: #fff;
 }
 
-
-
-@media(min-width: 900px){
-  .load-more-button-container{
+@media (min-width: 900px) {
+  .load-more-button-container {
     justify-content: space-between;
     padding: 32px 0 32px 0;
     flex-direction: unset;
     align-items: unset;
     margin: auto;
     margin-bottom: 32px;
-}
-.load-more-button{
-  width: 40%;
-  margin-left: 18px;
-}
-.load-all-button{
-  width: 40%;
-  margin-right: 18px;
-}
+  }
+  .load-more-button {
+    width: 40%;
+    margin-left: 18px;
+  }
+  .load-all-button {
+    width: 40%;
+    margin-right: 18px;
+  }
 }

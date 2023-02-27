@@ -116,31 +116,37 @@ const Pokemon = () => {
       <Heading pokemonItem={pokemon} />
 
       <div className="pokemon-container-div">
-      <div className="pokemon-container">
-        <div className="main-contents">
-          <div className="left-column">
-            <Image
-              src={pokemon.sprites?.other?.["official-artwork"]?.front_default}
-            />
-            <Stats pokemonItem={pokemon} />
+        <div className="pokemon-container">
+          <div className="main-contents">
+            <div className="left-column">
+              <Image
+                src={
+                  pokemon.sprites?.other?.["official-artwork"]?.front_default
+                }
+              />
+              <Stats pokemonItem={pokemon} />
+            </div>
+            <div className="right-column">
+              <div className="versions-and-info-container">
+                <Versions blue={blue} red={red} />
+                <Info pokemonItem={pokemon} />
+              </div>
+              <div className="type-and-weaknesses-container">
+                <div className="type-div">
+                  <h3 className="type-h3">Type</h3>
+                  <Type typesArray={typesArray} isLarge={true} />
+                </div>
+                <Weakness
+                  damageStuff1={damageStuff1}
+                  damageStuff2={damageStuff2}
+                  isLarge={true}
+                />
+              </div>
+            </div>
           </div>
-          <div className="right-column">
-            <div className="versions-and-info-container">
-            <Versions blue={blue} red={red} />
-            <Info pokemonItem={pokemon} />
-            </div>
-            <div className="type-and-weaknesses-container">
-            <div className="type-div">
-            <h3 className="type-h3">Type</h3>
-            <Type typesArray={typesArray} isLarge={true} />
-            </div>
-            <Weakness damageStuff1={damageStuff1} damageStuff2={damageStuff2} isLarge={true} />
-            </div>
-          </div>
-        </div>
 
-        <Evolution pokemonItem={pokemon} />
-        <Explore />
+          <Evolution pokemonItem={pokemon} />
+          <Explore />
         </div>
       </div>
     </div>

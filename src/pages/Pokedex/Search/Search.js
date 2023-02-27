@@ -23,6 +23,7 @@ const Search = () => {
       const pokemony = await getPokemon();
       const pokemonz = pokemony.results;
       setPokemon(pokemonz);
+      console.log(pokemonz);
     };
     pokemonx();
   }, []);
@@ -33,6 +34,7 @@ const Search = () => {
   const [foundPokemon, setFoundPokemon] = useState("");
 
   const pokemons = pokemon.map((poke) => poke.name);
+  console.log(pokemons);
 
   const filter = (e) => {
     const keyword = e.target.value;
@@ -53,54 +55,57 @@ const Search = () => {
   return (
     <div className="search-container">
       <div className="conditional-search-div">
-      <div className="search-div1">
-        <h2 className="search-h2">Name or Number</h2>
-        <div className="search-input-container-div">
-      <div className="search-input-container">
-        <input
-          type="search"
-          value={name}
-          onChange={filter}
-          className="search-input"
-   
-          onClick={filter}
-        />
+        <div className="search-div1">
+          <h2 className="search-h2">Name or Number</h2>
+          <div className="search-input-container-div">
+            <div className="search-input-container">
+              <input
+                type="search"
+                value={name}
+                onChange={filter}
+                className="search-input"
+                onClick={filter}
+              />
 
-        <button
-          className="button-result"
-          onClick={() => navigate(`/${name.toLowerCase()}`)}
-        >
-          <SearchIcon></SearchIcon>
-        </button>
-      </div>
-      <div className="pokemon-list">
-        {foundPokemon && foundPokemon.length > 0 ? (
-          <OutsideClickHandler
-            className="pokedexResultsDiv"
-            onOutsideClick={() => {
-              setFoundPokemon("");
-            }}
-          >
-            {foundPokemon?.map((poke) => (
-              <div
-                className="jimmy"
-                onClick={() =>{
-                  setName(poke.charAt(0).toUpperCase() + poke.slice(1)); setFoundPokemon("")
-                }
-                }
+              <button
+                className="button-result"
+                onClick={() => navigate(`/${name.toLowerCase()}`)}
               >
-                {" "}
-                <p className="jim">{poke}</p>
-              </div>
-            ))}
-          </OutsideClickHandler>
-        ) : null}
-      </div>
-      </div>
-      </div>
-      <div className="search-div2">
-        <div className="green-banner"><h3 className="green-bannerh3">Search for a Pokémon by name or using its National Pokédex number.</h3></div>
-      </div>
+                <SearchIcon></SearchIcon>
+              </button>
+            </div>
+            <div className="pokemon-list">
+              {foundPokemon && foundPokemon.length > 0 ? (
+                <OutsideClickHandler
+                  className="pokedexResultsDiv"
+                  onOutsideClick={() => {
+                    setFoundPokemon("");
+                  }}
+                >
+                  {foundPokemon?.map((poke) => (
+                    <div
+                      className="jimmy"
+                      onClick={() => {
+                        setName(poke.charAt(0).toUpperCase() + poke.slice(1));
+                        setFoundPokemon("");
+                      }}
+                    >
+                      {" "}
+                      <p className="jim">{poke}</p>
+                    </div>
+                  ))}
+                </OutsideClickHandler>
+              ) : null}
+            </div>
+          </div>
+        </div>
+        <div className="search-div2">
+          <div className="green-banner">
+            <h3 className="green-bannerh3">
+              Search for a Pokémon by name or using its National Pokédex number.
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
   );
