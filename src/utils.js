@@ -9,7 +9,7 @@ export const formatName = (name) => {
   if (name === "mr-mime" || name === "mr-rime") {
     return name.slice(0, 2) + ". " + name.slice(3);
   }
-  return name?.split('-')[0];
+  return name?.split("-")[0];
 };
 
 export const formatNumber = (number) => {
@@ -23,6 +23,6 @@ export const formatNumber = (number) => {
 };
 
 export const getTypeArray = (typesArray) => {
-  const typesStringsArray = typesArray.map((item) => item.type.name)
-  return typesStringsArray
-}
+  const typesStringsArray = typesArray.map((item) => item.type.name);
+  return typesStringsArray;
+};

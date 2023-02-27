@@ -1,8 +1,8 @@
 import React from "react";
-import './Pokeball.css'
+import "./Pokeball.css";
 
 const Pokeball = () => {
-    return <div className="pokeball-div" />;
-}
+  return <div className="pokeball-div" />;
+};
 
-export default Pokeball
+export default Pokeball;

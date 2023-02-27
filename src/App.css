@@ -2,7 +2,6 @@ body {
   margin: 0%;
   background-color: white;
   overflow-x: hidden;
-  /* background-color: #424242; */
 }
 
 .appContentContainer {
@@ -16,12 +15,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
-  ;
 }
-
-
-
-
 
 .appRoutesContainer {
   display: flex;
@@ -32,7 +26,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 
 @font-face {
   font-family: "Pokemon";
@@ -53,7 +46,7 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap");
 
-@import '@fontsource/roboto/300.css';
-@import '@fontsource/roboto/400.css';
-@import '@fontsource/roboto/500.css';
-@import '@fontsource/roboto/700.css';
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";

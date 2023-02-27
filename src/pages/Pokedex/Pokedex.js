@@ -4,11 +4,7 @@ import PokemonCard from "./PokemonCard";
 import "./Pokedex.css";
 import Pokeball from "../../components/Pokeball/Pokeball";
 import Search from "./Search/Search";
-import LoopRoundedIcon from '@mui/icons-material/LoopRounded';
-import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon';
-
-
- 
+import LoopRoundedIcon from "@mui/icons-material/LoopRounded";
 
 const P = new Pokedex();
 
@@ -62,7 +58,7 @@ const Home = () => {
       setLoading(false);
     }
   };
-console.log("hello!")
+  console.log("hello!");
   const getAllPokemon = async () => {
     setLoading(true);
     const pokemonList = await P.getPokemonsList({
@@ -78,8 +74,6 @@ console.log("hello!")
       setLoading(false);
     }
   };
-
-
 
   const loadMore = async () => {
     const pokemonList = await P.getPokemonsList({
@@ -158,8 +152,6 @@ console.log("hello!")
     setPokemon(sortedPokemon);
   };
 
-
-
   return (
     <div className="pokedexContainer">
       <div className="titleContainer">
@@ -172,12 +164,14 @@ console.log("hello!")
           type="button"
           alt="Surprise me!"
           onClick={getRandomPokemon}
-        > <LoopRoundedIcon></LoopRoundedIcon>
+        >
+          {" "}
+          <LoopRoundedIcon></LoopRoundedIcon>
           Surprise Me!
         </button>
         <div className="selectWrapper">
           <select id="sortOrder" onChange={handleSelectChange}>
-            <option value="noSort">Sort results by...</option>
+            <option value="">Sort results by...</option>
             <option value="numberAsc">Lowest Number (First)</option>
             <option value="numberDesc">Highest Number (First)</option>
             <option value="nameAsc">A-Z</option>
@@ -191,17 +185,23 @@ console.log("hello!")
         ))}
       </div>
       <div className="load-more-button-container">
-      <button className="load-more-button"
-        onClick={() => {
-          loadMore(end(start + 12));
-        }}
-        // onClick={MyList()}
-      >
-        Load More Pokémon
-      </button>
-      <button className="load-all-button" onClick={() => {getAllPokemon()}}>Load All Pokémon</button>
+        <button
+          className="load-more-button"
+          onClick={() => {
+            loadMore(end(start + 12));
+          }}
+        >
+          Load More Pokémon
+        </button>
+        <button
+          className="load-all-button"
+          onClick={() => {
+            getAllPokemon();
+          }}
+        >
+          Load All Pokémon
+        </button>
       </div>
-  
     </div>
   );
 };
