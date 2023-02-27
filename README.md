@@ -1,5 +1,13 @@
 # Pokémon Pokedex App
 
+A partial clone of the offical Pokemon Pokedex you would find if you searched for it on google.
+
+It utilizes https://github.com/PokeAPI/pokedex-promise-v2 for all of the relevant data of each Pokemon.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
