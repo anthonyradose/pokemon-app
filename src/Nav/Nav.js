@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Nav.css";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
 import GamepadIcon from "@mui/icons-material/Gamepad";
@@ -9,6 +10,7 @@ import FeedIcon from "@mui/icons-material/Feed";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const Nav = () => {
+  const navigate = useNavigate();
   const [show, setShow] = useState("nav-tab-img");
   const [Navs, setNavs] = useState("nav-div");
   const [grey, setGrey] = useState("home-tab");
@@ -49,16 +51,18 @@ const Nav = () => {
             isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
           }
         >
-          <div className="nav-div" id={grey}>
+          <div className="nav-div" id={grey} onClick={() => navigate(`/`)}>
             <img
               className={show}
               src="https://icon-library.com/images/pikachu-icon/pikachu-icon-14.jpg"
             ></img>
             <a className="nav-link">
-              <div className="nav-link-label">Home</div>
+              <div className="nav-link-label" href="/pokemon-app/">
+                Home
+              </div>
             </a>
           </div>
-          <div className={Navs} id="pokedex-tab">
+          <div className={Navs} id="pokedex-tab" onClick={() => navigate(`/`)}>
             <CatchingPokemonIcon className={show}></CatchingPokemonIcon>
             <a className="nav-link">
               <div className="nav-link-label">Pokédex</div>

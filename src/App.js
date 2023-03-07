@@ -8,15 +8,15 @@ import "./App.css";
 const App = () => {
   return (
     <div className="appContentContainer">
-      <Nav />
-      <div className="appRoutesContainer">
-        <Router basename="/pokemon-app/">
+      <Router basename="/pokemon-app/">
+        <Nav />
+        <div className="appRoutesContainer">
           <Routes>
             <Route path="/" element={<Pokedex />} />
             <Route path="/:name" element={<Pokemon />} />
           </Routes>
-        </Router>
-      </div>
+        </div>
+      </Router>
     </div>
   );
 };
