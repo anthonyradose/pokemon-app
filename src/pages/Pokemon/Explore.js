@@ -6,8 +6,8 @@ const Explore = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="explore-div">
-      <a className="explore-link" onClick={() => navigate(`/`)}>
+    <div className="explore-div" onClick={() => navigate(`/`)}>
+      <a className="explore-link">
         Explore More Pokémon
       </a>
     </div>
