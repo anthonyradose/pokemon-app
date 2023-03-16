@@ -98,6 +98,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 * [Pokemon Pokédex](https://www.pokemon.com/uk/pokedex)
 * [Ileriayo](https://github.com/Ileriayo), (https://github.com/Ileriayo/markdown-badges)
 * [GitHub Pages](https://pages.github.com)
-* [PokeAPI] (https://github.com/PokeAPI)
+* [PokeAPI](https://github.com/PokeAPI)
 * [icon-library](https://icon-library.com/)
 * [MUI Icons](https://materialui.co/icons)
