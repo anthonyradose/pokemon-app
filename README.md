@@ -4,8 +4,19 @@ A partial clone of the offical Pokemon Pokedex you would find if you searched fo
 
 It utilizes https://github.com/PokeAPI/pokedex-promise-v2 for all of the relevant data of each Pokemon.
 
+<hr>
+
+<h2 align="center"><img src="https://live.staticflickr.com/65535/52458237115_0fbfdb8a5b_b.jpg"></h2>
 
 
+### Built With
+
+* ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+* ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
+* ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+* ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+* ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
 
 
 # Getting Started with Create React App
@@ -79,3 +90,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # pokemon-app
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Pokemon Pokédex](https://www.pokemon.com/uk/pokedex)
+* [Ileriayo](https://github.com/Ileriayo), (https://github.com/Ileriayo/markdown-badges)
+* [GitHub Pages](https://pages.github.com)
+* [PokeAPI] (https://github.com/PokeAPI)
+* [icon-library](https://icon-library.com/)
+* [MUI Icons](https://materialui.co/icons)
