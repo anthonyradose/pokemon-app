@@ -20,9 +20,11 @@ const Pokemon = () => {
   const { name } = useParams();
   const [pokemon, setPokemon] = useState();
   const [loading, setLoading] = useState(false);
+  const [pageLoaded, setPageLoaded] = useState(false);
 
   const getPokemonDetails = async (name) => {
     setLoading(true);
+  
     const item = await P.getPokemonByName(name);
     item.spec = await P.getPokemonSpeciesByName(name);
     const cat = await fetch(item.species.url);
@@ -86,7 +88,9 @@ const Pokemon = () => {
     item.unknown = !item.canBeMale && !item.canBeFemale;
 
     setPokemon(item);
+    setPageLoaded(true)
     setLoading(false);
+
   };
 
   useEffect(() => {
@@ -95,7 +99,7 @@ const Pokemon = () => {
     }
   }, [name]);
 
-  if (loading) {
+  if (loading && !pageLoaded) {
     return <Pokeball />;
   }
 
