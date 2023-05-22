@@ -9,6 +9,10 @@ const P = new Pokedex();
 
 const Search = () => {
   const [pokemon, setPokemon] = useState([]);
+  // the value of the search field
+  const [name, setName] = useState("");
+  // the search result
+  const [foundPokemon, setFoundPokemon] = useState("");
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -17,36 +21,23 @@ const Search = () => {
         limit: 898,
         offset: 0,
       });
-      return pokemonList;
+      const pokemonData = pokemonList.results.map((pokemon) => pokemon.name);
+      setPokemon(pokemonData);
+      console.log(pokemonData);
     };
-    const pokemonx = async () => {
-      const pokemony = await getPokemon();
-      const pokemonz = pokemony.results;
-      setPokemon(pokemonz);
-      console.log(pokemonz);
-    };
-    pokemonx();
+    getPokemon();
   }, []);
-
-  // the value of the search field
-  const [name, setName] = useState("");
-  // the search result
-  const [foundPokemon, setFoundPokemon] = useState("");
-
-  const pokemons = pokemon.map((poke) => poke.name);
-  console.log(pokemons);
 
   const filter = (e) => {
     const keyword = e.target.value;
 
     if (keyword !== "") {
-      const results = pokemons.filter((pokemon) => {
-        return pokemon.toLowerCase().includes(keyword.toLowerCase());
-        // Use the toLowerCase() method to make it case-insensitive
-      });
+      const results = pokemon.filter((poke) =>
+        poke.toLowerCase().includes(keyword.toLowerCase())
+      );
       setFoundPokemon(results);
     } else {
-      setFoundPokemon("");
+      setFoundPokemon([]);
       // If the text field is empty, show all users
     }
     setName(keyword);
