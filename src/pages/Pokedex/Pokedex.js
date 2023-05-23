@@ -18,6 +18,8 @@ const Home = () => {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(false);
   const [start, setStart] = useState(12);
+  const [selectedSortOption, setSelectedSortOption] = useState("numberAsc"); // Set the default selected sorting option
+
 
   const totalPokemon = 898;
 
@@ -101,59 +103,27 @@ const Home = () => {
     return <Pokeball />;
   }
 
-  const handleSelectChange = async (event) => {
+  const handleSelectChange = (event) => {
+    const selectedOption = event.target.value;
+    setSelectedSortOption(selectedOption);
+  
+    setLoading(true);
     let sortedPokemon = [];
-    if (event.target.value === "numberAsc") {
-      setLoading(true);
-      sortedPokemon = await pokemon.sort(function (a, b) {
-        if (a.id < b.id) {
-          return -1;
-        }
-        if (a.id > b.id) {
-          return 1;
-        }
-        return 0;
-      });
+  
+    if (selectedOption === "numberAsc") {
+      sortedPokemon = pokemon.slice().sort((a, b) => a.id - b.id);
+    } else if (selectedOption === "numberDesc") {
+      sortedPokemon = pokemon.slice().sort((a, b) => b.id - a.id);
+    } else if (selectedOption === "nameAsc") {
+      sortedPokemon = pokemon.slice().sort((a, b) => a.name.localeCompare(b.name));
+    } else if (selectedOption === "nameDesc") {
+      sortedPokemon = pokemon.slice().sort((a, b) => b.name.localeCompare(a.name));
     }
-    if (event.target.value === "numberDesc") {
-      setLoading(true);
-      sortedPokemon = await pokemon.sort(function (a, b) {
-        if (a.id < b.id) {
-          return 1;
-        }
-        if (a.id > b.id) {
-          return -1;
-        }
-        return 0;
-      });
-    }
-    if (event.target.value === "nameAsc") {
-      setLoading(true);
-      sortedPokemon = await pokemon.sort(function (a, b) {
-        if (a.name < b.name) {
-          return -1;
-        }
-        if (a.name > b.name) {
-          return 1;
-        }
-        return 0;
-      });
-    }
-    if (event.target.value === "nameDesc") {
-      setLoading(true);
-      sortedPokemon = await pokemon.sort(function (a, b) {
-        if (a.name < b.name) {
-          return 1;
-        }
-        if (a.name > b.name) {
-          return -1;
-        }
-        return 0;
-      });
-    }
+  
     setLoading(false);
     setPokemon(sortedPokemon);
   };
+  
 
   return (
     <div className="pokedexContainer">
@@ -173,8 +143,7 @@ const Home = () => {
           Surprise Me!
         </button>
         <div className="selectWrapper">
-          <select id="sortOrder" onChange={handleSelectChange}>
-            <option value="">Sort results by...</option>
+          <select id="sortOrder" onChange={handleSelectChange} value={selectedSortOption}>
             <option value="numberAsc">Lowest Number (First)</option>
             <option value="numberDesc">Highest Number (First)</option>
             <option value="nameAsc">A-Z</option>
