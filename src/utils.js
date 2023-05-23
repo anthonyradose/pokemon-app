@@ -26,3 +26,21 @@ export const getTypeArray = (typesArray) => {
   const typesStringsArray = typesArray.map((item) => item.type.name);
   return typesStringsArray;
 };
+
+// pokemonCache.js
+
+import Pokedex from "pokedex-promise-v2";
+
+const P = new Pokedex();
+const pokemonCache = new Map();
+
+export const getPokemonStuff = async (pokemon) => {
+  if (pokemonCache.has(pokemon.name)) {
+    return pokemonCache.get(pokemon.name);
+  } else {
+    const item = await P.getPokemonByName(pokemon.name);
+    pokemonCache.set(pokemon.name, item);
+    return item;
+  }
+};
+

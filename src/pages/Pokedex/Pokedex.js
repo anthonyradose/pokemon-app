@@ -5,6 +5,7 @@ import "./Pokedex.css";
 import Pokeball from "../../components/Pokeball/Pokeball";
 import Search from "./Search/Search";
 import LoopRoundedIcon from "@mui/icons-material/LoopRounded";
+import { getPokemonStuff } from "../../utils";
 
 const P = new Pokedex();
 
@@ -16,7 +17,7 @@ const getPokemonDetails = async (pokemon) => {
 const Home = () => {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [start, end] = useState(12);
+  const [start, setStart] = useState(12);
 
   const totalPokemon = 898;
 
@@ -51,11 +52,12 @@ const Home = () => {
 
     if (pokemonList?.results) {
       const pokemonListWithDetails = await Promise.all(
-        pokemonList.results?.map(getPokemonDetails)
+        pokemonList.results?.map((pokemon) => getPokemonStuff(pokemon))
       );
-
+      setTimeout(() => {
       setPokemon(pokemonListWithDetails);
       setLoading(false);
+    }, 1000); // Delay of 1 second
     }
   };
   console.log("hello!");
@@ -77,7 +79,7 @@ const Home = () => {
 
   const loadMore = async () => {
     const pokemonList = await P.getPokemonsList({
-      limit: start,
+      limit: start + 12,
       offset: 0,
     });
 
@@ -87,6 +89,7 @@ const Home = () => {
       );
 
       setPokemon(pokemonListWithDetails);
+      setStart(start + 12);
     }
   };
 
@@ -187,9 +190,7 @@ const Home = () => {
       <div className="load-more-button-container">
         <button
           className="load-more-button"
-          onClick={() => {
-            loadMore(end(start + 12));
-          }}
+          onClick={loadMore}
         >
           Load More Pokémon
         </button>
