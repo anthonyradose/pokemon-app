@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { formatName, formatNumber } from "../../utils";
+import { formatName, formatNumber } from "../utils";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import "./pokemon.css";
+import "../pages/Pokemon/pokemon.css";
 
 const Pagination = ({ pokemonItem }) => {
   let navigate = useNavigate();

@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Pokedex from "pokedex-promise-v2";
 import Pokeball from "../../components/Pokeball/Pokeball";
-import Heading from "./Heading";
+import Heading from "../../components/Heading/Heading";
 import Type from "../../components/Type/Type";
-import Pagination from "./Pagination";
-import Stats from "./Stats";
-import Image from "./Image";
-import Info from "./Info";
-import Evolution from "./Evolution";
-import Versions from "./Versions";
-import Weakness from "./Weakness";
+import Pagination from "../../components/Pagination";
+import Stats from "../../components/Stats";
+import Image from "../../components/Image/Image";
+import Info from "../../components/Info/Info";
+import Evolution from "../../components/Evolution/Evolution";
+import Versions from "../../components/Versions";
+import Weakness from "../../components/Weakness";
 import { getTypeArray } from "../../utils";
-import Explore from "./Explore";
+import Explore from "../../components/Explore/Explore";
 
 const P = new Pokedex();
 

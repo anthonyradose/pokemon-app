@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./pokemon.css";
+import "../../pages/Pokemon/pokemon.css";
 
 const Explore = () => {
   const navigate = useNavigate();
