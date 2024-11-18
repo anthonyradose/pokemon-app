@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pokemon-app/static/css/main.6acabdd6.css",
-    "main.js": "/pokemon-app/static/js/main.7eebbe7c.js",
+    "main.js": "/pokemon-app/static/js/main.da31223b.js",
     "static/media/roboto-all-500-normal.woff": "/pokemon-app/static/media/roboto-all-500-normal.52cb737b682eb9661ee1.woff",
     "static/media/roboto-all-700-normal.woff": "/pokemon-app/static/media/roboto-all-700-normal.ef6d1d09b20b877fee4e.woff",
     "static/media/roboto-all-400-normal.woff": "/pokemon-app/static/media/roboto-all-400-normal.376ea5d93f71583052f6.woff",
@@ -36,10 +36,10 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/pokemon-app/static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
     "index.html": "/pokemon-app/index.html",
     "main.6acabdd6.css.map": "/pokemon-app/static/css/main.6acabdd6.css.map",
-    "main.7eebbe7c.js.map": "/pokemon-app/static/js/main.7eebbe7c.js.map"
+    "main.da31223b.js.map": "/pokemon-app/static/js/main.da31223b.js.map"
   },
   "entrypoints": [
     "static/css/main.6acabdd6.css",
-    "static/js/main.7eebbe7c.js"
+    "static/js/main.da31223b.js"
   ]
 }
