@@ -1,5 +1,5 @@
 Nav {
-  background: #fff;
+  background: #ff0000;
   border-bottom: 2px solid #f0f0f0;
   height: 87px;
   width: 100%;
@@ -15,6 +15,93 @@ Nav {
   top: -35px;
   z-index: 3;
 }
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Outer light casing */
+.big-light-outer {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #d6d8dd;
+  border: 1px solid black;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Inner blue light */
+.big-light-inner {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #309ee4;
+  position: relative;
+  border: 1px solid black;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Outer core */
+.light-core-outer {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #1b6695;
+  position: relative;
+  left: 4px;
+  top: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Inner core */
+.light-core-inner {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #1b6695;
+  position: relative;
+  left: 3px;
+  top: 2px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Small dot (reflection) */
+.big-dot {
+  height: 10px;
+  width: 10px;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  background-color: #d6d8dd;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* 🔥 Hover effect: Applied to `.home` to light up everything inside */
+.home:hover .big-light-outer {
+  box-shadow: 0 0 20px 5px rgba(48, 158, 228, 0.7),
+    0 0 50px 10px rgba(48, 158, 228, 0.5);
+}
+
+.home:hover .big-light-inner {
+  background-color: #50b0ff; /* Brighter blue */
+}
+
+.home:hover .light-core-outer {
+  background-color: #2d86c0; /* Slightly brighter */
+}
+
+.home:hover .light-core-inner {
+  background-color: #4ca2e0; /* More vibrant */
+}
+
+.home:hover .big-dot {
+  background-color: #fff; /* Light reflection effect */
+}
+
 a.nav-link {
   text-decoration: none;
   color: #464646;
@@ -174,112 +261,4 @@ a > div {
   width: 90%;
   margin: auto;
   max-width: 895px;
-}
-
-@media screen and (max-width: 899px) {
-  Nav {
-    background: radial-gradient(ellipse at center, #3d3d3d 0%, #1e1e1e 57%);
-    flex-direction: column;
-    width: 100%;
-    border-bottom: none;
-    align-items: center;
-    height: 60px;
-  }
-  .nav-div {
-    justify-content: unset;
-  }
-  .phantom-div {
-    width: 100%;
-    align-items: center;
-  }
-  .hamburger {
-    display: block;
-    position: absolute;
-    width: 50px;
-    height: 58px;
-    background-color: #313131;
-    border: none;
-    border-bottom: 2px solid #000;
-    border-right: 2px solid #000;
-  }
-  .hamburger > svg {
-    width: 1em;
-    height: 1em;
-    font-size: 2rem;
-    font-weight: 900;
-  }
-  .menu-icon {
-    color: white;
-  }
-  .navigation-menu {
-    height: 0px;
-    width: 100%;
-    display: flex;
-    max-width: 895px;
-    background-color: white;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    transition: height 500ms ease;
-    overflow: hidden;
-  }
-
-  .navigation-menu.expanded {
-    height: 400px;
-  }
-  #home-tab {
-    border-radius: unset;
-    border-left: 5px solid #919191;
-    border-bottom: 1px solid #dedede;
-    padding-left: 3%;
-    flex-direction: row;
-  }
-  .nav-tab-img {
-    margin-right: 16px;
-  }
-  #pokedex-tab {
-    border-radius: unset;
-    border-left: 5px solid #e3350d;
-    border-bottom: 1px solid #dedede;
-    padding-left: 3%;
-    flex-direction: row;
-  }
-  .nav-div > svg {
-    margin-right: 16px;
-  }
-  #games-tab {
-    border-radius: unset;
-    border-left: 5px solid #ee6b2f;
-    border-bottom: 1px solid #dedede;
-    padding-left: 3%;
-    flex-direction: row;
-  }
-  #trading-tab {
-    border-radius: unset;
-    border-left: 5px solid #e6bc2f;
-    border-bottom: 1px solid #dedede;
-    padding-left: 3%;
-    flex-direction: row;
-  }
-  #tv-tab {
-    border-radius: unset;
-    border-left: 5px solid #4dad5b;
-    border-bottom: 1px solid #dedede;
-    padding-left: 3%;
-    flex-direction: row;
-  }
-  #play-tab {
-    border-radius: unset;
-    border-left: 5px solid #30a7d7;
-    border-bottom: 1px solid #dedede;
-    padding-left: 3%;
-    flex-direction: row;
-  }
-  #news-tab {
-    border-radius: unset;
-    border-left: 5px solid #1b53ba;
-    border-bottom: 1px solid #dedede;
-    padding-left: 3%;
-    flex-direction: row;
-  }
 }
