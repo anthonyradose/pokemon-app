@@ -22,8 +22,6 @@ Nav {
   justify-content: center;
   cursor: pointer;
 }
-
-/* Outer light casing */
 .big-light-outer {
   height: 50px;
   width: 50px;
@@ -33,7 +31,6 @@ Nav {
   transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Inner blue light */
 .big-light-inner {
   height: 45px;
   width: 45px;

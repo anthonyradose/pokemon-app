@@ -47,7 +47,6 @@ const Search = () => {
     <div className="search-container">
       <div className="conditional-search-div">
         <div className="search-div1">
-          <h2 className="search-h2">Name or Number</h2>
           <div className="search-input-container-div">
             <div className="search-input-container">
               <input
