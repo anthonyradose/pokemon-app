@@ -6,7 +6,7 @@ import "./Pokedex.css"; // Import styles for the Pokedex component
 import Pokeball from "../../components/Pokeball/Pokeball"; // Import a loading indicator component
 import Search from "../../components/Search/Search"; // Import the search component for filtering Pokemon
 import LoopRoundedIcon from "@mui/icons-material/LoopRounded"; // Import an icon for randomization button
-import { getPokemonStuff } from "../../utils"; // Import a utility function for fetching additional Pokemon data
+import { getPokemonStuff } from "../../utils/utils"; // Import a utility function for fetching additional Pokemon data
 
 // Instantiate the Pokedex API
 const P = new Pokedex();

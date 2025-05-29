@@ -11,7 +11,7 @@ import Info from "../../components/Info/Info";
 import Evolution from "../../components/Evolution/Evolution";
 import Versions from "../../components/Versions";
 import Weakness from "../../components/Weakness";
-import { getTypeArray } from "../../utils";
+import { getTypeArray } from "../../utils/utils";
 import Explore from "../../components/Explore/Explore";
 
 const P = new Pokedex();

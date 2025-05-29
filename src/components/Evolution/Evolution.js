@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { formatName, formatNumber, getTypeArray } from "../../utils";
+import { formatName, formatNumber, getTypeArray } from "../../utils/utils";
 import Type from "../Type/Type";
 import "../../pages/Pokemon/pokemon.css";
 

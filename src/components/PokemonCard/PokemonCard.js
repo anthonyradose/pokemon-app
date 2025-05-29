@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./PokemonCard.css";
-import { formatName, formatNumber, getTypeArray } from "../../utils";
+import { formatName, formatNumber, getTypeArray } from "../../utils/utils";
 import Type from "../../components/Type/Type";
 
 const PokemonCard = ({ pokemonItem }) => {
