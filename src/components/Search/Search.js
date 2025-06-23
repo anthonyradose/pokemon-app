@@ -1,47 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import Pokedex from "pokedex-promise-v2";
+import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import OutsideClickHandler from "react-outside-click-handler";
 import "./Search.css";
-
-const P = new Pokedex();
+import useSearch from "../../hooks/useSearch";
 
 const Search = () => {
-  const [pokemon, setPokemon] = useState([]);
-  // the value of the search field
-  const [name, setName] = useState("");
-  // the search result
-  const [foundPokemon, setFoundPokemon] = useState("");
-  let navigate = useNavigate();
-
-  useEffect(() => {
-    const getPokemon = async () => {
-      const pokemonList = await P.getPokemonsList({
-        limit: 898,
-        offset: 0,
-      });
-      const pokemonData = pokemonList.results.map((pokemon) => pokemon.name);
-      setPokemon(pokemonData);
-      console.log(pokemonData);
-    };
-    getPokemon();
-  }, []);
-
-  const filter = (e) => {
-    const keyword = e.target.value;
-
-    if (keyword !== "") {
-      const results = pokemon.filter((poke) =>
-        poke.toLowerCase().includes(keyword.toLowerCase())
-      );
-      setFoundPokemon(results);
-    } else {
-      setFoundPokemon([]);
-      // If the text field is empty, show all users
-    }
-    setName(keyword);
-  };
+  const {
+    name,
+    foundPokemon,
+    filter,
+    handlePokemonSelect,
+    handleSearch,
+    clearResults,
+  } = useSearch();
 
   return (
     <div className="search-container">
@@ -59,7 +30,7 @@ const Search = () => {
 
               <button
                 className="button-result"
-                onClick={() => navigate(`/${name.toLowerCase()}`)}
+                onClick={handleSearch}
               >
                 <SearchIcon></SearchIcon>
               </button>
@@ -68,17 +39,12 @@ const Search = () => {
               {foundPokemon && foundPokemon.length > 0 ? (
                 <OutsideClickHandler
                   className="pokedexResultsDiv"
-                  onOutsideClick={() => {
-                    setFoundPokemon("");
-                  }}
+                  onOutsideClick={clearResults}
                 >
                   {foundPokemon?.map((poke) => (
                     <div
                       className="jimmy"
-                      onClick={() => {
-                        setName(poke.charAt(0).toUpperCase() + poke.slice(1));
-                        setFoundPokemon("");
-                      }}
+                      onClick={() => handlePokemonSelect(poke)}
                     >
                       {" "}
                       <p className="jim">{poke}</p>

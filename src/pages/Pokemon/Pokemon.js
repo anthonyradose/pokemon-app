@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import Pokeball from "../../components/Pokeball/Pokeball";
 import Heading from "../../components/Heading/Heading";
@@ -12,27 +12,11 @@ import Versions from "../../components/Versions/Versions";
 import Weakness from "../../components/Weakness/Weakness";
 import { getTypeArray } from "../../utils/utils";
 import Explore from "../../components/Explore/Explore";
-import { getDetailedPokemonDetails } from "../../services/pokemonApi";
+import usePokemonDetails from "../../hooks/usePokemonDetails";
 
 const Pokemon = () => {
   const { name } = useParams();
-  const [pokemon, setPokemon] = useState();
-  const [loading, setLoading] = useState(false);
-  const [pageLoaded, setPageLoaded] = useState(false);
-
-  const handleGetPokemonDetails = async (name) => {
-    setLoading(true);
-    const item = await getDetailedPokemonDetails(name);
-    setPokemon(item);
-    setPageLoaded(true);
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    if (name) {
-      handleGetPokemonDetails(name);
-    }
-  }, [name]);
+  const { pokemon, loading, pageLoaded } = usePokemonDetails(name);
 
   if (loading && !pageLoaded) {
     return <Pokeball />;

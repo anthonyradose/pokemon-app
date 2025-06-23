@@ -1,10 +1,10 @@
 import React from "react";
 import "../../pages/Pokemon/pokemon.css";
-import { useState } from "react";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
+import useVersionToggle from "../../hooks/useVersionToggle";
 
 const Versions = ({ blue, red }) => {
-  const [showBlue, setShowBlue] = useState(true);
+  const { showBlue, toggleToBlue, toggleToRed } = useVersionToggle(true);
 
   return (
     <div className="version-container">
@@ -17,7 +17,7 @@ const Versions = ({ blue, red }) => {
           <span className="version-span">
             <CatchingPokemonIcon
               className="version-blue"
-              onClick={() => setShowBlue(true)}
+              onClick={toggleToBlue}
             >
               Blue
             </CatchingPokemonIcon>
@@ -25,7 +25,7 @@ const Versions = ({ blue, red }) => {
           <span className="version-span">
             <CatchingPokemonIcon
               className="version-red"
-              onClick={() => setShowBlue(false)}
+              onClick={toggleToRed}
             >
               Red
             </CatchingPokemonIcon>
