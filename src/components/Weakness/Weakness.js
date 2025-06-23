@@ -1,6 +1,6 @@
 import React from "react";
-import Type from "./Type/Type";
-import "./Type/Type.css";
+import Type from "../Type/Type";
+import "../Type/Type.css";
 
 const Weakness = ({ damageStuff1, damageStuff2 }) => {
   let weakness1 = damageStuff1.double_damage_from.map((item) => item.name);

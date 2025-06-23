@@ -1,5 +1,5 @@
 import React from "react";
-import "../pages/Pokemon/pokemon.css";
+import "../../pages/Pokemon/pokemon.css";
 
 const StatBar = ({ numOfBarsColored, statName }) => {
   const numThing = numOfBarsColored;
@@ -7,7 +7,7 @@ const StatBar = ({ numOfBarsColored, statName }) => {
   const lisArray = Array.from(new Array(15));
   const liMapped = lisArray.map((a, i) => {
     const changeColor = i < numThing ? "#30a7d7" : "white";
-    return <li className="stat-li" style={{ backgroundColor: changeColor }} />;
+    return <li key={i} className="stat-li" style={{ backgroundColor: changeColor }} />;
   });
   return (
     <div>
@@ -25,24 +25,23 @@ const Stats = ({ pokemonItem }) => {
     const nums = newObj.base_stat;
     numsArray.push(Math.round(nums / 17));
   }
-  const statsMapped = statsArray.map((stats) => {
-    ``;
+  const statsMapped = statsArray.map((stats, index) => {
     const statName =
       stats.stat.name.charAt(0) +
       stats.stat.name.slice(1, 8).replace("-", " ") +
       stats.stat.name.charAt(8) +
       stats.stat.name.slice(9);
-    return <span className="stats-span">{statName}</span>;
+    return <span key={index} className="stats-span">{statName}</span>;
   });
   return (
-    <div className="stats-wrapper">
+    <div id="stats-wrapper">
       <div className="stats-div">
         <h3 className="stats-header">Stats</h3>
         <div className="stats-container">
           <ul className="stat-ul-parent">
             {numsArray.map((num, index) => {
               return (
-                <div className="stat-ul-div">
+                <div key={index} className="stat-ul-div">
                   <StatBar
                     numOfBarsColored={num}
                     statName={statsMapped[index]}

@@ -1,5 +1,5 @@
 import React from "react";
-import "../pages/Pokemon/pokemon.css";
+import "../../pages/Pokemon/pokemon.css";
 import { useState } from "react";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
 
