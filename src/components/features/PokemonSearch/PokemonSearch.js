@@ -1,7 +1,7 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import OutsideClickHandler from "react-outside-click-handler";
-import useSearch from "../../hooks/useSearch";
+import useSearch from "../../../hooks/useSearch";
 import "./PokemonSearch.css";
 
 const PokemonSearch = () => {

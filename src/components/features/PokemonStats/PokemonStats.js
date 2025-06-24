@@ -1,4 +1,4 @@
-import "../../pages/PokemonDetails/PokemonDetails.css";
+import "../../../pages/PokemonDetails/PokemonDetails.css";
 import React from "react";
 
 const StatBar = ({ numOfBarsColored, statName }) => {

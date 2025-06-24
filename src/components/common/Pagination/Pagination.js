@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { formatName, formatNumber } from "../../utils/formatters";
-import "../../pages/PokemonDetails/PokemonDetails.css";
+import { formatName, formatNumber } from "../../../utils/formatters";
+import "../../../pages/PokemonDetails/PokemonDetails.css";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
-import useVersionToggle from "../../hooks/useVersionToggle";
-import "../../pages/PokemonDetails/PokemonDetails.css";
+import useVersionToggle from "../../../hooks/useVersionToggle";
+import "../../../pages/PokemonDetails/PokemonDetails.css";
 
 const PokemonVersion = ({ blue, red }) => {
   const { showBlue, toggleToBlue, toggleToRed } = useVersionToggle(true);

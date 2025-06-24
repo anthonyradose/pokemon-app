@@ -1,7 +1,7 @@
 import React from "react";
 import MaleIcon from "@mui/icons-material/Male";
 import FemaleIcon from "@mui/icons-material/Female";
-import "../../pages/PokemonDetails/PokemonDetails.css";
+import "../../../pages/PokemonDetails/PokemonDetails.css";
 
 const PokemonInfo = ({ pokemonItem }) => {
   let height = pokemonItem.height;

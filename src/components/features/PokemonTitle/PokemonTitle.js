@@ -1,6 +1,6 @@
 import React from "react";
-import "../../pages/PokemonDetails/PokemonDetails.css";
-import { formatName, formatNumber } from "../../utils/formatters";
+import "../../../pages/PokemonDetails/PokemonDetails.css";
+import { formatName, formatNumber } from "../../../utils/formatters";
 
 const PokemonTitle = ({ pokemonItem }) => {
   const name = formatName(pokemonItem.name);
