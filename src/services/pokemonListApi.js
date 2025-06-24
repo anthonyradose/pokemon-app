@@ -1,5 +1,5 @@
 import P from "./pokedexClient";
-import { getPokemonStuff } from "./cache";
+import { getCachedPokemonDetails } from "./pokemonCache";
 
 // Function to get basic information about a Pokemon by its name
 const getBasicPokemonDetails = async (pokemon) => {
@@ -36,7 +36,7 @@ const getPokemon = async () => {
   if (pokemonList?.results) {
     // Fetch additional details for the Pokemon using a utility function
     const pokemonListWithDetails = await Promise.all(
-      pokemonList.results?.map((pokemon) => getPokemonStuff(pokemon))
+      pokemonList.results?.map((pokemon) => getCachedPokemonDetails(pokemon))
     );
     return pokemonListWithDetails;
   }
@@ -83,4 +83,4 @@ export {
   getPokemon,
   getAllPokemon,
   loadMore,
-};
+}; 

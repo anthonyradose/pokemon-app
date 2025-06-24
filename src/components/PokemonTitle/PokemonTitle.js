@@ -1,8 +1,8 @@
 import React from "react";
-import "../../pages/Pokemon/pokemon.css";
-import { formatName, formatNumber } from "../../utils/utils";
+import "../../pages/PokemonDetails/PokemonDetails.css";
+import { formatName, formatNumber } from "../../utils/formatters";
 
-const Heading = ({ pokemonItem }) => {
+const PokemonTitle = ({ pokemonItem }) => {
   const name = formatName(pokemonItem.name);
   const number = formatNumber(pokemonItem.id);
   return (
@@ -13,4 +13,4 @@ const Heading = ({ pokemonItem }) => {
   );
 };
 
-export default Heading;
+export default PokemonTitle;

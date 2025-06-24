@@ -1,7 +1,7 @@
+import "./PokemonType.css";
 import React from "react";
-import "./Type.css";
 
-const Type = ({ typesArray, isLarge }) => {
+const PokemonType = ({ typesArray, isLarge }) => {
   return (
     <div className={isLarge ? "type-container-large" : "type-container-small"}>
       {typesArray?.map((item) => {
@@ -20,4 +20,4 @@ const Type = ({ typesArray, isLarge }) => {
   );
 };
 
-export default Type;
+export default PokemonType;

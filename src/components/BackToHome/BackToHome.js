@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../../pages/Pokemon/pokemon.css";
+import "../../pages/PokemonDetails/PokemonDetails.css";
 
-const Explore = () => {
+const BackToHome = () => {
   const navigate = useNavigate();
 
   return (
@@ -14,4 +14,4 @@ const Explore = () => {
   );
 };
 
-export default Explore;
+export default BackToHome;

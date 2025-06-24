@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { formatName, formatNumber, getTypeArray } from "../../utils/utils";
-import Type from "../Type/Type";
-import "../../pages/Pokemon/pokemon.css";
+import { formatName, formatNumber, getTypeArray } from "../../utils/formatters";
+import PokemonType from "../PokemonType/PokemonType";
+import "../../pages/PokemonDetails/PokemonDetails.css";
 
-const Evolution = ({ pokemonItem }) => {
+const EvolutionChart = ({ pokemonItem }) => {
   const typesArray = getTypeArray(pokemonItem.types);
 
   let navigate = useNavigate();
@@ -24,7 +24,7 @@ const Evolution = ({ pokemonItem }) => {
         <h3 className="evolution-h3-1">{formatName(item.name)}</h3>
         <h3 className="evolution-h3-2">{formatNumber(item.id)}</h3>
       </span>
-      <Type typesArray={typesArray} isLarge={false} />
+      <PokemonType typesArray={typesArray} isLarge={false} />
     </div>
   ));
 
@@ -41,4 +41,4 @@ const Evolution = ({ pokemonItem }) => {
   );
 };
 
-export default Evolution;
+export default EvolutionChart;

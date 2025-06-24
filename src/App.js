@@ -1,6 +1,6 @@
 import React from "react";
-import Pokedex from "./pages/Pokedex/Pokedex";
-import Pokemon from "./pages/Pokemon/Pokemon";
+import PokemonList from "./pages/PokemonList/PokemonList";
+import PokemonDetails from "./pages/PokemonDetails/PokemonDetails";
 import Nav from "./components/Nav/Nav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
@@ -15,8 +15,8 @@ const App = () => {
         <main>
         <div className="appRoutesContainer">
           <Routes>
-            <Route path="/" element={<Pokedex />} />
-            <Route path="/:name" element={<Pokemon />} />
+            <Route path="/" element={<PokemonList />} />
+            <Route path="/:name" element={<PokemonDetails />} />
           </Routes>
         </div>
         </main>

@@ -1,13 +1,13 @@
 // Import necessary libraries and components
 import React from "react"; // Import React and hooks for state and effects
 import PokemonCard from "../../components/PokemonCard/PokemonCard"; // Import the PokemonCard component for displaying individual Pokemon
-import "./Pokedex.css"; // Import styles for the Pokedex component
+import "./PokemonList.css"; // Import styles for the PokemonList component
 import Pokeball from "../../components/Pokeball/Pokeball"; // Import a loading indicator component
-import Search from "../../components/Search/Search"; // Import the search component for filtering Pokemon
+import PokemonSearch from "../../components/PokemonSearch/PokemonSearch"; // Import the search component for filtering Pokemon
 import LoopRoundedIcon from "@mui/icons-material/LoopRounded"; // Import an icon for randomization button
 import usePokemonList from "../../hooks/usePokemonList"; // Import the custom hook
 
-const Home = () => {
+const PokemonList = () => {
   const {
     pokemon,
     loading,
@@ -25,11 +25,11 @@ const Home = () => {
 
   // Render the component
   return (
-    <div className="pokedexContainer"> {/* Main container for the Pokedex */}
+    <div className="pokedexContainer"> {/* Main container for the PokemonList */}
       <div className="titleContainer"> {/* Title section */}
         <h1 className="titleH1">Pokédex</h1> {/* Main title */}
       </div>
-      <Search pokemonItem={pokemon} /> {/* Search component for filtering Pokemon */}
+      <PokemonSearch pokemonItem={pokemon} /> {/* Search component for filtering Pokemon */}
       <div className="filtersContainer"> {/* Filter buttons and sorting options */}
         <button
           className="randomizer" // Button to get random Pokemon
@@ -52,7 +52,7 @@ const Home = () => {
       </div>
       <div className="pokedexResultsContainer"> {/* Container for displaying Pokemon results */}
         {pokemon?.map((poke) => ( // Map through the Pokemon array
-          <PokemonCard pokemonItem={poke} key={poke.name} /> // Render a PokemonCard for each Pokemon
+          <PokemonCard pokemonItem={poke} key={poke.name} /> // Render a Card for each Pokemon
         ))}
       </div>
       <div className="load-more-button-container"> {/* Container for load more buttons */}
@@ -73,4 +73,4 @@ const Home = () => {
   );
 };
 
-export default Home; // Export the Home component for use in other parts of the application
+export default PokemonList; // Export the PokemonList component for use in other parts of the application 

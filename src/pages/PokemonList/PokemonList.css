@@ -198,12 +198,8 @@
 
 @media (min-width: 900px) {
   .load-more-button-container {
-    justify-content: space-between;
-    padding: 32px 0 32px 0;
     flex-direction: unset;
-    align-items: unset;
-    margin: auto;
-    margin-bottom: 32px;
+    justify-content: space-between;
   }
   .load-more-button {
     width: 40%;
@@ -213,7 +209,17 @@
     width: 40%;
     margin-right: 18px;
   }
-  .titleContainer{
-    justify-content: start;
-  }
 }
+
+.load-more-button:hover {
+  background-color: #1b82b1;
+}
+
+.load-all-button:hover {
+  background-color: #d85a1f;
+}
+
+.titleContainer{
+  padding-top: 32px;
+  padding-bottom: 32px;
+} 

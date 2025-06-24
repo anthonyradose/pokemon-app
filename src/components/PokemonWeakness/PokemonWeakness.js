@@ -1,8 +1,8 @@
 import React from "react";
-import Type from "../Type/Type";
-import "../Type/Type.css";
+import PokemonType from "../PokemonType/PokemonType";
+import "../PokemonType/PokemonType.css";
 
-const Weakness = ({ damageStuff1, damageStuff2 }) => {
+const PokemonWeakness = ({ damageStuff1, damageStuff2 }) => {
   let weakness1 = damageStuff1.double_damage_from.map((item) => item.name);
   let weakness2 = damageStuff2?.double_damage_from.map((item) => item.name);
 
@@ -12,9 +12,9 @@ const Weakness = ({ damageStuff1, damageStuff2 }) => {
   return (
     <div className="weakness-card">
       <h3 className="weakness-h3">Weaknesses</h3>
-      <Type typesArray={beta} isLarge={true} />
+      <PokemonType typesArray={beta} isLarge={true} />
     </div>
   );
 };
 
-export default Weakness;
+export default PokemonWeakness;

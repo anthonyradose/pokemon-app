@@ -1,10 +1,10 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import OutsideClickHandler from "react-outside-click-handler";
-import "./Search.css";
 import useSearch from "../../hooks/useSearch";
+import "./PokemonSearch.css";
 
-const Search = () => {
+const PokemonSearch = () => {
   const {
     name,
     foundPokemon,
@@ -44,10 +44,10 @@ const Search = () => {
                   {foundPokemon?.map((poke) => (
                     <div
                       className="jimmy"
-                      onClick={() => handlePokemonSelect(poke)}
+                      key={poke.name}
+                      onClick={() => handlePokemonSelect(poke.name)}
                     >
-                      {" "}
-                      <p className="jim">{poke}</p>
+                      {poke.name}
                     </div>
                   ))}
                 </OutsideClickHandler>
@@ -67,4 +67,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default PokemonSearch;

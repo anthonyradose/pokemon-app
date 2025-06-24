@@ -1,5 +1,5 @@
+import "../../pages/PokemonDetails/PokemonDetails.css";
 import React from "react";
-import "../../pages/Pokemon/pokemon.css";
 
 const StatBar = ({ numOfBarsColored, statName }) => {
   const numThing = numOfBarsColored;
@@ -17,7 +17,7 @@ const StatBar = ({ numOfBarsColored, statName }) => {
   );
 };
 
-const Stats = ({ pokemonItem }) => {
+const PokemonStats = ({ pokemonItem }) => {
   const statsArray = pokemonItem.stats;
   const numsArray = [];
   for (let i = 0; i < statsArray.length; i++) {
@@ -56,4 +56,4 @@ const Stats = ({ pokemonItem }) => {
   );
 };
 
-export default Stats;
+export default PokemonStats;

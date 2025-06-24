@@ -1,11 +1,10 @@
 import React from "react";
-import "../../pages/Pokemon/pokemon.css";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
 import useVersionToggle from "../../hooks/useVersionToggle";
+import "../../pages/PokemonDetails/PokemonDetails.css";
 
-const Versions = ({ blue, red }) => {
+const PokemonVersion = ({ blue, red }) => {
   const { showBlue, toggleToBlue, toggleToRed } = useVersionToggle(true);
-
   return (
     <div className="version-container">
       <div className="version-div">
@@ -36,4 +35,4 @@ const Versions = ({ blue, red }) => {
   );
 };
 
-export default Versions;
+export default PokemonVersion;

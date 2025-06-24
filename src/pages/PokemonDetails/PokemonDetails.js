@@ -1,20 +1,21 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import "./PokemonDetails.css";
 import Pokeball from "../../components/Pokeball/Pokeball";
-import Heading from "../../components/Heading/Heading";
-import Type from "../../components/Type/Type";
+import PokemonTitle from "../../components/PokemonTitle/PokemonTitle";
+import PokemonType from "../../components/PokemonType/PokemonType";
 import Pagination from "../../components/Pagination/Pagination";
-import Stats from "../../components/Stats/Stats";
-import Image from "../../components/Image/Image";
-import Info from "../../components/Info/Info";
-import Evolution from "../../components/Evolution/Evolution";
-import Versions from "../../components/Versions/Versions";
-import Weakness from "../../components/Weakness/Weakness";
-import { getTypeArray } from "../../utils/utils";
-import Explore from "../../components/Explore/Explore";
+import PokemonStats from "../../components/PokemonStats/PokemonStats";
+import PokemonImage from "../../components/PokemonImage/PokemonImage";
+import PokemonInfo from "../../components/PokemonInfo/PokemonInfo";
+import EvolutionChart from "../../components/EvolutionChart/EvolutionChart";
+import PokemonVersion from "../../components/PokemonVersion/PokemonVersion";
+import PokemonWeakness from "../../components/PokemonWeakness/PokemonWeakness";
+import { getTypeArray } from "../../utils/formatters";
+import BackToHome from "../../components/BackToHome/BackToHome";
 import usePokemonDetails from "../../hooks/usePokemonDetails";
 
-const Pokemon = () => {
+const PokemonDetails = () => {
   const { name } = useParams();
   const { pokemon, loading, pageLoaded } = usePokemonDetails(name);
 
@@ -36,30 +37,30 @@ const Pokemon = () => {
   return (
     <div className="pokemon-page">
       <Pagination pokemonItem={pokemon} />
-      <Heading pokemonItem={pokemon} />
+      <PokemonTitle pokemonItem={pokemon} />
 
       <div className="pokemon-container-div">
         <div className="pokemon-container">
           <div className="main-contents">
             <div className="left-column">
-              <Image
+              <PokemonImage
                 src={
                   pokemon.sprites?.other?.["official-artwork"]?.front_default
                 }
               />
-              <Stats pokemonItem={pokemon} />
+              <PokemonStats pokemonItem={pokemon} />
             </div>
             <div className="right-column">
               <div className="versions-and-info-container">
-                <Versions blue={blue} red={red} />
-                <Info pokemonItem={pokemon} />
+                <PokemonVersion blue={blue} red={red} />
+                <PokemonInfo pokemonItem={pokemon} />
               </div>
               <div className="type-and-weaknesses-container">
                 <div className="type-div">
                   <h3 className="type-h3">Type</h3>
-                  <Type typesArray={typesArray} isLarge={true} />
+                  <PokemonType typesArray={typesArray} isLarge={true} />
                 </div>
-                <Weakness
+                <PokemonWeakness
                   damageStuff1={damageStuff1}
                   damageStuff2={damageStuff2}
                   isLarge={true}
@@ -68,12 +69,12 @@ const Pokemon = () => {
             </div>
           </div>
 
-          <Evolution pokemonItem={pokemon} />
-          <Explore />
+          <EvolutionChart pokemonItem={pokemon} />
+          <BackToHome />
         </div>
       </div>
     </div>
   );
 };
 
-export default Pokemon;
+export default PokemonDetails; 

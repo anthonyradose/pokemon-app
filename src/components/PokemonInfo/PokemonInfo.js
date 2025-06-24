@@ -1,9 +1,9 @@
 import React from "react";
 import MaleIcon from "@mui/icons-material/Male";
 import FemaleIcon from "@mui/icons-material/Female";
-import "../../pages/Pokemon/pokemon.css";
+import "../../pages/PokemonDetails/PokemonDetails.css";
 
-const Info = ({ pokemonItem }) => {
+const PokemonInfo = ({ pokemonItem }) => {
   let height = pokemonItem.height;
   let weight = pokemonItem.weight;
   let category = pokemonItem.category.replace("Pokémon", "");
@@ -68,4 +68,4 @@ const Info = ({ pokemonItem }) => {
   );
 };
 
-export default Info;
+export default PokemonInfo;

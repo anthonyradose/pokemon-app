@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./PokemonCard.css";
-import { formatName, formatNumber, getTypeArray } from "../../utils/utils";
-import Type from "../../components/Type/Type";
+import { formatName, formatNumber, getTypeArray } from "../../utils/formatters";
+import PokemonType from "../PokemonType/PokemonType";
 
 const PokemonCard = ({ pokemonItem }) => {
   let navigate = useNavigate();
@@ -28,7 +28,7 @@ const PokemonCard = ({ pokemonItem }) => {
         <div className="pokemonId">{formatNumber(pokemonItem.id)}</div>
         <div className="pokemonName">{name}</div>
         <div className="cardTypeContainer">
-          <Type isLarge={false} typesArray={typesArray} />
+          <PokemonType isLarge={false} typesArray={typesArray} />
         </div>
       </div>
     </div>

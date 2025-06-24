@@ -2,7 +2,7 @@ import P from "./pokedexClient";
 
 const pokemonCache = new Map();
 
-const getPokemonStuff = async (pokemon) => {
+const getCachedPokemonDetails = async (pokemon) => {
   if (pokemonCache.has(pokemon.name)) {
     return pokemonCache.get(pokemon.name);
   } else {
@@ -13,5 +13,5 @@ const getPokemonStuff = async (pokemon) => {
 };
 
 export {
-  getPokemonStuff
+  getCachedPokemonDetails
 };

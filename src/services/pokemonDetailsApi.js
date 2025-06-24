@@ -68,4 +68,4 @@ const getDetailedPokemonDetails = async (name) => {
 
 export {
   getDetailedPokemonDetails,
-};
+}; 
