@@ -13,40 +13,41 @@ const Pagination = ({ pokemonItem }) => {
   const nextId = formatNumber(pokemonItem.nextPokemon.id);
 
   return (
-    <section className=" pagination section pokedex-pokemon-header">
+    <nav className="pagination section pokedex-pokemon-header" role="navigation" aria-label="Pokémon navigation">
       <div className="pokedex-pokemon-pagination">
         <div className="pagination-container">
-          <div
+          <button
             className="previous-container"
             onClick={() => navigate(`/${pokemonItem.prevPokemon.name}`)}
+            type="button"
+            aria-label={`Go to previous Pokémon: ${previous}`}
           >
             <div className="previous">
               <div className="left">
-                <ArrowCircleLeftIcon></ArrowCircleLeftIcon>
+                <ArrowCircleLeftIcon aria-hidden="true"></ArrowCircleLeftIcon>
                 <span className="pokemon-pagination-number">{prevId}</span>
                 <span className="pokemon-pagination-name">{previous}</span>
               </div>
             </div>
-          </div>
+          </button>
 
-          <div
+          <button
             className="next-container"
             onClick={() => navigate(`/${pokemonItem.nextPokemon.name}`)}
+            type="button"
+            aria-label={`Go to next Pokémon: ${next}`}
           >
-            <div
-              className="next"
-              onClick={() => navigate(`/${pokemonItem.nextPokemon.name}`)}
-            >
+            <div className="next">
               <div className="right">
                 <span className="pokemon-pagination-name">{next}</span>
                 <span className="pokemon-pagination-number">{nextId}</span>
-                <ArrowCircleRightIcon></ArrowCircleRightIcon>
+                <ArrowCircleRightIcon aria-hidden="true"></ArrowCircleRightIcon>
               </div>
             </div>
-          </div>
+          </button>
         </div>
       </div>
-    </section>
+    </nav>
   );
 };
 

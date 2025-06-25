@@ -7,7 +7,7 @@ const PokemonTitle = ({ pokemonItem }) => {
   const number = formatNumber(pokemonItem.id);
   return (
     <div className="pokemon-heading-div">
-      <span className="pokemon-heading-name">{name}</span>
+      <h1 className="pokemon-heading-name">{name}</h1>
       <span className="pokemon-heading-id">{number}</span>
     </div>
   );

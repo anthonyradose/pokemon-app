@@ -8,19 +8,21 @@ import "./styles/App.css";
 const App = () => {
   return (
     <div className="appContentContainer">
-      <Router basename="/pokemon-app/">
-      <header>
-        <Nav />
+      <Router basename="/pokemon-app">
+        <header role="banner">
+          <Nav />
         </header>
-        <main>
-        <div className="appRoutesContainer">
-          <Routes>
-            <Route path="/" element={<PokemonList />} />
-            <Route path="/:name" element={<PokemonDetails />} />
-          </Routes>
-        </div>
+        <main role="main">
+          <div className="appRoutesContainer">
+            <Routes>
+              <Route path="/" element={<PokemonList />} />
+              <Route path="/:name" element={<PokemonDetails />} />
+            </Routes>
+          </div>
         </main>
-        {/* <footer></footer> */}
+        <footer role="contentinfo">
+          <p>&copy; 2025 Pokédex App - Pokémon data provided by PokéAPI</p>
+        </footer>
       </Router>
     </div>
   );

@@ -5,7 +5,7 @@ import P from "../services/pokedexClient";
 const useSearch = () => {
   const [pokemon, setPokemon] = useState([]);
   const [name, setName] = useState("");
-  const [foundPokemon, setFoundPokemon] = useState("");
+  const [foundPokemon, setFoundPokemon] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const useSearch = () => {
 
   const handlePokemonSelect = (poke) => {
     setName(poke.charAt(0).toUpperCase() + poke.slice(1));
-    setFoundPokemon("");
+    setFoundPokemon([]);
   };
 
   const handleSearch = () => {
@@ -43,7 +43,7 @@ const useSearch = () => {
   };
 
   const clearResults = () => {
-    setFoundPokemon("");
+    setFoundPokemon([]);
   };
 
   return {

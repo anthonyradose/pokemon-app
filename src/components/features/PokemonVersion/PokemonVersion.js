@@ -14,20 +14,22 @@ const PokemonVersion = ({ blue, red }) => {
         <div className="versions-heading">
           Versions:{" "}
           <span className="version-span">
-            <CatchingPokemonIcon
+            <button
               className="version-blue"
               onClick={toggleToBlue}
+              type="button"
             >
-              Blue
-            </CatchingPokemonIcon>
+              <CatchingPokemonIcon />
+            </button>
           </span>
           <span className="version-span">
-            <CatchingPokemonIcon
+            <button
               className="version-red"
               onClick={toggleToRed}
+              type="button"
             >
-              Red
-            </CatchingPokemonIcon>
+              <CatchingPokemonIcon />
+            </button>
           </span>
         </div>
       </div>

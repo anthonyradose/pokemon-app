@@ -41,12 +41,12 @@ const PokemonStats = ({ pokemonItem }) => {
           <ul className="stat-ul-parent">
             {numsArray.map((num, index) => {
               return (
-                <div key={index} className="stat-ul-div">
+                <li key={index} className="stat-ul-div">
                   <StatBar
                     numOfBarsColored={num}
                     statName={statsMapped[index]}
                   />
-                </div>
+                </li>
               );
             })}
           </ul>

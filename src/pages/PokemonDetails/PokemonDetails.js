@@ -35,13 +35,13 @@ const PokemonDetails = () => {
   const typesArray = getTypeArray(pokemon.types);
 
   return (
-    <div className="pokemon-page">
+    <article className="pokemon-page" role="main">
       <Pagination pokemonItem={pokemon} />
       <PokemonTitle pokemonItem={pokemon} />
 
       <div className="pokemon-container-div">
         <div className="pokemon-container">
-          <div className="main-contents">
+          <section className="main-contents">
             <div className="left-column">
               <PokemonImage
                 src={
@@ -51,11 +51,11 @@ const PokemonDetails = () => {
               <PokemonStats pokemonItem={pokemon} />
             </div>
             <div className="right-column">
-              <div className="versions-and-info-container">
+              <section className="versions-and-info-container">
                 <PokemonVersion blue={blue} red={red} />
                 <PokemonInfo pokemonItem={pokemon} />
-              </div>
-              <div className="type-and-weaknesses-container">
+              </section>
+              <section className="type-and-weaknesses-container">
                 <div className="type-div">
                   <h3 className="type-h3">Type</h3>
                   <PokemonType typesArray={typesArray} isLarge={true} />
@@ -65,15 +65,15 @@ const PokemonDetails = () => {
                   damageStuff2={damageStuff2}
                   isLarge={true}
                 />
-              </div>
+              </section>
             </div>
-          </div>
+          </section>
 
           <EvolutionChart pokemonItem={pokemon} />
           <BackToHome />
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
