@@ -34,7 +34,9 @@ const useSearch = () => {
   };
 
   const handlePokemonSelect = (poke) => {
-    setName(poke.charAt(0).toUpperCase() + poke.slice(1));
+    if (poke && typeof poke === 'string') {
+      setName(poke.charAt(0).toUpperCase() + poke.slice(1));
+    }
     setFoundPokemon([]);
   };
 

@@ -53,7 +53,8 @@
 .search-input-container-div {
   width: 80%;
 }
-.pokemon-list > div {
+.pokemon-list > div,
+.pokemon-list > ul {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,6 +65,25 @@
   width: 68%;
   color: #999;
   z-index: 3;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  max-height: 150px;
+  background: white;
+  overflow: hidden;
+  width: 68%;
+  color: #999;
+  z-index: 3;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* 900!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -99,7 +119,8 @@
   .search-input-container-div {
     width: 100%;
   }
-  .pokemon-list > div {
+  .pokemon-list > div,
+  .pokemon-list > ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,6 +131,12 @@
     width: 30.5%;
     color: #999;
     z-index: 3;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .search-results-list {
+    width: 30.5%;
   }
   .green-banner {
     width: 100%;
@@ -133,7 +160,12 @@
   .search-div2 {
     margin-right: 18px;
   }
-  .pokemon-list > div {
+  .pokemon-list > div,
+  .pokemon-list > ul {
+    width: 30%;
+    max-width: 300px;
+  }
+  .search-results-list {
     width: 30%;
     max-width: 300px;
   }
@@ -156,11 +188,20 @@ p.jim {
   margin: 10px;
   padding: 0;
 }
-.jimmy {
+.search-result-item {
   width: 100%;
+  cursor: pointer;
+  padding: 8px 12px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-family: Exo;
+  border: none;
+  background: none;
+  text-align: left;
 }
-.jimmy:hover {
-  background-color: #1b53ba;
+
+.search-result-item:hover {
+  background-color: #f0f0f0;
 }
 .search-input-container {
   display: flex;

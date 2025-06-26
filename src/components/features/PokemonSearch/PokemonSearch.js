@@ -15,7 +15,7 @@ const PokemonSearch = () => {
   } = useSearch();
 
   return (
-    <div className="search-container">
+    <section className="search-container" aria-label="Pokémon search">
       <div className="conditional-search-div">
         <div className="search-div1">
           <div className="search-input-container-div">
@@ -26,44 +26,55 @@ const PokemonSearch = () => {
                 onChange={filter}
                 className="search-input"
                 onClick={filter}
+                aria-label="Search for Pokémon by name or number"
+                aria-describedby="search-instructions"
               />
 
               <button
                 className="button-result"
                 onClick={handleSearch}
+                type="button"
+                aria-label="Search"
               >
-                <SearchIcon></SearchIcon>
+                <SearchIcon aria-hidden="true" />
               </button>
             </div>
-            <div className="pokemon-list">
-              {foundPokemon && foundPokemon.length > 0 ? (
-                <OutsideClickHandler
-                  className="pokedexResultsDiv"
-                  onOutsideClick={clearResults}
-                >
-                  {foundPokemon?.map((poke) => (
-                    <div
-                      className="jimmy"
-                      key={poke.name}
-                      onClick={() => handlePokemonSelect(poke.name)}
-                    >
-                      {poke.name}
-                    </div>
-                  ))}
-                </OutsideClickHandler>
-              ) : null}
-            </div>
+            {foundPokemon && foundPokemon.length > 0 && (
+              <OutsideClickHandler onOutsideClick={clearResults}>
+                <div className="pokemon-list">
+                  <ul className="search-results-list" role="listbox">
+                    {foundPokemon?.map((poke, index) => (
+                      <li
+                        className="search-result-item"
+                        key={`${poke}-${index}`}
+                        onClick={() => handlePokemonSelect(poke)}
+                        onKeyDown={(event) => {
+                          if (event.key === 'Enter') {
+                            handlePokemonSelect(poke);
+                          }
+                        }}
+                        tabIndex={0}
+                        role="option"
+                        aria-label={`Select ${poke}`}
+                      >
+                        {poke}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </OutsideClickHandler>
+            )}
           </div>
         </div>
         <div className="search-div2">
           <div className="green-banner">
-            <h3 className="green-bannerh3">
+            <h3 id="search-instructions" className="green-bannerh3">
               Search for a Pokémon by name or using its National Pokédex number.
             </h3>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
