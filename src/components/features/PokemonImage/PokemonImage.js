@@ -4,7 +4,7 @@ import React from "react";
 const PokemonImage = ({ src, name }) => {
   return (
     <div className="image-div">
-      <img src={src} alt={name} className="pokemon-image" />
+      <img src={src} alt={`${name} official artwork`} className="pokemon-image" />
     </div>
   );
 };

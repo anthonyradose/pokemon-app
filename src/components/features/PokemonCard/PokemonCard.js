@@ -12,26 +12,27 @@ const PokemonCard = ({ pokemonItem }) => {
   const typesArray = getTypeArray(pokemonItem.types);
 
   return (
-    <div
+    <button
       className="pokemonCardContainer"
-      key={pokemonItem.name}
       onClick={() => navigate(`/${pokemonItem.name}`)}
+      type="button"
+      aria-label={`View ${name} details`}
     >
       {pokemonImage && (
         <img
           className="pokemonImage"
-          alt={pokemonItem.name}
+          alt={`${name} official artwork`}
           src={pokemonImage}
         />
       )}
       <div className="copyContainer">
-        <div className="pokemonId">{formatNumber(pokemonItem.id)}</div>
-        <div className="pokemonName">{name}</div>
-        <div className="cardTypeContainer">
+        <span className="pokemonId" aria-label="Pokémon number">{formatNumber(pokemonItem.id)}</span>
+        <h3 className="pokemonName">{name}</h3>
+        <div className="cardTypeContainer" aria-label="Pokémon types">
           <PokemonType isLarge={false} typesArray={typesArray} />
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 

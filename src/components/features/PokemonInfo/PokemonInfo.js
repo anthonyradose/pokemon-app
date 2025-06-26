@@ -8,8 +8,8 @@ const PokemonInfo = ({ pokemonItem }) => {
   let weight = pokemonItem.weight;
   let category = pokemonItem.category.replace("Pokémon", "");
 
-  const abilities = pokemonItem.abilities?.map(({ ability }) => (
-    <span className="info-value" id="info-abilities">
+  const abilities = pokemonItem.abilities?.map(({ ability }, index) => (
+    <span key={ability.name} className="info-value info-abilities">
       {ability?.name.replaceAll("-", " ")}
     </span>
   ));
@@ -19,7 +19,7 @@ const PokemonInfo = ({ pokemonItem }) => {
   };
 
   return (
-    <div className="info-div" height={200} width={400}>
+    <section className="info-div" aria-label="Pokémon information">
       <div className="info-ul-div1">
         <ul className="info-ul1">
           <li className="info-li">
@@ -32,17 +32,15 @@ const PokemonInfo = ({ pokemonItem }) => {
           </li>
           <li className="info-li">
             <span className="info-label">Gender</span>
-            <div className="info-gender-div">
+            <div className="info-gender-div" aria-label="Gender options">
               {pokemonItem.canBeMale ? (
-                <span className="info-value">
-                  {" "}
-                  <MaleIcon className="malePokemon"></MaleIcon>
+                <span className="info-value" aria-label="Can be male">
+                  <MaleIcon className="malePokemon" aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.canBeFemale ? (
-                <span className="info-value">
-                  {" "}
-                  <FemaleIcon className="femalePokemon"></FemaleIcon>
+                <span className="info-value" aria-label="Can be female">
+                  <FemaleIcon className="femalePokemon" aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.unknown ? (
@@ -60,11 +58,13 @@ const PokemonInfo = ({ pokemonItem }) => {
           </li>
           <li className="info-li">
             <span className="info-label">Abilities</span>
-            {abilities}
+            <div aria-label="Pokémon abilities">
+              {abilities}
+            </div>
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 
