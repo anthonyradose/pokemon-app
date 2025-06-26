@@ -1,21 +1,21 @@
 body {
   margin: 0%;
-  background-color: white;
-  overflow-x: hidden;
-}
-header{
-  width: 100%;
-}
-.appContentContainer {
   background-color: #FF0000;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
-.appRoutesContainer {
+header{
+  width: 100%;
+}
+
+/* Apply routes container styles to main elements */
+main {
   display: flex;
   max-width: 1280px;
   width: 100%;
@@ -30,9 +30,11 @@ header{
   color: #EDC20C;
   font-size: 3rem;
 }
+
 .titleContainer{
   background-color: #FF0000;
 }
+
 @font-face {
   font-family: "Pokemon";
   src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");

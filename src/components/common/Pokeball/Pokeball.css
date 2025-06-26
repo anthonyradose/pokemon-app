@@ -38,3 +38,16 @@
   border: 1px solid #36454f;
   background-image: radial-gradient(#36454f 50%, white 50%);
 }
+
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}

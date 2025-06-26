@@ -20,29 +20,39 @@ const PokemonList = () => {
 
   // Render loading indicator if data is being fetched
   if (loading) {
-    return <Pokeball />; // Show loading component while data is loading
+    return (
+      <div className="loading-screen">
+        <Pokeball />
+      </div>
+    );
   }
 
   // Render the component
   return (
-    <div className="pokedexContainer"> {/* Main container for the PokemonList */}
-      <div className="titleContainer"> {/* Title section */}
-        <h1 className="titleH1">Pokédex</h1> {/* Main title */}
+    <main className="pokedexContainer" role="main" aria-label="Pokédex">
+      <div className="titleContainer">
+        <h1 className="titleH1">Pokédex</h1>
       </div>
-      <PokemonSearch pokemonItem={pokemon} /> {/* Search component for filtering Pokemon */}
-      <div className="filtersContainer"> {/* Filter buttons and sorting options */}
+      
+      <PokemonSearch pokemonItem={pokemon} />
+      
+      <div className="filtersContainer" role="toolbar" aria-label="Pokémon filters">
         <button
-          className="randomizer" // Button to get random Pokemon
+          className="randomizer"
           type="button"
-          alt="Surprise me!"
-          onClick={handleGetRandomPokemon} // Event handler for random Pokemon
+          aria-label="Get random Pokémon"
+          onClick={handleGetRandomPokemon}
         >
-          <LoopRoundedIcon /> {/* Randomization icon */}
-          Surprise Me! {/* Button text */}
+          <LoopRoundedIcon aria-hidden="true" />
+          Surprise Me!
         </button>
-        <div className="selectWrapper"> {/* Wrapper for the sort select input */}
-          <select id="sortOrder" onChange={handleSelectChange} value={selectedSortOption}>
-            {/* Dropdown for sorting options */}
+        <div className="selectWrapper">
+          <select 
+            id="sortOrder" 
+            onChange={handleSelectChange} 
+            value={selectedSortOption}
+            aria-label="Sort Pokémon"
+          >
             <option value="numberAsc">Lowest Number (First)</option>
             <option value="numberDesc">Highest Number (First)</option>
             <option value="nameAsc">A-Z</option>
@@ -50,26 +60,30 @@ const PokemonList = () => {
           </select>
         </div>
       </div>
-      <div className="pokedexResultsContainer"> {/* Container for displaying Pokemon results */}
-        {pokemon?.map((poke) => ( // Map through the Pokemon array
-          <PokemonCard pokemonItem={poke} key={poke.name} /> // Render a Card for each Pokemon
+      
+      <div className="pokedexResultsContainer">
+        {pokemon?.map((poke) => (
+          <PokemonCard pokemonItem={poke} key={poke.name} />
         ))}
       </div>
-      <div className="load-more-button-container"> {/* Container for load more buttons */}
+      
+      <div className="load-more-button-container">
         <button
           className="load-more-button"
-          onClick={handleLoadMore} // Event handler for loading more Pokemon
+          onClick={handleLoadMore}
+          aria-label="Load more Pokémon"
         >
           Load More Pokémon
         </button>
         <button
           className="load-all-button"
-          onClick={handleGetAllPokemon} // Event handler for loading all Pokemon
+          onClick={handleGetAllPokemon}
+          aria-label="Load all Pokémon"
         >
           Load All Pokémon
         </button>
       </div>
-    </div>
+    </main>
   );
 };
 

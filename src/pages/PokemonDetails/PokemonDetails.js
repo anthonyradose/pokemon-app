@@ -20,7 +20,11 @@ const PokemonDetails = () => {
   const { pokemon, loading, pageLoaded } = usePokemonDetails(name);
 
   if (loading && !pageLoaded) {
-    return <Pokeball />;
+    return (
+      <div className="loading-screen">
+        <Pokeball />
+      </div>
+    );
   }
 
   if (!pokemon) {
@@ -35,29 +39,39 @@ const PokemonDetails = () => {
   const typesArray = getTypeArray(pokemon.types);
 
   return (
-    <article className="pokemon-page" role="main">
+    <main className="pokemon-page" role="main" aria-label={`${pokemon.name} details`}>
       <Pagination pokemonItem={pokemon} />
+      
       <PokemonTitle pokemonItem={pokemon} />
 
       <div className="pokemon-container-div">
         <div className="pokemon-container">
-          <section className="main-contents">
-            <div className="left-column">
-              <PokemonImage
-                src={
-                  pokemon.sprites?.other?.["official-artwork"]?.front_default
-                }
-              />
+          <section className="main-contents" aria-labelledby="pokemon-main-content">
+            <h2 id="pokemon-main-content" className="sr-only">Pokémon Information</h2>
+            
+            <div className="left-column" role="complementary" aria-label="Pokémon visual information">
+              <figure aria-label={`${pokemon.name} official artwork`}>
+                <PokemonImage
+                  src={
+                    pokemon.sprites?.other?.["official-artwork"]?.front_default
+                  }
+                  alt={`Official artwork of ${pokemon.name}`}
+                />
+              </figure>
               <PokemonStats pokemonItem={pokemon} />
             </div>
-            <div className="right-column">
-              <section className="versions-and-info-container">
+            
+            <div className="right-column" role="complementary" aria-label="Pokémon details and characteristics">
+              <section className="versions-and-info-container" aria-labelledby="pokemon-versions-info">
+                <h3 id="pokemon-versions-info" className="sr-only">Versions and Information</h3>
                 <PokemonVersion blue={blue} red={red} />
                 <PokemonInfo pokemonItem={pokemon} />
               </section>
-              <section className="type-and-weaknesses-container">
+              
+              <section className="type-and-weaknesses-container" aria-labelledby="pokemon-type-weaknesses">
+                <h3 id="pokemon-type-weaknesses" className="sr-only">Type and Weaknesses</h3>
                 <div className="type-div">
-                  <h3 className="type-h3">Type</h3>
+                  <h4 className="type-h3">Type</h4>
                   <PokemonType typesArray={typesArray} isLarge={true} />
                 </div>
                 <PokemonWeakness
@@ -69,11 +83,15 @@ const PokemonDetails = () => {
             </div>
           </section>
 
-          <EvolutionChart pokemonItem={pokemon} />
+          <section aria-labelledby="evolution-chart">
+            <h2 id="evolution-chart" className="sr-only">Evolution Chart</h2>
+            <EvolutionChart pokemonItem={pokemon} />
+          </section>
+          
           <BackToHome />
         </div>
       </div>
-    </article>
+    </main>
   );
 };
 
