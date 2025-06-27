@@ -44,12 +44,12 @@ const PokemonDetails = () => {
       
       <PokemonTitle pokemonItem={pokemon} />
 
-      <div className="pokemon-container-div">
-        <div className="pokemon-container">
-          <section className="main-contents" aria-labelledby="pokemon-main-content">
-            <h2 id="pokemon-main-content" className="sr-only">Pokémon Information</h2>
+      <div className="pokemon-details-layout">
+        <div className="pokemon-details-container">
+          <section className="pokemon-details-main" aria-labelledby="pokemon-details-main-content">
+            <h2 id="pokemon-details-main-content" className="sr-only">Pokémon Information</h2>
             
-            <div className="left-column" role="complementary" aria-label="Pokémon visual information">
+            <div className="pokemon-visual-section" role="complementary" aria-label="Pokémon visual information">
               <figure aria-label={`${pokemon.name} official artwork`}>
                 <PokemonImage
                   src={
@@ -61,17 +61,17 @@ const PokemonDetails = () => {
               <PokemonStats pokemonItem={pokemon} />
             </div>
             
-            <div className="right-column" role="complementary" aria-label="Pokémon details and characteristics">
-              <section className="versions-and-info-container" aria-labelledby="pokemon-versions-info">
-                <h3 id="pokemon-versions-info" className="sr-only">Versions and Information</h3>
+            <div className="pokemon-info-section" role="complementary" aria-label="Pokémon details and characteristics">
+              <section className="pokemon-meta-section" aria-labelledby="pokemon-details-versions-info">
+                <h3 id="pokemon-details-versions-info" className="sr-only">Versions and Information</h3>
                 <PokemonVersion blue={blue} red={red} />
                 <PokemonInfo pokemonItem={pokemon} />
               </section>
               
-              <section className="type-and-weaknesses-container" aria-labelledby="pokemon-type-weaknesses">
-                <h3 id="pokemon-type-weaknesses" className="sr-only">Type and Weaknesses</h3>
-                <div className="type-div">
-                  <h4 className="type-h3">Type</h4>
+              <section className="pokemon-battle-info" aria-labelledby="pokemon-details-type-weaknesses">
+                <h3 id="pokemon-details-type-weaknesses" className="sr-only">Type and Weaknesses</h3>
+                <div className="pokemon-type-div">
+                  <h4 className="pokemon-type-heading">Type</h4>
                   <PokemonType typesArray={typesArray} isLarge={true} />
                 </div>
                 <PokemonWeakness
@@ -83,8 +83,8 @@ const PokemonDetails = () => {
             </div>
           </section>
 
-          <section aria-labelledby="evolution-chart">
-            <h2 id="evolution-chart" className="sr-only">Evolution Chart</h2>
+          <section aria-labelledby="pokemon-evolution-chart">
+            <h2 id="pokemon-evolution-chart" className="sr-only">Evolution Chart</h2>
             <EvolutionChart pokemonItem={pokemon} />
           </section>
           

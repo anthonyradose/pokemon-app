@@ -22,7 +22,7 @@ Nav {
   justify-content: center;
   cursor: pointer;
 }
-.big-light-outer {
+.pokeball-outer-ring {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -31,7 +31,7 @@ Nav {
   transition: box-shadow 0.3s ease-in-out;
 }
 
-.big-light-inner {
+.pokeball-inner-ring {
   height: 45px;
   width: 45px;
   border-radius: 50%;
@@ -42,7 +42,7 @@ Nav {
 }
 
 /* Outer core */
-.light-core-outer {
+.pokeball-core-outer {
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -54,7 +54,7 @@ Nav {
 }
 
 /* Inner core */
-.light-core-inner {
+.pokeball-core-inner {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -66,7 +66,7 @@ Nav {
 }
 
 /* Small dot (reflection) */
-.big-dot {
+.pokeball-reflection {
   height: 10px;
   width: 10px;
   position: relative;
@@ -78,44 +78,44 @@ Nav {
 }
 
 /* 🔥 Hover effect: Applied to `.home` to light up everything inside */
-.home:hover .big-light-outer {
+.home:hover .pokeball-outer-ring {
   box-shadow: 0 0 20px 5px rgba(48, 158, 228, 0.7),
     0 0 50px 10px rgba(48, 158, 228, 0.5);
 }
 
-.home:hover .big-light-inner {
+.home:hover .pokeball-inner-ring {
   background-color: #50b0ff; /* Brighter blue */
 }
 
-.home:hover .light-core-outer {
+.home:hover .pokeball-core-outer {
   background-color: #2d86c0; /* Slightly brighter */
 }
 
-.home:hover .light-core-inner {
+.home:hover .pokeball-core-inner {
   background-color: #4ca2e0; /* More vibrant */
 }
 
-.home:hover .big-dot {
+.home:hover .pokeball-reflection {
   background-color: #fff; /* Light reflection effect */
 }
 
-a.nav-link {
+a.navigation-link {
   text-decoration: none;
   color: #464646;
 }
-a.nav-link:link {
+a.navigation-link:link {
   text-decoration: none;
   color: #464646;
 }
-a.nav-link:visited {
+a.navigation-link:visited {
   text-decoration: none;
   color: #464646;
 }
-a.nav-link:hover {
+a.navigation-link:hover {
   text-decoration: none;
   color: #464646;
 }
-a.nav-link:active {
+a.navigation-link:active {
   text-decoration: none;
   color: #464646;
 }
@@ -132,7 +132,7 @@ a > div {
   }
 }
 
-.nav-div {
+.navigation-tab {
   border-bottom: 5px solid;
   display: flex;
   justify-content: space-evenly;
@@ -140,7 +140,7 @@ a > div {
   flex-direction: column;
   height: 86px;
 }
-.nav-div-2point0 {
+.navigation-tab-alt {
   border-bottom: 5px solid;
   display: flex;
   justify-content: space-evenly;
@@ -149,7 +149,7 @@ a > div {
   height: 82px;
 }
 
-.navigation-menu {
+.navigation-bar {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -157,79 +157,79 @@ a > div {
   max-width: 895px;
 }
 @media (min-width: 900px) {
-  .navigation-menu {
+  .navigation-bar {
     width: 100%;
   }
 }
 
-#home-tab {
+.home-tab {
   border-color: #919191;
   transition: 100ms ease 100ms;
   cursor: pointer;
   border-radius: 0% 0% 0% 5%;
 }
-#home-tab-2point0 {
+.home-tab-2point0 {
   border-color: #919191;
   transition: 100ms ease 100ms;
   cursor: pointer;
   height: 82px;
 }
-#home-tab:hover {
+.home-tab:hover {
   background-color: #919191;
 }
-#pokedex-tab {
+.pokedex-tab {
   border-color: #e3350d;
   transition: 100ms ease 100ms;
   cursor: pointer;
 }
-#pokedex-tab:hover {
+.pokedex-tab:hover {
   background-color: #e3350d;
 }
-#games-tab {
+.games-tab {
   border-color: #ee6b2f;
   transition: 100ms ease 100ms;
   cursor: pointer;
 }
-#games-tab:hover {
+.games-tab:hover {
   background-color: #ee6b2f;
 }
-#trading-tab {
+.trading-tab {
   border-color: #e6bc2f;
   transition: 100ms ease 100ms;
   cursor: pointer;
 }
-#trading-tab:hover {
+.trading-tab:hover {
   background-color: #e6bc2f;
 }
-#tv-tab {
+.tv-tab {
   border-color: #4dad5b;
   transition: 100ms ease 100ms;
   cursor: pointer;
 }
-#tv-tab:hover {
+.tv-tab:hover {
   background-color: #4dad5b;
 }
-#play-tab {
+.play-tab {
   border-color: #30a7d7;
   transition: 100ms ease 100ms;
   cursor: pointer;
 }
-#play-tab:hover {
+.play-tab:hover {
   background-color: #30a7d7;
 }
-#news-tab {
+.news-tab {
   border-color: #1b53ba;
   transition: 100ms ease 100ms;
   cursor: pointer;
   border-radius: 0% 0% 5% 0%;
 }
-#news-tab-2point0 {
+.news-tab-2point0 {
   border-color: #1b53ba;
   transition: 100ms ease 100ms;
   cursor: pointer;
   height: 82px;
 }
-#news-tab:hover {
+.news-tab:hover {
   background-color: #1b53ba;
 }
 
@@ -241,10 +241,10 @@ a > div {
   height: 30px;
 }
 
-.nav-div:hover {
+.navigation-tab:hover {
   color: white;
 }
-.nav-div:hover > a > div {
+.navigation-tab:hover > a > div {
   color: white;
 }
 

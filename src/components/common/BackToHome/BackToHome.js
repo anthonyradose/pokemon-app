@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../../pages/PokemonDetails/PokemonDetails.css";
+import "./BackToHome.css";
 
 const BackToHome = () => {
   return (
-    <div className="explore-div">
-      <Link to="/" className="explore-link">
+    <div className="back-to-home-wrapper">
+      <Link to="/" className="back-to-home-link">
         Explore More Pokémon
       </Link>
     </div>

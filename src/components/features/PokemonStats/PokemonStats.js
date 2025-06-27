@@ -1,3 +1,4 @@
+import "./PokemonStats.css";
 import "../../../pages/PokemonDetails/PokemonDetails.css";
 import React from "react";
 
@@ -7,11 +8,11 @@ const StatBar = ({ numOfBarsColored, statName }) => {
   const lisArray = Array.from(new Array(15));
   const liMapped = lisArray.map((a, i) => {
     const changeColor = i < numThing ? "#30a7d7" : "white";
-    return <li key={i} className="stat-li" style={{ backgroundColor: changeColor }} />;
+    return <li key={i} className="stat-bar-segment" style={{ backgroundColor: changeColor }} />;
   });
   return (
     <div>
-      <ul className="bar-ul">{liMapped}</ul>
+      <ul className="stat-bar">{liMapped}</ul>
       {statsLabel}
     </div>
   );
@@ -31,17 +32,17 @@ const PokemonStats = ({ pokemonItem }) => {
       stats.stat.name.slice(1, 8).replace("-", " ") +
       stats.stat.name.charAt(8) +
       stats.stat.name.slice(9);
-    return <span key={index} className="stats-span">{statName}</span>;
+    return <span key={index} className="stat-label">{statName}</span>;
   });
   return (
-    <div id="stats-wrapper">
+    <div className="stats-wrapper">
       <div className="stats-div">
         <h3 className="stats-header">Stats</h3>
         <div className="stats-container">
-          <ul className="stat-ul-parent">
+          <ul className="stats-list">
             {numsArray.map((num, index) => {
               return (
-                <li key={index} className="stat-ul-div">
+                <li key={index} className="stat-item">
                   <StatBar
                     numOfBarsColored={num}
                     statName={statsMapped[index]}

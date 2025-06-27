@@ -29,16 +29,16 @@ const PokemonList = () => {
 
   // Render the component
   return (
-    <main className="pokedexContainer" role="main" aria-label="Pokédex">
-      <div className="titleContainer">
-        <h1 className="titleH1">Pokédex</h1>
+    <main className="pokedex-container" role="main" aria-label="Pokédex">
+      <div className="pokedex-title-container">
+        <h1 className="pokedex-title">Pokédex</h1>
       </div>
       
       <PokemonSearch pokemonItem={pokemon} />
       
-      <div className="filtersContainer" role="toolbar" aria-label="Pokémon filters">
+      <div className="pokedex-filters-container" role="toolbar" aria-label="Pokémon filters">
         <button
-          className="randomizer"
+          className="shuffle-pokemon-button"
           type="button"
           aria-label="Get random Pokémon"
           onClick={handleGetRandomPokemon}
@@ -46,9 +46,9 @@ const PokemonList = () => {
           <LoopRoundedIcon aria-hidden="true" />
           Surprise Me!
         </button>
-        <div className="selectWrapper">
+        <div className="pokedex-select-wrapper">
           <select 
-            id="sortOrder" 
+            className="pokedex-sort-order" 
             onChange={handleSelectChange} 
             value={selectedSortOption}
             aria-label="Sort Pokémon"
@@ -61,22 +61,22 @@ const PokemonList = () => {
         </div>
       </div>
       
-      <div className="pokedexResultsContainer">
+      <div className="pokedex-results-container">
         {pokemon?.map((poke) => (
           <PokemonCard pokemonItem={poke} key={poke.name} />
         ))}
       </div>
       
-      <div className="load-more-button-container">
+      <div className="pokedex-load-more-container">
         <button
-          className="load-more-button"
+          className="pokedex-load-more-button"
           onClick={handleLoadMore}
           aria-label="Load more Pokémon"
         >
           Load More Pokémon
         </button>
         <button
-          className="load-all-button"
+          className="pokedex-load-all-button"
           onClick={handleGetAllPokemon}
           aria-label="Load all Pokémon"
         >

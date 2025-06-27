@@ -3,12 +3,12 @@ import React from "react";
 
 const PokemonType = ({ typesArray, isLarge }) => {
   return (
-    <div className={isLarge ? "type-container-large" : "type-container-small"}>
+    <div className={isLarge ? "pokemon-type-container-large" : "pokemon-type-container-small"}>
       {typesArray?.map((item) => {
         return (
           <div
             className={
-              isLarge ? `types-card-large ${item}` : `types-card-small ${item}`
+              isLarge ? `pokemon-types-card-large ${item}` : `pokemon-types-card-small ${item}`
             }
             key={item}
           >

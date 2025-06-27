@@ -1,0 +1,20 @@
+.back-to-home-wrapper {
+  background-color: #ee6b2f;
+  color: #fff;
+  border-radius: 5px;
+  width: 25%;
+  cursor: pointer;
+  height: 50px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.back-to-home-link {
+  font-family: "Exo", arial, sans-serif;
+  font-weight: 500;
+  font-size: 105%;
+} 

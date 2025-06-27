@@ -1,4 +1,4 @@
-.pokeball-div {
+.pokeball-loader {
   position: fixed;
   border: 3px solid #36454f;
   border-radius: 50%;
@@ -18,7 +18,7 @@
     transform: rotate(360deg);
   }
 }
-.pokeball-div::before {
+.pokeball-loader::before {
   position: absolute;
   content: "";
   height: 1vw;
@@ -26,7 +26,7 @@
   background-color: #36454f;
   top: 50%;
 }
-.pokeball-div::after {
+.pokeball-loader::after {
   position: absolute;
   content: "";
   height: 5vw;

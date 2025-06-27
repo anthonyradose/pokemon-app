@@ -18,7 +18,7 @@
   max-width: 895px;
   margin: auto;
 }
-.search-div1 {
+.search-input-section {
   width: 100%;
   height: 50%;
   display: flex;
@@ -26,14 +26,14 @@
   align-items: center;
   justify-content: center;
 }
-.search-div2 {
+.search-results-section {
   width: 100%;
   height: 50%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
-.green-banner {
+.search-banner {
   background: #4dad5b;
   width: 80%;
   height: 70%;
@@ -45,7 +45,7 @@
   font-family: "Exo";
   overflow: auto;
 }
-.green-bannerh3 {
+.search-text {
   font-size: 120%;
   width: 90%;
   font-weight: 400;
@@ -53,8 +53,8 @@
 .search-input-container-div {
   width: 80%;
 }
-.pokemon-list > div,
-.pokemon-list > ul {
+.pokemon-search-list > div,
+.pokemon-search-list > ul {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +70,7 @@
   margin: 0;
 }
 
-.search-results-list {
+.pokemon-search-results-list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,13 +104,13 @@
     height: 100%;
     justify-content: space-between;
   }
-  .search-div1 {
+  .search-input-section {
     width: 40%;
     height: 100%;
     margin-left: 18px;
     align-items: unset;
   }
-  .search-div2 {
+  .search-results-section {
     width: 40%;
     height: 100%;
     margin-right: 18px;
@@ -119,8 +119,8 @@
   .search-input-container-div {
     width: 100%;
   }
-  .pokemon-list > div,
-  .pokemon-list > ul {
+  .pokemon-search-list > div,
+  .pokemon-search-list > ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,10 +135,10 @@
     padding: 0;
     margin: 0;
   }
-  .search-results-list {
+  .pokemon-search-results-list {
     width: 30.5%;
   }
-  .green-banner {
+  .search-banner {
     width: 100%;
     height: 50%;
   }
@@ -154,18 +154,18 @@
     /* width: 90%; */
     justify-content: space-between;
   }
-  .search-div1 {
+  .search-input-section {
     margin-left: 18px;
   }
-  .search-div2 {
+  .search-results-section {
     margin-right: 18px;
   }
-  .pokemon-list > div,
-  .pokemon-list > ul {
+  .pokemon-search-list > div,
+  .pokemon-search-list > ul {
     width: 30%;
     max-width: 300px;
   }
-  .search-results-list {
+  .pokemon-search-results-list {
     width: 30%;
     max-width: 300px;
   }
@@ -184,11 +184,7 @@
   font-weight: 100;
   color: white;
 }
-p.jim {
-  margin: 10px;
-  padding: 0;
-}
-.search-result-item {
+.pokemon-search-result-item {
   width: 100%;
   cursor: pointer;
   padding: 8px 12px;
@@ -200,7 +196,7 @@ p.jim {
   text-align: left;
 }
 
-.search-result-item:hover {
+.pokemon-search-result-item:hover {
   background-color: #f0f0f0;
 }
 .search-input-container {
@@ -218,13 +214,35 @@ p.jim {
   align-items: center;
 }
 
-.jim {
-  text-transform: capitalize;
-  font-size: 16px;
-  font-family: Exo;
-}
 .clicked-name {
   text-transform: capitalize;
   font-size: 16px;
   font-family: Exo;
+}
+
+.pokemon-search-results-section {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.pokemon-search-banner {
+  background: #4dad5b;
+  width: 80%;
+  height: 70%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Exo";
+  overflow: auto;
+}
+
+.pokemon-search-text {
+  font-size: 120%;
+  width: 90%;
+  font-weight: 400;
 }

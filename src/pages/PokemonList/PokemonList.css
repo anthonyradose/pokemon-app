@@ -11,7 +11,7 @@
   border: 0;
 }
 
-.pokedexResultsContainer {
+.pokedex-results-container {
   background-color: white;
   display: grid;
   max-width: 895px;
@@ -21,7 +21,7 @@
 }
 
 @media (min-width: 480px) {
-  .pokedexResultsContainer {
+  .pokedex-results-container {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -34,12 +34,12 @@
   }
 }
 
-.pokedexContainer {
+.pokedex-container {
   max-width: 1280px;
   width: 100%;
 }
 
-.titleContainer {
+.pokedex-title-container {
   display: flex;
   background-color: white;
   width: 90%;
@@ -48,7 +48,7 @@
   justify-content: center;
 }
 
-.titleH1 {
+.pokedex-title {
   font-family: Exo;
   font-weight: 100;
   font-size: 30px;
@@ -58,35 +58,48 @@
 }
 
 @media (min-width: 768px) {
-  .pokedexResultsContainer {
+  .pokedex-results-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (min-width: 1024px) {
-  .pokedexResultsContainer {
+  .pokedex-results-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-.filtersContainer {
+.pokedex-filters-container {
   display: flex;
   justify-content: space-around;
   background-color: white;
   padding-bottom: 28px;
   max-width: 895px;
-}
-
-.filtersContainer {
   padding-top: 32px;
   flex-direction: column;
-  display: flex;
   align-items: center;
   background-color: white;
   width: 90%;
   margin: auto;
 }
 
-.randomizer {
+.pokedex-select-wrapper {
+  width: 80%;
+}
+
+@media (min-width: 900px) {
+  .pokedex-filters-container {
+    justify-content: space-between;
+    padding: 32px 0 0;
+    flex-direction: unset;
+    align-items: unset;
+  }
+  .pokedex-select-wrapper {
+    width: 40%;
+    margin-right: 18px;
+  }
+}
+
+.shuffle-pokemon-button {
   background-color: #30a7d7;
   color: white;
   width: 80%;
@@ -103,38 +116,7 @@
   justify-content: center;
 }
 
-.selectWrapper {
-  width: 80%;
-}
-
-@media (min-width: 900px) {
-  .filtersContainer {
-    justify-content: space-between;
-    padding: 32px 0 0;
-    flex-direction: unset;
-    align-items: unset;
-  }
-  .selectWrapper {
-    width: 40%;
-    margin-right: 18px;
-  }
-  .randomizer {
-    background-color: #30a7d7;
-    color: white;
-    width: 40%;
-    font-size: 1.1rem;
-    font-family: "Exo";
-    font-weight: 500;
-    padding: 1.4%;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: 100ms ease-in;
-    margin-left: 18px;
-  }
-}
-
-.randomizer:hover {
+.shuffle-pokemon-button:hover {
   background-color: #1b82b1;
 }
 
@@ -149,7 +131,7 @@
   background-color: #616161;
 }
 
-#sortOrder {
+.pokedex-sort-order {
   background-color: #313131;
   font-family: Exo;
   color: white;
@@ -160,7 +142,7 @@
   font-weight: 500;
 }
 
-.load-more-button-container {
+.pokedex-load-more-container {
   display: flex;
   width: 90%;
   margin-left: auto;
@@ -173,7 +155,7 @@
   align-items: center;
   max-width: 895px;
 }
-.load-more-button {
+.pokedex-load-more-button {
   display: inline-block;
   width: 80%;
   font-size: 100%;
@@ -190,7 +172,7 @@
   background-color: #30a7d7;
   color: #fff;
 }
-.load-all-button {
+.pokedex-load-all-button {
   display: inline-block;
   width: 80%;
   font-size: 100%;
@@ -210,29 +192,29 @@
 }
 
 @media (min-width: 900px) {
-  .load-more-button-container {
+  .pokedex-load-more-container {
     flex-direction: unset;
     justify-content: space-between;
   }
-  .load-more-button {
+  .pokedex-load-more-button {
     width: 40%;
     margin-left: 18px;
   }
-  .load-all-button {
+  .pokedex-load-all-button {
     width: 40%;
     margin-right: 18px;
   }
 }
 
-.load-more-button:hover {
+.pokedex-load-more-button:hover {
   background-color: #1b82b1;
 }
 
-.load-all-button:hover {
+.pokedex-load-all-button:hover {
   background-color: #d85a1f;
 }
 
-.titleContainer{
+.pokedex-title-container{
   padding-top: 32px;
   padding-bottom: 32px;
 } 

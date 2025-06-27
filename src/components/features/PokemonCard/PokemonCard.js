@@ -13,22 +13,22 @@ const PokemonCard = ({ pokemonItem }) => {
 
   return (
     <button
-      className="pokemonCardContainer"
+      className="pokemon-card-container"
       onClick={() => navigate(`/${pokemonItem.name}`)}
       type="button"
       aria-label={`View ${name} details`}
     >
       {pokemonImage && (
         <img
-          className="pokemonImage"
+          className="pokemon-card-image"
           alt={`${name} official artwork`}
           src={pokemonImage}
         />
       )}
-      <div className="copyContainer">
-        <span className="pokemonId" aria-label="Pokémon number">{formatNumber(pokemonItem.id)}</span>
-        <h3 className="pokemonName">{name}</h3>
-        <div className="cardTypeContainer" aria-label="Pokémon types">
+      <div className="pokemon-card-copy">
+        <span className="pokemon-card-id" aria-label="Pokémon number">{formatNumber(pokemonItem.id)}</span>
+        <h3 className="pokemon-card-name">{name}</h3>
+        <div className="pokemon-card-type-container" aria-label="Pokémon types">
           <PokemonType isLarge={false} typesArray={typesArray} />
         </div>
       </div>

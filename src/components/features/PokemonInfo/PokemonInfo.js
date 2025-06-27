@@ -2,6 +2,7 @@ import React from "react";
 import MaleIcon from "@mui/icons-material/Male";
 import FemaleIcon from "@mui/icons-material/Female";
 import "../../../pages/PokemonDetails/PokemonDetails.css";
+import "./PokemonInfo.css";
 
 const PokemonInfo = ({ pokemonItem }) => {
   let height = pokemonItem.height;
@@ -20,44 +21,44 @@ const PokemonInfo = ({ pokemonItem }) => {
 
   return (
     <section className="info-div" aria-label="Pokémon information">
-      <div className="info-ul-div1">
-        <ul className="info-ul1">
-          <li className="info-li">
-            <span className="info-label">Height</span>
-            <span className="info-value">{decimalize(height)} m</span>
+      <div className="physical-traits">
+        <ul className="physical-traits-list">
+          <li className="trait-item">
+            <span className="trait-label">Height</span>
+            <span className="trait-value">{decimalize(height)} m</span>
           </li>
-          <li className="info-li">
-            <span className="info-label">Weight</span>
-            <span className="info-value">{decimalize(weight)} kg</span>
+          <li className="trait-item">
+            <span className="trait-label">Weight</span>
+            <span className="trait-value">{decimalize(weight)} kg</span>
           </li>
-          <li className="info-li">
-            <span className="info-label">Gender</span>
+          <li className="trait-item">
+            <span className="trait-label">Gender</span>
             <div className="info-gender-div" aria-label="Gender options">
               {pokemonItem.canBeMale ? (
-                <span className="info-value" aria-label="Can be male">
+                <span className="trait-value" aria-label="Can be male">
                   <MaleIcon className="malePokemon" aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.canBeFemale ? (
-                <span className="info-value" aria-label="Can be female">
+                <span className="trait-value" aria-label="Can be female">
                   <FemaleIcon className="femalePokemon" aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.unknown ? (
-                <span className="info-value">Unknown</span>
+                <span className="trait-value">Unknown</span>
               ) : null}
             </div>
           </li>
         </ul>
       </div>
-      <div className="info-ul-div2">
-        <ul className="info-ul2">
-          <li className="info-li">
-            <span className="info-label">Category</span>
-            <span className="info-value">{category}</span>
+      <div className="pokemon-category">
+        <ul className="category-traits-list">
+          <li className="trait-item">
+            <span className="trait-label">Category</span>
+            <span className="trait-value">{category}</span>
           </li>
-          <li className="info-li">
-            <span className="info-label">Abilities</span>
+          <li className="trait-item">
+            <span className="trait-label">Abilities</span>
             <div aria-label="Pokémon abilities">
               {abilities}
             </div>

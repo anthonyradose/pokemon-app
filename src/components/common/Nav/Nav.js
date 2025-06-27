@@ -4,17 +4,17 @@ import "./Nav.css";
 const Nav = () => {
   return (
     <nav role="navigation" aria-label="Main navigation">
-      <Link to="/" className="home" aria-label="Go to home page">
-        <div className="big-light-outer">
-          <div className="big-light-inner">
-            <div className="light-core-outer">
-              <div className="light-core-inner">
-                <div className="big-dot"></div>
+      <Link to="/" className="home-tab" aria-label="Go to home page">
+        <div className="pokeball-outer-ring">
+          <div className="pokeball-inner-ring">
+            <div className="pokeball-core-outer">
+              <div className="pokeball-core-inner">
+                <div className="pokeball-reflection"></div>
               </div>
             </div>
           </div>
         </div>
-        <div className="nav-link">Home</div>
+        <div className="navigation-link">Home</div>
       </Link>
     </nav>
   );

@@ -1,0 +1,62 @@
+.info-div {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #30a7d7;
+  padding-top: 3%;
+  margin-top: 32px;
+  justify-content: space-around;
+}
+.info-label {
+  color: white;
+  font-family: "Exo", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.info-value {
+  font-family: "Exo", arial, sans-serif;
+  color: #212121;
+  font-weight: 500;
+  font-size: 125%;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.info-gender-div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.malePokemon {
+  color: #1976d2;
+}
+.femalePokemon {
+  color: #d81b60;
+}
+.physical-traits,
+.pokemon-category {
+  margin-bottom: 16px;
+}
+.physical-traits-list,
+.category-traits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.trait-item {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.trait-label {
+  font-weight: 500;
+  color: #212121;
+  min-width: 80px;
+  font-family: "Roboto", sans-serif;
+}
+.trait-value {
+  color: #616161;
+  margin-left: 8px;
+  font-family: "Exo", sans-serif;
+} 

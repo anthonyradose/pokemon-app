@@ -4,6 +4,7 @@ import { formatName, formatNumber } from "../../../utils/formatters";
 import "../../../pages/PokemonDetails/PokemonDetails.css";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import './Pagination.css';
 
 const Pagination = ({ pokemonItem }) => {
   let navigate = useNavigate();
@@ -15,15 +16,15 @@ const Pagination = ({ pokemonItem }) => {
   return (
     <nav className="pagination section pokedex-pokemon-header" role="navigation" aria-label="Pokémon navigation">
       <div className="pokedex-pokemon-pagination">
-        <div className="pagination-container">
+        <div className="pokemon-pagination-controls">
           <button
-            className="previous-container"
+            className="pokemon-pagination-prev"
             onClick={() => navigate(`/${pokemonItem.prevPokemon.name}`)}
             type="button"
             aria-label={`Go to previous Pokémon: ${previous}`}
           >
-            <div className="previous">
-              <div className="left">
+            <div className="pokemon-pagination-prev-content">
+              <div className="pokemon-pagination-prev-details">
                 <ArrowCircleLeftIcon aria-hidden="true"></ArrowCircleLeftIcon>
                 <span className="pokemon-pagination-number">{prevId}</span>
                 <span className="pokemon-pagination-name">{previous}</span>
@@ -32,13 +33,13 @@ const Pagination = ({ pokemonItem }) => {
           </button>
 
           <button
-            className="next-container"
+            className="pokemon-pagination-next"
             onClick={() => navigate(`/${pokemonItem.nextPokemon.name}`)}
             type="button"
             aria-label={`Go to next Pokémon: ${next}`}
           >
-            <div className="next">
-              <div className="right">
+            <div className="pokemon-pagination-next-content">
+              <div className="pokemon-pagination-next-details">
                 <span className="pokemon-pagination-name">{next}</span>
                 <span className="pokemon-pagination-number">{nextId}</span>
                 <ArrowCircleRightIcon aria-hidden="true"></ArrowCircleRightIcon>

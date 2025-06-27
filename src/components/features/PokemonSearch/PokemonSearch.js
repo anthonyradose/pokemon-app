@@ -17,7 +17,7 @@ const PokemonSearch = () => {
   return (
     <section className="search-container" aria-label="Pokémon search">
       <div className="conditional-search-div">
-        <div className="search-div1">
+        <div className="search-input-section">
           <div className="search-input-container-div">
             <div className="search-input-container">
               <input
@@ -41,11 +41,11 @@ const PokemonSearch = () => {
             </div>
             {foundPokemon && foundPokemon.length > 0 && (
               <OutsideClickHandler onOutsideClick={clearResults}>
-                <div className="pokemon-list">
-                  <ul className="search-results-list" role="listbox">
+                <div className="pokemon-search-list">
+                  <ul className="pokemon-search-results-list" role="listbox">
                     {foundPokemon?.map((poke, index) => (
                       <li
-                        className="search-result-item"
+                        className="pokemon-search-result-item"
                         key={`${poke}-${index}`}
                         onClick={() => handlePokemonSelect(poke)}
                         onKeyDown={(event) => {
@@ -66,9 +66,9 @@ const PokemonSearch = () => {
             )}
           </div>
         </div>
-        <div className="search-div2">
-          <div className="green-banner">
-            <h3 id="search-instructions" className="green-bannerh3">
+        <div className="pokemon-search-results-section">
+          <div className="pokemon-search-banner">
+            <h3 id="search-instructions" className="pokemon-search-text">
               Search for a Pokémon by name or using its National Pokédex number.
             </h3>
           </div>
