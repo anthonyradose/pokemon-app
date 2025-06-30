@@ -1,7 +1,7 @@
 import React from "react";
-import PokemonList from "./pages/PokemonList/PokemonList";
-import PokemonDetails from "./pages/PokemonDetails/PokemonDetails";
-import Nav from "./components/common/Nav/Nav";
+import PokemonList from "./pages/PokemonList";
+import PokemonDetails from "./pages/PokemonDetails";
+import Nav from "./components/common/Nav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
 

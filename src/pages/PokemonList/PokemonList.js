@@ -1,9 +1,9 @@
 // Import necessary libraries and components
 import React from "react"; // Import React and hooks for state and effects
-import PokemonCard from "../../components/features/PokemonCard/PokemonCard"; // Import the PokemonCard component for displaying individual Pokemon
+import PokemonCard from "../../components/features/PokemonCard"; // Import the PokemonCard component for displaying individual Pokemon
 import "./PokemonList.css"; // Import styles for the PokemonList component
-import Pokeball from "../../components/common/Pokeball/Pokeball"; // Import a loading indicator component
-import PokemonSearch from "../../components/features/PokemonSearch/PokemonSearch"; // Import the search component for filtering Pokemon
+import Pokeball from "../../components/common/Pokeball"; // Import a loading indicator component
+import PokemonSearch from "../../components/features/PokemonSearch"; // Import the search component for filtering Pokemon
 import LoopRoundedIcon from "@mui/icons-material/LoopRounded"; // Import an icon for randomization button
 import usePokemonList from "../../hooks/usePokemonList"; // Import the custom hook
 import { SORT_LABELS } from "../../constants/sortOptions";

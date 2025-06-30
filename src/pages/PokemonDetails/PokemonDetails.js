@@ -1,18 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "./PokemonDetails.css";
-import Pokeball from "../../components/common/Pokeball/Pokeball";
-import PokemonTitle from "../../components/features/PokemonTitle/PokemonTitle";
-import PokemonType from "../../components/features/PokemonType/PokemonType";
-import Pagination from "../../components/common/Pagination/Pagination";
-import PokemonStats from "../../components/features/PokemonStats/PokemonStats";
-import PokemonImage from "../../components/features/PokemonImage/PokemonImage";
-import PokemonInfo from "../../components/features/PokemonInfo/PokemonInfo";
-import EvolutionChart from "../../components/features/EvolutionChart/EvolutionChart";
-import PokemonVersion from "../../components/features/PokemonVersion/PokemonVersion";
-import PokemonWeakness from "../../components/features/PokemonWeakness/PokemonWeakness";
+import Pokeball from "../../components/common/Pokeball";
+import PokemonTitle from "../../components/features/PokemonTitle";
+import PokemonType from "../../components/features/PokemonType";
+import Pagination from "../../components/common/Pagination";
+import PokemonStats from "../../components/features/PokemonStats";
+import PokemonImage from "../../components/features/PokemonImage";
+import PokemonInfo from "../../components/features/PokemonInfo";
+import EvolutionChart from "../../components/features/EvolutionChart";
+import PokemonVersion from "../../components/features/PokemonVersion";
+import PokemonWeakness from "../../components/features/PokemonWeakness";
 import { getTypeArray } from "../../utils/formatters";
-import BackToHome from "../../components/common/BackToHome/BackToHome";
+import BackToHome from "../../components/common/BackToHome";
 import usePokemonDetails from "../../hooks/usePokemonDetails";
 
 const PokemonDetails = () => {

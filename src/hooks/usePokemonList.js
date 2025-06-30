@@ -34,11 +34,9 @@ const usePokemonList = () => {
   };
 
   const handleLoadMore = async () => {
-    setLoading(true);
     const pokemonListWithDetails = await loadMore(start);
     setPokemon(pokemonListWithDetails);
     setStart(start + LOAD_MORE_COUNT);
-    setLoading(false);
   };
 
   const handleSelectChange = (event) => {
