@@ -1,4 +1,5 @@
 import P from "./pokedexClient";
+import { TOTAL_POKEMON } from "../constants/pokemon";
 
 const getDetailedPokemonDetails = async (name) => {
   const item = await P.getPokemonByName(name);
@@ -42,10 +43,10 @@ const getDetailedPokemonDetails = async (name) => {
   item.evoListItems = evoListItems;
 
   item.prevPokemon = await P.getPokemonByName(
-    item.id === 1 ? 898 : item.id - 1
+    item.id === 1 ? TOTAL_POKEMON : item.id - 1
   );
   item.nextPokemon = await P.getPokemonByName(
-    item.id === 898 ? 1 : item.id + 1
+    item.id === TOTAL_POKEMON ? 1 : item.id + 1
   );
 
   const item1 = await P.getGenderByName("male");

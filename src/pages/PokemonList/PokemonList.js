@@ -6,6 +6,7 @@ import Pokeball from "../../components/common/Pokeball/Pokeball"; // Import a lo
 import PokemonSearch from "../../components/features/PokemonSearch/PokemonSearch"; // Import the search component for filtering Pokemon
 import LoopRoundedIcon from "@mui/icons-material/LoopRounded"; // Import an icon for randomization button
 import usePokemonList from "../../hooks/usePokemonList"; // Import the custom hook
+import { SORT_LABELS } from "../../constants/sortOptions";
 
 const PokemonList = () => {
   const {
@@ -53,10 +54,10 @@ const PokemonList = () => {
             value={selectedSortOption}
             aria-label="Sort Pokémon"
           >
-            <option value="numberAsc">Lowest Number (First)</option>
-            <option value="numberDesc">Highest Number (First)</option>
-            <option value="nameAsc">A-Z</option>
-            <option value="nameDesc">Z-A</option>
+            <option value="numberAsc">{SORT_LABELS.numberAsc}</option>
+            <option value="numberDesc">{SORT_LABELS.numberDesc}</option>
+            <option value="nameAsc">{SORT_LABELS.nameAsc}</option>
+            <option value="nameDesc">{SORT_LABELS.nameDesc}</option>
           </select>
         </div>
       </div>

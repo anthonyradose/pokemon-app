@@ -1,13 +1,15 @@
 import "./PokemonStats.css";
 import "../../../pages/PokemonDetails/PokemonDetails.css";
 import React from "react";
+import { STAT_BAR_MAX } from "../../../constants/pokemon";
+import { COLORS } from "../../../constants/uiColors";
 
 const StatBar = ({ numOfBarsColored, statName }) => {
   const numThing = numOfBarsColored;
   const statsLabel = statName;
-  const lisArray = Array.from(new Array(15));
+  const lisArray = Array.from(new Array(STAT_BAR_MAX));
   const liMapped = lisArray.map((a, i) => {
-    const changeColor = i < numThing ? "#30a7d7" : "white";
+    const changeColor = i < numThing ? COLORS.STAT_BAR_ACTIVE : COLORS.STAT_BAR_INACTIVE;
     return <li key={i} className="stat-bar-segment" style={{ backgroundColor: changeColor }} />;
   });
   return (

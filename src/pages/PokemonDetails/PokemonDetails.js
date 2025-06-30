@@ -45,7 +45,7 @@ const PokemonDetails = () => {
       <PokemonTitle pokemonItem={pokemon} />
 
       <div className="pokemon-details-layout">
-        <div className="pokemon-details-container">
+        <article className="pokemon-details-container">
           <section className="pokemon-details-main" aria-labelledby="pokemon-details-main-content">
             <h2 id="pokemon-details-main-content" className="sr-only">Pokémon Information</h2>
             
@@ -89,7 +89,7 @@ const PokemonDetails = () => {
           </section>
           
           <BackToHome />
-        </div>
+        </article>
       </div>
     </main>
   );

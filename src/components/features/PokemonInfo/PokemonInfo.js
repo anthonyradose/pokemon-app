@@ -3,11 +3,13 @@ import MaleIcon from "@mui/icons-material/Male";
 import FemaleIcon from "@mui/icons-material/Female";
 import "../../../pages/PokemonDetails/PokemonDetails.css";
 import "./PokemonInfo.css";
+import { UNITS } from "../../../constants/measurementUnits";
+import { POKEMON_SUFFIX } from "../../../constants/pokemonNameRules";
 
 const PokemonInfo = ({ pokemonItem }) => {
   let height = pokemonItem.height;
   let weight = pokemonItem.weight;
-  let category = pokemonItem.category.replace("Pokémon", "");
+  let category = pokemonItem.category.replace(POKEMON_SUFFIX, "");
 
   const abilities = pokemonItem.abilities?.map(({ ability }, index) => (
     <span key={ability.name} className="info-value info-abilities">
@@ -25,11 +27,11 @@ const PokemonInfo = ({ pokemonItem }) => {
         <ul className="physical-traits-list">
           <li className="trait-item">
             <span className="trait-label">Height</span>
-            <span className="trait-value">{decimalize(height)} m</span>
+            <span className="trait-value">{decimalize(height)} {UNITS.HEIGHT}</span>
           </li>
           <li className="trait-item">
             <span className="trait-label">Weight</span>
-            <span className="trait-value">{decimalize(weight)} kg</span>
+            <span className="trait-value">{decimalize(weight)} {UNITS.WEIGHT}</span>
           </li>
           <li className="trait-item">
             <span className="trait-label">Gender</span>
