@@ -1,11 +1,11 @@
-import "./PokemonImage.css";
+import styles from "./PokemonImage.module.css";
 import "../../../pages/PokemonDetails/PokemonDetails.css";
 import React from "react";
 
 const PokemonImage = ({ src, name }) => {
   return (
-    <div className="pokemon-image-wrapper">
-      <img src={src} alt={`${name} official artwork`} className="pokemon-image" />
+    <div className={styles.pokemonImageWrapper}>
+      <img src={src} alt={`${name} official artwork`} className={styles.pokemonImage} />
     </div>
   );
 };

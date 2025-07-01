@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./PokemonCard.css";
+import styles from "./PokemonCard.module.css";
 import { formatName, formatNumber, getTypeArray } from "../../../utils/formatters";
 import PokemonType from "../PokemonType/PokemonType";
 
@@ -13,22 +13,22 @@ const PokemonCard = ({ pokemonItem }) => {
 
   return (
     <button
-      className="pokemon-card-container"
+      className={styles.pokemonCardContainer}
       onClick={() => navigate(`/${pokemonItem.name}`)}
       type="button"
       aria-label={`View ${name} details`}
     >
       {pokemonImage && (
         <img
-          className="pokemon-card-image"
+          className={styles.pokemonCardImage}
           alt={`${name} official artwork`}
           src={pokemonImage}
         />
       )}
-      <div className="pokemon-card-copy">
-        <span className="pokemon-card-id" aria-label="Pokémon number">{formatNumber(pokemonItem.id)}</span>
-        <h3 className="pokemon-card-name">{name}</h3>
-        <div className="pokemon-card-type-container" aria-label="Pokémon types">
+      <div className={styles.pokemonCardCopy}>
+        <span className={styles.pokemonCardId} aria-label="Pokémon number">{formatNumber(pokemonItem.id)}</span>
+        <h3 className={styles.pokemonCardName}>{name}</h3>
+        <div className={styles.pokemonCardTypeContainer} aria-label="Pokémon types">
           <PokemonType isLarge={false} typesArray={typesArray} />
         </div>
       </div>

@@ -1,10 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { formatName, formatNumber } from "../../../utils/formatters";
-import "../../../pages/PokemonDetails/PokemonDetails.css";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-import './Pagination.css';
+import styles from "./Pagination.module.css";
 
 const Pagination = ({ pokemonItem }) => {
   let navigate = useNavigate();
@@ -14,34 +13,34 @@ const Pagination = ({ pokemonItem }) => {
   const nextId = formatNumber(pokemonItem.nextPokemon.id);
 
   return (
-    <nav className="pagination pokedex-pokemon-header" role="navigation" aria-label="Pokémon navigation">
-      <div className="pokedex-pokemon-pagination">
-        <div className="pokemon-pagination-controls">
+    <nav className={`${styles.pagination} ${styles.pokedexPokemonHeader}`} role="navigation" aria-label="Pokémon navigation">
+      <div className={styles.pokedexPokemonPagination}>
+        <div className={styles.pokemonPaginationControls}>
           <button
-            className="pokemon-pagination-prev"
+            className={styles.pokemonPaginationPrev}
             onClick={() => navigate(`/${pokemonItem.prevPokemon.name}`)}
             type="button"
             aria-label={`Go to previous Pokémon: ${previous}`}
           >
-            <div className="pokemon-pagination-prev-content">
-              <div className="pokemon-pagination-prev-details">
+            <div className={styles.pokemonPaginationPrevContent}>
+              <div className={styles.pokemonPaginationPrevDetails}>
                 <ArrowCircleLeftIcon aria-hidden="true"></ArrowCircleLeftIcon>
-                <span className="pokemon-pagination-number">{prevId}</span>
-                <span className="pokemon-pagination-name">{previous}</span>
+                <span className={styles.pokemonPaginationNumber}>{prevId}</span>
+                <span className={styles.pokemonPaginationName}>{previous}</span>
               </div>
             </div>
           </button>
 
           <button
-            className="pokemon-pagination-next"
+            className={styles.pokemonPaginationNext}
             onClick={() => navigate(`/${pokemonItem.nextPokemon.name}`)}
             type="button"
             aria-label={`Go to next Pokémon: ${next}`}
           >
-            <div className="pokemon-pagination-next-content">
-              <div className="pokemon-pagination-next-details">
-                <span className="pokemon-pagination-name">{next}</span>
-                <span className="pokemon-pagination-number">{nextId}</span>
+            <div className={styles.pokemonPaginationNextContent}>
+              <div className={styles.pokemonPaginationNextDetails}>
+                <span className={styles.pokemonPaginationName}>{next}</span>
+                <span className={styles.pokemonPaginationNumber}>{nextId}</span>
                 <ArrowCircleRightIcon aria-hidden="true"></ArrowCircleRightIcon>
               </div>
             </div>

@@ -1,0 +1,43 @@
+.pagination.pokedexPokemonHeader {
+  height: 180px;
+  background-color: white;
+  box-sizing: border-box;
+  padding-top: 60px;
+}
+
+.pokedexPokemonPagination {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-size: 150%;
+}
+
+
+.pokemonPaginationName {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #616161;
+  font-family: "Exo", sans-serif;
+  text-transform: uppercase;
+  margin: 0 12px;
+  display: none;
+}
+.pokemonPaginationNumber {
+  font-family: "Exo", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Responsive styles for used classes only */
+@media (min-width: 218px) {
+}
+@media (min-width: 300px) {
+}
+@media (min-width: 400px) {
+}
+@media (min-width: 600px) {
+  @media (min-width: 700px) {
+  }
+} 

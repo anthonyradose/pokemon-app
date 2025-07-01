@@ -56,20 +56,13 @@
   font-weight: 500;
   /* margin-left: 6px; */
 }
-.pokemon-pagination-name {
-  font-size: 20px;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #616161;
-  font-family: "Exo", sans-serif;
-  text-transform: uppercase;
-  margin: 0 12px;
-}
 
-.pokemon-pagination-number {
-  font-family: "Exo", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
+.container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 16px;
+  color: "black";
 }
 
 .container {
@@ -638,237 +631,10 @@ div.pokemon-weakness-card > div {
 
 /* 0 - 217px!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.pagination.section.pokedex-pokemon-header {
-  height: 180px;
-  background-color: white;
-  box-sizing: border-box;
-  padding-top: 60px;
-}
+/* Removed .pagination.section.pokedex-pokemon-header and .pokedex-pokemon-pagination */
 
-.pokedex-pokemon-pagination {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  font-size: 150%;
-}
-
-.pagination-container {
-  width: 100%;
-  display: flex;
-  background-color: white;
-  justify-content: space-between;
-}
-
-.previous-container {
-  background-color: white;
-  width: 49%;
-  height: 100%;
-  transition: 300ms ease;
-  cursor: pointer;
-}
-
-.previous {
-  width: 99.7%;
-  background: #a4a4a4;
-  height: 100%;
-  display: flex;
-  transition: 300ms ease;
-  justify-content: center;
-}
-.next {
-  background-color: #a4a4a4;
-  width: 99.7%;
-  height: 100%;
-  transition: 300ms ease;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-}
-.next-container {
-  background-color: white;
-  width: 49%;
-  height: 100%;
-  transition: 300ms ease;
-  cursor: pointer;
-}
-
-.pokemon-heading-div {
-  background: white;
-  position: absolute;
-  height: 51px;
-  width: 70%;
-  left: 15%;
-  top: 215px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.pokemon-pagination-name {
-  font-size: 20px;
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #616161;
-  font-family: "Exo", sans-serif;
-  text-transform: uppercase;
-  margin: 0 12px;
-  display: none;
-}
-
-.left,
-.right {
-  color: white;
-  width: 74.5%;
-  background: #a4a4a4;
-  max-width: 447.5px;
-  display: flex;
-  transition: 300ms ease;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10px;
-  justify-content: flex-start;
-}
-
-.pokemon-weakness-card {
-  margin-left: 4px;
-}
-
-.evolution-wrapper {
-  width: 90%;
-}
-.evolution-content-div {
-  flex-direction: column;
-}
-
-.versions-heading {
-  display: flex;
-}
-@media (min-width: 153px) {
-  .versions-heading {
-    display: block;
-  }
-}
-.evolution-wrapper {
-  color: black;
-  display: flex;
-  width: 95%;
-  height: 25%;
-  text-transform: capitalize;
-  background: transparent
-    url("https://assets.pokemon.com/static2/_ui/img/chrome/body_gray_bg.png");
-  background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/body_gray_bg.png");
-  background-position-x: initial;
-  background-position-y: initial;
-  background-size: initial;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: transparent;
-  border-radius: 5px;
-  margin: auto;
-  margin-bottom: 32px;
-  margin-top: 16px;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-}
-
-.evolution-content-div {
-  display: flex;
-  padding-bottom: 3%;
-  flex-direction: column;
-  width: 90%;
-  align-items: center;
-}
-
-.evolution-pokemon-div {
-  cursor: pointer;
-  display: flex;
-  width: 90%;
-  margin-bottom: 64px;
-  margin-top: 16px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.evolution-h2 {
-  font-family: "Roboto", arial, sans-serif;
-  font-weight: 400;
-  color: #fff;
-
-  text-transform: none;
-  font-size: 137.5%;
-}
-
-.evolution-span-1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 16px;
-}
-
-.evolution-h3-1 {
-  font-family: "Exo", arial, sans-serif;
-  color: #fff;
-  font-size: 20px;
-  clear: both;
-  text-align: center;
-  width: 100%;
-  line-height: 125%;
-  font-weight: 100;
-  margin: 0;
-}
-
-.evolution-h3-2 {
-  font-family: "Exo", arial, sans-serif;
-  color: #a4acaf;
-  font-size: 20px;
-  font-weight: 100;
-  margin: 0;
-}
-
-.evolution-pokemon-div > .type-container-small {
-  display: flex;
-  text-align: center;
-  margin-top: 8px;
-  width: 90%;
-  justify-content: center;
-}
-
-.explore-div {
-  background-color: #ee6b2f;
-  color: #fff;
-  border-radius: 5px;
-  width: 90%;
-  cursor: pointer;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  margin-bottom: 32px;
-  align-items: center;
-  float: none;
-}
-
-.explore-link {
-  font-family: "Exo", arial, sans-serif;
-  font-weight: 500;
-  font-size: 105%;
-  text-align: center;
-}
-
-/* > 217!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media (min-width: 218px) {
-  .pagination.section.pokedex-pokemon-header {
-    height: 210px;
-  }
-  .pokedex-pokemon-pagination {
-    height: 80%;
-    font-size: 125%;
-  }
-
+  /* Removed .pagination.section.pokedex-pokemon-header and .pokedex-pokemon-pagination */
   .previous-container,
   .next-container {
     width: 49.3%;
@@ -932,31 +698,7 @@ div.pokemon-weakness-card > div {
   }
 }
 
-/* PAGINATION CONTAINER GAP: */
-@media (min-width: 300px) {
-  .previous-container,
-  .next-container {
-    width: 49.5%;
-  }
-}
-@media (min-width: 400px) {
-  .previous-container,
-  .next-container {
-    width: 49.7%;
-  }
-}
-@media (min-width: 600px) {
-  .previous-container,
-  .next-container {
-    width: 49.8%;
-  }
-  @media (min-width: 700px) {
-    .previous-container,
-    .next-container {
-      width: 49.9%;
-    }
-  }
-}
+
 
 /* > 460px!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media (min-width: 461px) and (max-width: 900px) {
@@ -1004,13 +746,7 @@ div.pokemon-weakness-card > div {
 
 /* >900px!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media (min-width: 900px) {
-  .pagination.section.pokedex-pokemon-header {
-    padding-top: 90px;
-  }
-  .pokedex-pokemon-pagination {
-    height: 90%;
-  }
-
+  /* Removed .pagination.section.pokedex-pokemon-header and .pokedex-pokemon-pagination */
   .pokemon-heading-div {
     top: 234px;
   }
@@ -1029,9 +765,6 @@ div.pokemon-weakness-card > div {
   .pokemon-details-main {
     flex-direction: row;
     padding-top: 80px;
-  }
-  .pokemon-pagination-name {
-    display: flex;
   }
   .pokemon-heading-name,
   .pokemon-heading-id {
