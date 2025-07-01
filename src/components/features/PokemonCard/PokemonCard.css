@@ -79,7 +79,7 @@
   color: #313131;
 }
 
-.typesContainer {
+.types-container {
   display: flex;
   flex: 1;
   margin-top: 5%;
@@ -89,7 +89,7 @@
   font-size: 11px;
 }
 
-.typesCard {
+.types-card {
   font-family: "Exo";
   font-size: 11px;
   margin-right: 4px;

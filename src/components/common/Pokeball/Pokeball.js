@@ -1,8 +1,8 @@
 import React from "react";
-import "./Pokeball.css";
+import styles from "./Pokeball.module.css";
 
 const Pokeball = () => {
-  return <div className="pokeball-loader" />;
+  return <div className={styles.pokeballLoader} />;
 };
 
 export default Pokeball;

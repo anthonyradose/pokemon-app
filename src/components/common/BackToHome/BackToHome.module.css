@@ -1,4 +1,4 @@
-.back-to-home-wrapper {
+.backToHomeWrapper {
   background-color: #ee6b2f;
   color: #fff;
   border-radius: 5px;
@@ -13,7 +13,7 @@
   margin-bottom: 24px;
 }
 
-.back-to-home-link {
+.backToHomeLink {
   font-family: "Exo", arial, sans-serif;
   font-weight: 500;
   font-size: 105%;

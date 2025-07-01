@@ -38,12 +38,12 @@ const PokemonInfo = ({ pokemonItem }) => {
             <div className="info-gender-div" aria-label="Gender options">
               {pokemonItem.canBeMale ? (
                 <span className="trait-value" aria-label="Can be male">
-                  <MaleIcon className="malePokemon" aria-hidden="true" />
+                  <MaleIcon className="male-pokemon" aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.canBeFemale ? (
                 <span className="trait-value" aria-label="Can be female">
-                  <FemaleIcon className="femalePokemon" aria-hidden="true" />
+                  <FemaleIcon className="female-pokemon" aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.unknown ? (

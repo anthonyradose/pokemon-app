@@ -24,15 +24,29 @@ main {
   align-items: center;
 }
 
-.titleH1{
+.title-h1{
   font-family: "Pokemon";
   text-shadow: -4px 1px 1px #3E558B;
   color: #EDC20C;
   font-size: 3rem;
 }
 
-.titleContainer{
+.title-container{
   background-color: #FF0000;
+}
+
+/* Loading screen styles - used across multiple components */
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 @font-face {

@@ -14,7 +14,7 @@ const Pagination = ({ pokemonItem }) => {
   const nextId = formatNumber(pokemonItem.nextPokemon.id);
 
   return (
-    <nav className="pagination section pokedex-pokemon-header" role="navigation" aria-label="Pokémon navigation">
+    <nav className="pagination pokedex-pokemon-header" role="navigation" aria-label="Pokémon navigation">
       <div className="pokedex-pokemon-pagination">
         <div className="pokemon-pagination-controls">
           <button
