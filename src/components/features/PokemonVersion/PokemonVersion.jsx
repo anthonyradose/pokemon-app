@@ -18,8 +18,10 @@ const PokemonVersion = ({ blue, red }) => {
               className={styles.pokemonVersionBlueBtn}
               onClick={toggleToBlue}
               type="button"
+              aria-label="Show Blue version description"
+              aria-pressed={showBlue}
             >
-              <CatchingPokemonIcon />
+              <CatchingPokemonIcon aria-hidden="true" />
             </button>
           </span>
           <span className={styles.pokemonVersionToggle}>
@@ -27,8 +29,10 @@ const PokemonVersion = ({ blue, red }) => {
               className={styles.pokemonVersionRedBtn}
               onClick={toggleToRed}
               type="button"
+              aria-label="Show Red version description"
+              aria-pressed={!showBlue}
             >
-              <CatchingPokemonIcon />
+              <CatchingPokemonIcon aria-hidden="true" />
             </button>
           </span>
         </div>

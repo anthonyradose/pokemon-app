@@ -13,7 +13,7 @@ const StatBar = ({ numOfBarsColored, statName }) => {
   });
   return (
     <div>
-      <ul className={styles.statBar}>{liMapped}</ul>
+      <ul className={styles.statBar} role="progressbar" aria-label={`${statsLabel} stat bar`} aria-valuenow={numThing} aria-valuemin="0" aria-valuemax={STAT_BAR_MAX}>{liMapped}</ul>
       {statsLabel}
     </div>
   );

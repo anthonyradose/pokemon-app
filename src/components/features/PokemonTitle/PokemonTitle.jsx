@@ -8,7 +8,7 @@ const PokemonTitle = ({ pokemonItem }) => {
   return (
     <div className={styles.pokemonTitleWrapper}>
       <h1 className={styles.pokemonTitleName}>{name}</h1>
-      <span className={styles.pokemonTitleId}>{number}</span>
+      <span className={styles.pokemonTitleId} aria-label={`Pokémon number ${number}`}>{number}</span>
     </div>
   );
 };
