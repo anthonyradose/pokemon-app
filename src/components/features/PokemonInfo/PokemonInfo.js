@@ -1,8 +1,8 @@
 import React from "react";
 import MaleIcon from "@mui/icons-material/Male";
 import FemaleIcon from "@mui/icons-material/Female";
-import "../../../pages/PokemonDetails/PokemonDetails.css";
-import "./PokemonInfo.css";
+yarn a
+import styles from "./PokemonInfo.module.css";
 import { UNITS } from "../../../constants/measurementUnits";
 import { POKEMON_SUFFIX } from "../../../constants/pokemonNameRules";
 
@@ -12,7 +12,7 @@ const PokemonInfo = ({ pokemonItem }) => {
   let category = pokemonItem.category.replace(POKEMON_SUFFIX, "");
 
   const abilities = pokemonItem.abilities?.map(({ ability }, index) => (
-    <span key={ability.name} className="info-value info-abilities">
+    <span key={ability.name} className={`${styles.infoValue} ${styles.infoAbilities}`}>
       {ability?.name.replaceAll("-", " ")}
     </span>
   ));
@@ -22,45 +22,45 @@ const PokemonInfo = ({ pokemonItem }) => {
   };
 
   return (
-    <section className="info-div" aria-label="Pokémon information">
-      <div className="physical-traits">
-        <ul className="physical-traits-list">
-          <li className="trait-item">
-            <span className="trait-label">Height</span>
-            <span className="trait-value">{decimalize(height)} {UNITS.HEIGHT}</span>
+    <section className={styles.infoDiv} aria-label="Pokémon information">
+      <div className={styles.physicalTraits}>
+        <ul className={styles.physicalTraitsList}>
+          <li className={styles.traitItem}>
+            <span className={styles.traitLabel}>Height</span>
+            <span className={styles.traitValue}>{decimalize(height)} {UNITS.HEIGHT}</span>
           </li>
-          <li className="trait-item">
-            <span className="trait-label">Weight</span>
-            <span className="trait-value">{decimalize(weight)} {UNITS.WEIGHT}</span>
+          <li className={styles.traitItem}>
+            <span className={styles.traitLabel}>Weight</span>
+            <span className={styles.traitValue}>{decimalize(weight)} {UNITS.WEIGHT}</span>
           </li>
-          <li className="trait-item">
-            <span className="trait-label">Gender</span>
-            <div className="info-gender-div" aria-label="Gender options">
+          <li className={styles.traitItem}>
+            <span className={styles.traitLabel}>Gender</span>
+            <div className={styles.infoGenderDiv} aria-label="Gender options">
               {pokemonItem.canBeMale ? (
-                <span className="trait-value" aria-label="Can be male">
-                  <MaleIcon className="male-pokemon" aria-hidden="true" />
+                <span className={styles.traitValue} aria-label="Can be male">
+                  <MaleIcon className={styles.malePokemon} aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.canBeFemale ? (
-                <span className="trait-value" aria-label="Can be female">
-                  <FemaleIcon className="female-pokemon" aria-hidden="true" />
+                <span className={styles.traitValue} aria-label="Can be female">
+                  <FemaleIcon className={styles.femalePokemon} aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.unknown ? (
-                <span className="trait-value">Unknown</span>
+                <span className={styles.traitValue}>Unknown</span>
               ) : null}
             </div>
           </li>
         </ul>
       </div>
-      <div className="pokemon-category">
-        <ul className="category-traits-list">
-          <li className="trait-item">
-            <span className="trait-label">Category</span>
-            <span className="trait-value">{category}</span>
+      <div className={styles.pokemonCategory}>
+        <ul className={styles.categoryTraitsList}>
+          <li className={styles.traitItem}>
+            <span className={styles.traitLabel}>Category</span>
+            <span className={styles.traitValue}>{category}</span>
           </li>
-          <li className="trait-item">
-            <span className="trait-label">Abilities</span>
+          <li className={styles.traitItem}>
+            <span className={styles.traitLabel}>Abilities</span>
             <div aria-label="Pokémon abilities">
               {abilities}
             </div>

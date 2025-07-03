@@ -1,4 +1,4 @@
-.stats-wrapper {
+.statsWrapper {
   width: 90%;
   height: 40%;
   background-color: transparent;
@@ -8,13 +8,13 @@
   margin-top: 16px;
   margin-bottom: 0px;
 }
-.stats-div {
+.statsDiv {
   box-sizing: border-box;
   border-radius: 10px;
   width: 100%;
   height: 100%;
 }
-.stats-header {
+.statsHeader {
   font-family: "Exo", arial, sans-serif;
   clear: both;
   color: #313131;
@@ -24,7 +24,7 @@
   text-transform: none;
   font-weight: 500;
 }
-.stats-container {
+.statsContainer {
   font-size: 20px;
   padding-top: 10%;
   background-color: #a4a4a4;
@@ -32,7 +32,7 @@
   height: 100%;
   border-radius: 10px;
 }
-.stats-list {
+.statsList {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -40,16 +40,16 @@
   flex-direction: column;
   gap: 8px;
 }
-.stat-item {
+.statItem {
   margin-bottom: 8px;
 }
-.stat-bar {
+.statBar {
   display: flex;
   gap: 2px;
   padding: 0;
   margin: 0 0 4px 0;
 }
-.stat-bar-segment {
+.statBarSegment {
   width: 12px;
   height: 16px;
   border-radius: 2px;
@@ -57,7 +57,7 @@
   margin-right: 2px;
   display: inline-block;
 }
-.stat-label {
+.statLabel {
   font-size: 12px;
   color: #616161;
   margin-left: 4px;

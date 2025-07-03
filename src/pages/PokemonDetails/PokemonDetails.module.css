@@ -1,0 +1,122 @@
+/* Page-level layout styles only - component-specific styles moved to individual CSS modules */
+
+.pokemonPage {
+  width: 100%;
+}
+
+.pokemonContainer {
+  background-color: white;
+  width: 100%;
+  padding-bottom: 8%;
+}
+
+.pokemonDetailsLayout {
+  width: 100%;
+  margin: auto;
+  max-width: 895px;
+  margin-bottom: 10%;
+  padding-top: 8px;
+  background-color: white;
+  margin-top: 16px;
+}
+
+.pokemonDetailsContainer {
+  /* Container for the main content */
+}
+
+.pokemonDetailsMain {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pokemonVisualSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.pokemonInfoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pokemonMetaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pokemonBattleInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pokemonTypeDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pokemonTypeHeading {
+  font-family: "Exo", sans-serif;
+  color: #212121;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* Responsive design */
+@media (min-width: 900px) {
+  .pokemonDetailsMain {
+    flex-direction: row;
+    padding-top: 80px;
+  }
+  
+  .pokemonVisualSection {
+    flex: 1;
+  }
+  
+  .pokemonInfoSection {
+    flex: 1;
+  }
+}
+
+@media (min-width: 461px) and (max-width: 900px) {
+  .pokemonDetailsLayout {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 310px) {
+  .pokemonDetailsLayout {
+    margin: 0 8px;
+  }
+}
+
+@media (min-width: 218px) {
+  .pokemonDetailsLayout {
+    margin: 0 4px;
+  }
+}
+
+/* Font imports */
+@font-face {
+  font-family: "Pokemon";
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon")
+      format("svg");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap"); 

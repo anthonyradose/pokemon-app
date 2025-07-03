@@ -1,31 +1,30 @@
 import React from "react";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
 import useVersionToggle from "../../../hooks/useVersionToggle";
-import "../../../pages/PokemonDetails/PokemonDetails.css";
-import "./PokemonVersion.css";
+import styles from "./PokemonVersion.module.css";
 
 const PokemonVersion = ({ blue, red }) => {
   const { showBlue, toggleToBlue, toggleToRed } = useVersionToggle(true);
   return (
-    <div className="pokemon-version-container">
-      <div className="pokemon-version-content">
+    <div className={styles.pokemonVersionContainer}>
+      <div className={styles.pokemonVersionContent}>
         <div>
-          <p className="pokemon-version-text">{showBlue ? blue : red} </p>
+          <p className={styles.pokemonVersionText}>{showBlue ? blue : red} </p>
         </div>
-        <div className="pokemon-version-heading">
+        <div className={styles.pokemonVersionHeading}>
           Versions:{" "}
-          <span className="pokemon-version-toggle">
+          <span className={styles.pokemonVersionToggle}>
             <button
-              className="pokemon-version-blue-btn"
+              className={styles.pokemonVersionBlueBtn}
               onClick={toggleToBlue}
               type="button"
             >
               <CatchingPokemonIcon />
             </button>
           </span>
-          <span className="pokemon-version-toggle">
+          <span className={styles.pokemonVersionToggle}>
             <button
-              className="pokemon-version-red-btn"
+              className={styles.pokemonVersionRedBtn}
               onClick={toggleToRed}
               type="button"
             >

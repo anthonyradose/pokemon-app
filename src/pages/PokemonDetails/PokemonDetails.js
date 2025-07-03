@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import "./PokemonDetails.css";
+import styles from "./PokemonDetails.module.css";
 import Pokeball from "../../components/common/Pokeball";
 import PokemonTitle from "../../components/features/PokemonTitle";
 import PokemonType from "../../components/features/PokemonType";
@@ -39,17 +39,17 @@ const PokemonDetails = () => {
   const typesArray = getTypeArray(pokemon.types);
 
   return (
-    <main className="pokemon-page" role="main" aria-label={`${pokemon.name} details`}>
+    <main className={styles.pokemonPage} role="main" aria-label={`${pokemon.name} details`}>
       <Pagination pokemonItem={pokemon} />
       
       <PokemonTitle pokemonItem={pokemon} />
 
-      <div className="pokemon-details-layout">
-        <article className="pokemon-details-container">
-          <section className="pokemon-details-main" aria-labelledby="pokemon-details-main-content">
+      <div className={styles.pokemonDetailsLayout}>
+        <article className={styles.pokemonDetailsContainer}>
+          <section className={styles.pokemonDetailsMain} aria-labelledby="pokemon-details-main-content">
             <h2 id="pokemon-details-main-content" className="sr-only">Pokémon Information</h2>
             
-            <div className="pokemon-visual-section" role="complementary" aria-label="Pokémon visual information">
+            <div className={styles.pokemonVisualSection} role="complementary" aria-label="Pokémon visual information">
               <figure aria-label={`${pokemon.name} official artwork`}>
                 <PokemonImage
                   src={
@@ -61,17 +61,17 @@ const PokemonDetails = () => {
               <PokemonStats pokemonItem={pokemon} />
             </div>
             
-            <div className="pokemon-info-section" role="complementary" aria-label="Pokémon details and characteristics">
-              <section className="pokemon-meta-section" aria-labelledby="pokemon-details-versions-info">
+            <div className={styles.pokemonInfoSection} role="complementary" aria-label="Pokémon details and characteristics">
+              <section className={styles.pokemonMetaSection} aria-labelledby="pokemon-details-versions-info">
                 <h3 id="pokemon-details-versions-info" className="sr-only">Versions and Information</h3>
                 <PokemonVersion blue={blue} red={red} />
                 <PokemonInfo pokemonItem={pokemon} />
               </section>
               
-              <section className="pokemon-battle-info" aria-labelledby="pokemon-details-type-weaknesses">
+              <section className={styles.pokemonBattleInfo} aria-labelledby="pokemon-details-type-weaknesses">
                 <h3 id="pokemon-details-type-weaknesses" className="sr-only">Type and Weaknesses</h3>
-                <div className="pokemon-type-div">
-                  <h4 className="pokemon-type-heading">Type</h4>
+                <div className={styles.pokemonTypeDiv}>
+                  <h4 className={styles.pokemonTypeHeading}>Type</h4>
                   <PokemonType typesArray={typesArray} isLarge={true} />
                 </div>
                 <PokemonWeakness

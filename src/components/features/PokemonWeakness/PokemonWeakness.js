@@ -1,7 +1,6 @@
 import React from "react";
 import PokemonType from "../PokemonType/PokemonType";
-import "../PokemonType/PokemonType.css";
-import "./PokemonWeakness.css";
+import styles from "./PokemonWeakness.module.css";
 
 const PokemonWeakness = ({ damageStuff1, damageStuff2 }) => {
   let weakness1 = damageStuff1.double_damage_from.map((item) => item.name);
@@ -11,8 +10,8 @@ const PokemonWeakness = ({ damageStuff1, damageStuff2 }) => {
   const beta = [...new Set(alpha)];
 
   return (
-    <div className="pokemon-weakness-card">
-      <h3 className="pokemon-weakness-title">Weaknesses</h3>
+    <div className={styles.pokemonWeaknessCard}>
+      <h3 className={styles.pokemonWeaknessTitle}>Weaknesses</h3>
       <PokemonType typesArray={beta} isLarge={true} />
     </div>
   );

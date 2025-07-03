@@ -1,5 +1,4 @@
-import "./PokemonStats.css";
-import "../../../pages/PokemonDetails/PokemonDetails.css";
+import styles from "./PokemonStats.module.css";
 import React from "react";
 import { STAT_BAR_MAX } from "../../../constants/pokemon";
 import { COLORS } from "../../../constants/uiColors";
@@ -10,11 +9,11 @@ const StatBar = ({ numOfBarsColored, statName }) => {
   const lisArray = Array.from(new Array(STAT_BAR_MAX));
   const liMapped = lisArray.map((a, i) => {
     const changeColor = i < numThing ? COLORS.STAT_BAR_ACTIVE : COLORS.STAT_BAR_INACTIVE;
-    return <li key={i} className="stat-bar-segment" style={{ backgroundColor: changeColor }} />;
+    return <li key={i} className={styles.statBarSegment} style={{ backgroundColor: changeColor }} />;
   });
   return (
     <div>
-      <ul className="stat-bar">{liMapped}</ul>
+      <ul className={styles.statBar}>{liMapped}</ul>
       {statsLabel}
     </div>
   );
@@ -34,17 +33,17 @@ const PokemonStats = ({ pokemonItem }) => {
       stats.stat.name.slice(1, 8).replace("-", " ") +
       stats.stat.name.charAt(8) +
       stats.stat.name.slice(9);
-    return <span key={index} className="stat-label">{statName}</span>;
+    return <span key={index} className={styles.statLabel}>{statName}</span>;
   });
   return (
-    <div className="stats-wrapper">
-      <div className="stats-div">
-        <h3 className="stats-header">Stats</h3>
-        <div className="stats-container">
-          <ul className="stats-list">
+    <div className={styles.statsWrapper}>
+      <div className={styles.statsDiv}>
+        <h3 className={styles.statsHeader}>Stats</h3>
+        <div className={styles.statsContainer}>
+          <ul className={styles.statsList}>
             {numsArray.map((num, index) => {
               return (
-                <li key={index} className="stat-item">
+                <li key={index} className={styles.statItem}>
                   <StatBar
                     numOfBarsColored={num}
                     statName={statsMapped[index]}

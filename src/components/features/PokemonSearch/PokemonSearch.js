@@ -2,7 +2,7 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import OutsideClickHandler from "react-outside-click-handler";
 import useSearch from "../../../hooks/useSearch";
-import "./PokemonSearch.css";
+import styles from "./PokemonSearch.module.css";
 
 const PokemonSearch = () => {
   const {
@@ -15,23 +15,23 @@ const PokemonSearch = () => {
   } = useSearch();
 
   return (
-    <section className="search-container" aria-label="Pokémon search">
-      <div className="conditional-search-div">
-        <div className="search-input-section">
-          <div className="search-input-container-div">
-            <div className="search-input-container">
+    <section className={styles.searchContainer} aria-label="Pokémon search">
+      <div className={styles.conditionalSearchDiv}>
+        <div className={styles.searchInputSection}>
+          <div className={styles.searchInputContainerDiv}>
+            <div className={styles.searchInputContainer}>
               <input
                 type="search"
                 value={name}
                 onChange={filter}
-                className="search-input"
+                className={styles.searchInput}
                 onClick={filter}
                 aria-label="Search for Pokémon by name or number"
                 aria-describedby="search-instructions"
               />
 
               <button
-                className="button-result"
+                className={styles.buttonResult}
                 onClick={handleSearch}
                 type="button"
                 aria-label="Search"
@@ -41,11 +41,11 @@ const PokemonSearch = () => {
             </div>
             {foundPokemon && foundPokemon.length > 0 && (
               <OutsideClickHandler onOutsideClick={clearResults}>
-                <div className="pokemon-search-list">
-                  <ul className="pokemon-search-results-list" role="listbox">
+                <div className={styles.pokemonSearchList}>
+                  <ul className={styles.pokemonSearchResultsList} role="listbox">
                     {foundPokemon?.map((poke, index) => (
                       <li
-                        className="pokemon-search-result-item"
+                        className={styles.pokemonSearchResultItem}
                         key={`${poke}-${index}`}
                         onClick={() => handlePokemonSelect(poke)}
                         onKeyDown={(event) => {
@@ -66,9 +66,9 @@ const PokemonSearch = () => {
             )}
           </div>
         </div>
-        <div className="pokemon-search-results-section">
-          <div className="pokemon-search-banner">
-            <h3 id="search-instructions" className="pokemon-search-text">
+        <div className={styles.pokemonSearchResultsSection}>
+          <div className={styles.pokemonSearchBanner}>
+            <h3 id="search-instructions" className={styles.pokemonSearchText}>
               Search for a Pokémon by name or using its National Pokédex number.
             </h3>
           </div>

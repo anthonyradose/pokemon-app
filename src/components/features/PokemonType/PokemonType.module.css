@@ -1,15 +1,15 @@
-.pokemon-type-container-small {
+.pokemonTypeContainerSmall {
   display: flex;
   text-align: center;
 }
 
-.pokemon-type-container-large {
+.pokemonTypeContainerLarge {
   display: flex;
   width: 100%;
   height: 30%;
 }
 
-.pokemon-types-card-small {
+.pokemonTypesCardSmall {
   border-radius: 3px;
   line-height: 18px;
   max-width: 110px;
@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-.pokemon-types-card-large {
+.pokemonTypesCardLarge {
   text-transform: capitalize;
   overflow: auto;
   width: 32%;
@@ -44,7 +44,7 @@
   padding-bottom: 1%;
 }
 
-.pokemon-type-title {
+.pokemonTypeTitle {
   width: 90%;
   font-size: 125%;
   font-family: "Exo";
@@ -142,7 +142,7 @@
 }
 
 @media (min-width: 900px) {
-  .pokemon-types-card-large {
+  .pokemonTypesCardLarge {
     padding: 0;
   }
-}
+} 

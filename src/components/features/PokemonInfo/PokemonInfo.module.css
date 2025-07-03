@@ -1,4 +1,4 @@
-.info-div {
+.infoDiv {
   display: flex;
   box-sizing: border-box;
   width: 100%;
@@ -8,13 +8,13 @@
   margin-top: 32px;
   justify-content: space-around;
 }
-.info-label {
+.infoLabel {
   color: white;
   font-family: "Exo", sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.info-value {
+.infoValue {
   font-family: "Exo", arial, sans-serif;
   color: #212121;
   font-weight: 500;
@@ -23,7 +23,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.info-gender-div {
+.infoGenderDiv {
   display: flex;
   gap: 8px;
   align-items: center;
@@ -34,28 +34,28 @@
 .femalePokemon {
   color: #d81b60;
 }
-.physical-traits,
-.pokemon-category {
+.physicalTraits,
+.pokemonCategory {
   margin-bottom: 16px;
 }
-.physical-traits-list,
-.category-traits-list {
+.physicalTraitsList,
+.categoryTraitsList {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.trait-item {
+.traitItem {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
 }
-.trait-label {
+.traitLabel {
   font-weight: 500;
   color: #212121;
   min-width: 80px;
   font-family: "Roboto", sans-serif;
 }
-.trait-value {
+.traitValue {
   color: #616161;
   margin-left: 8px;
   font-family: "Exo", sans-serif;

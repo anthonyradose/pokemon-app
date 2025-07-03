@@ -1,5 +1,4 @@
 import styles from "./PokemonImage.module.css";
-import "../../../pages/PokemonDetails/PokemonDetails.css";
 import React from "react";
 
 const PokemonImage = ({ src, name }) => {

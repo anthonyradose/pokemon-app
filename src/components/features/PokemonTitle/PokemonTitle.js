@@ -1,5 +1,4 @@
 import React from "react";
-import "../../../pages/PokemonDetails/PokemonDetails.css";
 import styles from "./PokemonTitle.module.css";
 import { formatName, formatNumber } from "../../../utils/formatters";
 
