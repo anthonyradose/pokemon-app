@@ -1,1 +1,1 @@
-export { default } from './EvolutionChart'; 
+export { default } from './EvolutionChart.jsx'; 

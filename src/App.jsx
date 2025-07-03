@@ -7,7 +7,7 @@ import "./styles/App.css";
 
 const App = () => {
   return (
-    <Router basename="/pokemon-app">
+    <Router>
       <header role="banner">
         <Nav />
       </header>

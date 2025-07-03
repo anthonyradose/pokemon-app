@@ -1,3 +1,6 @@
+/* Font imports */
+
+
 /* Page-level layout styles only - component-specific styles moved to individual CSS modules */
 
 .pokemonPage {
@@ -116,7 +119,4 @@
       format("truetype"),
     url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon")
       format("svg");
-}
-
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap"); 
+} 

@@ -1,7 +1,6 @@
 import React from "react";
 import MaleIcon from "@mui/icons-material/Male";
 import FemaleIcon from "@mui/icons-material/Female";
-yarn a
 import styles from "./PokemonInfo.module.css";
 import { UNITS } from "../../../constants/measurementUnits";
 import { POKEMON_SUFFIX } from "../../../constants/pokemonNameRules";

@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap");
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+
 body {
   margin: 0%;
   background-color: #FF0000;
@@ -63,13 +70,4 @@ main {
     url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon")
       format("svg");
 }
-
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap");
-
-@import "@fontsource/roboto/300.css";
-@import "@fontsource/roboto/400.css";
-@import "@fontsource/roboto/500.css";
-@import "@fontsource/roboto/700.css";
 

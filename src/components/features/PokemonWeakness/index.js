@@ -1,1 +1,1 @@
-export { default } from './PokemonWeakness'; 
+export { default } from './PokemonWeakness.jsx'; 

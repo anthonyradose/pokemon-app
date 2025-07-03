@@ -1,1 +1,1 @@
-export { default } from './PokemonSearch'; 
+export { default } from './PokemonSearch.jsx'; 

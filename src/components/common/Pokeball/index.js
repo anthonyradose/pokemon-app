@@ -1,1 +1,1 @@
-export { default } from './Pokeball'; 
+export { default } from './Pokeball.jsx'; 

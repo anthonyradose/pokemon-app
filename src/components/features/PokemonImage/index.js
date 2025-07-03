@@ -1,1 +1,1 @@
-export { default } from './PokemonImage'; 
+export { default } from './PokemonImage.jsx'; 

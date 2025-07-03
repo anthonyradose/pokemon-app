@@ -1,1 +1,1 @@
-export { default } from './PokemonType'; 
+export { default } from './PokemonType.jsx'; 

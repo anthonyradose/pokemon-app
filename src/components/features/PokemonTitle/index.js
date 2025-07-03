@@ -1,1 +1,1 @@
-export { default } from './PokemonTitle'; 
+export { default } from './PokemonTitle.jsx'; 
