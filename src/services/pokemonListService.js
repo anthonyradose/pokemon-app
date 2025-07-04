@@ -1,6 +1,6 @@
 import P from "./pokedexClient";
 import { getCachedPokemonDetails } from "./pokemonCache";
-import { TOTAL_POKEMON, RANDOM_POKEMON_COUNT, INITIAL_POKEMON_COUNT, LOAD_MORE_COUNT } from "../constants/pokemonConfig";
+import { appLimits } from "../constants/appLimits";
 
 // Function to get basic information about a Pokemon by its name
 const getBasicPokemonDetails = async (pokemon) => {
@@ -9,13 +9,13 @@ const getBasicPokemonDetails = async (pokemon) => {
 };
 
 // Function to fetch a random selection of Pokemon
-const getRandomPokemon = async (totalPokemon = TOTAL_POKEMON) => {
+const getRandomPokemon = async (totalPokemon = appLimits.totalPokemon) => {
   const pokemonList = await P.getPokemonsList({
     limit: totalPokemon,
     offset: 0,
   });
   const randomPokemonArray = [];
-  for (let i = 1; i < RANDOM_POKEMON_COUNT; i += 1) {
+  for (let i = 1; i < appLimits.randomPokemonCount; i += 1) {
     randomPokemonArray.push(
       pokemonList.results[Math.floor(Math.random() * totalPokemon)]
     );
@@ -30,7 +30,7 @@ const getRandomPokemon = async (totalPokemon = TOTAL_POKEMON) => {
 // Function to fetch the first 12 Pokemon for initial display
 const getPokemon = async () => {
   const pokemonList = await P.getPokemonsList({
-    limit: INITIAL_POKEMON_COUNT,
+    limit: appLimits.initialPokemonCount,
     offset: 0,
   });
 
@@ -45,7 +45,7 @@ const getPokemon = async () => {
 };
 
 // Function to fetch all Pokemon for potential future use
-const getAllPokemon = async (totalPokemon = TOTAL_POKEMON) => {
+const getAllPokemon = async (totalPokemon = appLimits.totalPokemon) => {
   const pokemonList = await P.getPokemonsList({
     limit: totalPokemon,
     offset: 0,
@@ -64,7 +64,7 @@ const getAllPokemon = async (totalPokemon = TOTAL_POKEMON) => {
 // Function to load more Pokemon when requested
 const loadMore = async (start) => {
   const pokemonList = await P.getPokemonsList({
-    limit: start + LOAD_MORE_COUNT,
+    limit: start + appLimits.loadMoreCount,
     offset: 0,
   });
 

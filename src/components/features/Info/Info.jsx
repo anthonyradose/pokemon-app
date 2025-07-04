@@ -2,13 +2,13 @@ import React from "react";
 import MaleIcon from "@mui/icons-material/Male";
 import FemaleIcon from "@mui/icons-material/Female";
 import styles from "./Info.module.css";
-import { UNITS } from "../../../constants/measurementUnits";
-import { POKEMON_SUFFIX } from "../../../constants/pokemonNameRules";
+import { measurementUnits } from "../../../constants/displayFormats";
+import { nameRules } from "../../../constants/nameRules";
 
 const Info = ({ pokemonItem }) => {
   let height = pokemonItem.height;
   let weight = pokemonItem.weight;
-  let category = pokemonItem.category.replace(POKEMON_SUFFIX, "");
+  let category = pokemonItem.category.replace(nameRules.suffix, "");
 
   const abilities = pokemonItem.abilities?.map(({ ability }, index) => (
     <span key={ability.name} className={styles.abilityValue}>
@@ -26,11 +26,11 @@ const Info = ({ pokemonItem }) => {
         <ul className={styles.physicalTraitsList}>
           <li className={styles.traitItem}>
             <span className={styles.traitLabel}>Height</span>
-            <span className={styles.traitValue}>{decimalize(height)} {UNITS.HEIGHT}</span>
+            <span className={styles.traitValue}>{decimalize(height)} {measurementUnits.height}</span>
           </li>
           <li className={styles.traitItem}>
             <span className={styles.traitLabel}>Weight</span>
-            <span className={styles.traitValue}>{decimalize(weight)} {UNITS.WEIGHT}</span>
+            <span className={styles.traitValue}>{decimalize(weight)} {measurementUnits.weight}</span>
           </li>
           <li className={styles.traitItem}>
             <span className={styles.traitLabel}>Gender</span>

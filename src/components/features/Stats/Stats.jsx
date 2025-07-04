@@ -1,19 +1,18 @@
 import styles from "./Stats.module.css";
 import React from "react";
-import { STAT_BAR_MAX } from "../../../constants/pokemonConfig";
-import { COLORS } from "../../../constants/uiColors";
+import { appLimits } from "../../../constants/appLimits";
 
 const StatBar = ({ numOfBarsColored, statName }) => {
   const numThing = numOfBarsColored;
   const statsLabel = statName;
-  const lisArray = Array.from(new Array(STAT_BAR_MAX));
+  const lisArray = Array.from(new Array(appLimits.statBarMax));
   const liMapped = lisArray.map((a, i) => {
-    const changeColor = i < numThing ? COLORS.STAT_BAR_ACTIVE : COLORS.STAT_BAR_INACTIVE;
+    const changeColor = i < numThing ? "#4CAF50" : "#E0E0E0";
     return <li key={i} className={styles.statBarSegment} style={{ backgroundColor: changeColor }} />;
   });
   return (
     <div>
-      <ul className={styles.statBar} role="progressbar" aria-label={`${statsLabel} stat bar`} aria-valuenow={numThing} aria-valuemin="0" aria-valuemax={STAT_BAR_MAX}>{liMapped}</ul>
+      <ul className={styles.statBar} role="progressbar" aria-label={`${statsLabel} stat bar`} aria-valuenow={numThing} aria-valuemin="0" aria-valuemax={appLimits.statBarMax}>{liMapped}</ul>
       {statsLabel}
     </div>
   );

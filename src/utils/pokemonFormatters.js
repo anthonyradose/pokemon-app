@@ -1,14 +1,14 @@
-import { HYPHEN_NAMES, APOSTROPHE_NAMES, MR_NAMES, POKEMON_SUFFIX } from "../constants/pokemonNameRules";
-import { NUMBER_FORMATS } from "../constants/numberFormats";
+import { nameRules } from "../constants/nameRules";
+import { digitFormats } from "../constants/displayFormats";
 
 export const formatName = (name) => {
-  if (HYPHEN_NAMES.includes(name)) {
+  if (nameRules.hyphen.includes(name)) {
     return name;
   }
-  if (APOSTROPHE_NAMES.includes(name)) {
+  if (nameRules.apostrophe.includes(name)) {
     return name.slice(0, 8) + "'" + name.slice(8);
   }
-  if (MR_NAMES.includes(name)) {
+  if (nameRules.mr.includes(name)) {
     return name.slice(0, 2) + ". " + name.slice(3);
   }
   return name?.split("-")[0];
@@ -16,12 +16,12 @@ export const formatName = (name) => {
 
 export const formatNumber = (number) => {
   if (number < 10) {
-    return `${NUMBER_FORMATS.SINGLE_DIGIT}${number}`;
+    return `${digitFormats.singleDigit}${number}`;
   }
   if (number < 100) {
-    return `${NUMBER_FORMATS.DOUBLE_DIGIT}${number}`;
+    return `${digitFormats.doubleDigit}${number}`;
   }
-  return `${NUMBER_FORMATS.TRIPLE_DIGIT}${number}`;
+  return `${digitFormats.tripleDigit}${number}`;
 };
 
 export const getTypeArray = (typesArray) => {

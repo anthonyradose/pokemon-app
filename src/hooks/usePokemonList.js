@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { getPokemon, getAllPokemon, loadMore, getRandomPokemon } from "../services/pokemonListService";
-import { TOTAL_POKEMON, INITIAL_POKEMON_COUNT, LOAD_MORE_COUNT } from "../constants/pokemonConfig";
-import { SORT_OPTIONS } from "../constants/sortOptions";
+import { appLimits } from "../constants/appLimits";
+import { sortOptions } from "../constants/sortConfig";
 
 const usePokemonList = () => {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [start, setStart] = useState(INITIAL_POKEMON_COUNT);
-  const [selectedSortOption, setSelectedSortOption] = useState(SORT_OPTIONS.NUMBER_ASC);
-  const totalPokemon = TOTAL_POKEMON;
+  const [start, setStart] = useState(appLimits.initialPokemonCount);
+  const [selectedSortOption, setSelectedSortOption] = useState(sortOptions.numberAsc);
+  const totalPokemon = appLimits.totalPokemon;
 
   const handleGetRandomPokemon = async () => {
     setLoading(true);
@@ -36,7 +36,7 @@ const usePokemonList = () => {
   const handleLoadMore = async () => {
     const pokemonListWithDetails = await loadMore(start);
     setPokemon(pokemonListWithDetails);
-    setStart(start + LOAD_MORE_COUNT);
+    setStart(start + appLimits.loadMoreCount);
   };
 
   const handleSelectChange = (event) => {
@@ -45,13 +45,13 @@ const usePokemonList = () => {
     setLoading(true);
     let sortedPokemon = [];
     
-    if (selectedOption === SORT_OPTIONS.NUMBER_ASC) {
+    if (selectedOption === sortOptions.numberAsc) {
       sortedPokemon = pokemon.slice().sort((a, b) => a.id - b.id);
-    } else if (selectedOption === SORT_OPTIONS.NUMBER_DESC) {
+    } else if (selectedOption === sortOptions.numberDesc) {
       sortedPokemon = pokemon.slice().sort((a, b) => b.id - a.id);
-    } else if (selectedOption === SORT_OPTIONS.NAME_ASC) {
+    } else if (selectedOption === sortOptions.nameAsc) {
       sortedPokemon = pokemon.slice().sort((a, b) => a.name.localeCompare(b.name));
-    } else if (selectedOption === SORT_OPTIONS.NAME_DESC) {
+    } else if (selectedOption === sortOptions.nameDesc) {
       sortedPokemon = pokemon.slice().sort((a, b) => b.name.localeCompare(a.name));
     }
     

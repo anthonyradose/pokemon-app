@@ -6,7 +6,7 @@ import Loader from "../../components/common/Loader"; // Import a loading indicat
 import Search from "../../components/features/Search"; // Import the search component for filtering Pokemon
 import LoopRoundedIcon from "@mui/icons-material/LoopRounded"; // Import an icon for randomization button
 import usePokemonList from "../../hooks/usePokemonList"; // Import the custom hook
-import { SORT_LABELS } from "../../constants/sortOptions";
+import { sortLabels } from "../../constants/sortConfig";
 
 const PokemonList = () => {
   const {
@@ -54,10 +54,10 @@ const PokemonList = () => {
             value={selectedSortOption}
             aria-label="Sort Pokémon"
           >
-            <option value="numberAsc">{SORT_LABELS.numberAsc}</option>
-            <option value="numberDesc">{SORT_LABELS.numberDesc}</option>
-            <option value="nameAsc">{SORT_LABELS.nameAsc}</option>
-            <option value="nameDesc">{SORT_LABELS.nameDesc}</option>
+                    <option value="numberAsc">{sortLabels.numberAsc}</option>
+        <option value="numberDesc">{sortLabels.numberDesc}</option>
+        <option value="nameAsc">{sortLabels.nameAsc}</option>
+        <option value="nameDesc">{sortLabels.nameDesc}</option>
           </select>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import P from "../services/pokedexClient";
 import { useNavigate } from "react-router-dom";
-import { TOTAL_POKEMON } from "../constants/pokemonConfig";
+import { appLimits } from "../constants/appLimits";
 
 const useSearch = () => {
   const [pokemon, setPokemon] = useState([]);
@@ -12,7 +12,7 @@ const useSearch = () => {
   useEffect(() => {
     const getPokemon = async () => {
       const pokemonList = await P.getPokemonsList({
-        limit: TOTAL_POKEMON,
+        limit: appLimits.totalPokemon,
         offset: 0,
       });
       const pokemonData = pokemonList.results.map((pokemon) => pokemon.name);
