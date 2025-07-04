@@ -1,4 +1,4 @@
-.infoDiv {
+.infoSection {
   display: flex;
   box-sizing: border-box;
   width: 100%;
@@ -7,12 +7,6 @@
   padding-top: 3%;
   margin-top: 32px;
   justify-content: space-around;
-}
-.infoLabel {
-  color: white;
-  font-family: "Exo", sans-serif;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .infoValue {
   font-family: "Exo", arial, sans-serif;
@@ -23,15 +17,24 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.infoGenderDiv {
+.abilityValue {
+  font-family: "Exo", arial, sans-serif;
+  color: #212121;
+  font-weight: 500;
+  font-size: 125%;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.genderContainer {
   display: flex;
   gap: 8px;
   align-items: center;
 }
-.malePokemon {
+.maleIcon {
   color: #1976d2;
 }
-.femalePokemon {
+.femaleIcon {
   color: #d81b60;
 }
 .physicalTraits,

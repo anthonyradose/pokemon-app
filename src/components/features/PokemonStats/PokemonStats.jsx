@@ -1,6 +1,6 @@
 import styles from "./PokemonStats.module.css";
 import React from "react";
-import { STAT_BAR_MAX } from "../../../constants/pokemon";
+import { STAT_BAR_MAX } from "../../../constants/pokemonConfig";
 import { COLORS } from "../../../constants/uiColors";
 
 const StatBar = ({ numOfBarsColored, statName }) => {
@@ -37,7 +37,7 @@ const PokemonStats = ({ pokemonItem }) => {
   });
   return (
     <div className={styles.statsWrapper}>
-      <div className={styles.statsDiv}>
+      <div className={styles.statsContent}>
         <h3 className={styles.statsHeader}>Stats</h3>
         <div className={styles.statsContainer}>
           <ul className={styles.statsList}>

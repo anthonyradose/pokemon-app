@@ -1,13 +1,15 @@
-.pokemonWeaknessCard {
+.weaknessSection {
   margin-left: 4px;
 }
-.pokemonWeaknessTitle {
+
+.weaknessTitle {
   width: 100%;
   font-family: "Exo";
   font-weight: 500;
   font-size: 125%;
 }
-div.pokemonWeaknessCard > div {
+
+.weaknessContent {
   display: flex;
   flex-wrap: wrap;
   width: 100%;

@@ -1,34 +1,34 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { formatName, formatNumber, getTypeArray } from "../../../utils/formatters";
-import PokemonType from "../PokemonType/PokemonType";
-import styles from "./EvolutionChart.module.css";
+import { formatName, formatNumber, getTypeArray } from "../../../utils/pokemonFormatters";
+import PokemonTypeBadge from "../PokemonTypeBadge/PokemonTypeBadge";
+import styles from "./EvolutionChain.module.css";
 
-const EvolutionChart = ({ pokemonItem }) => {
+const EvolutionChain = ({ pokemonItem }) => {
   const typesArray = getTypeArray(pokemonItem.types);
 
   let navigate = useNavigate();
   const evolutions = pokemonItem?.evoListItems?.map((item) => (
     <button
       key={item.name}
-      className={styles.evolutionPokemonCard}
+      className={styles.evolutionCard}
       onClick={() => navigate(`/${item.name}`)}
       type="button"
       aria-label={`View ${formatName(item.name)} details`}
     >
       <img
-        className={styles.evolutionPokemonImg}
+        className={styles.evolutionImg}
         height={200}
         width={200}
         src={item.sprites?.other["official-artwork"]?.front_default}
         alt={`${formatName(item.name)} evolution`}
       />
 
-      <span className={styles.evolutionPokemonHeader}>
-        <h3 className={styles.evolutionPokemonName}>{formatName(item.name)}</h3>
-        <h3 className={styles.evolutionPokemonNumber}>{formatNumber(item.id)}</h3>
+      <span className={styles.evolutionHeader}>
+        <h3 className={styles.evolutionName}>{formatName(item.name)}</h3>
+        <h3 className={styles.evolutionNumber}>{formatNumber(item.id)}</h3>
       </span>
-      <PokemonType typesArray={typesArray} isLarge={false} />
+      <PokemonTypeBadge typesArray={typesArray} isLarge={false} />
     </button>
   ));
 
@@ -45,4 +45,4 @@ const EvolutionChart = ({ pokemonItem }) => {
   );
 };
 
-export default EvolutionChart;
+export default EvolutionChain;

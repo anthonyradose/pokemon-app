@@ -1,5 +1,5 @@
 import { HYPHEN_NAMES, APOSTROPHE_NAMES, MR_NAMES, POKEMON_SUFFIX } from "../constants/pokemonNameRules";
-import { NUMBER_FORMATS } from "../constants/numberFormatting";
+import { NUMBER_FORMATS } from "../constants/numberFormats";
 
 export const formatName = (name) => {
   if (HYPHEN_NAMES.includes(name)) {

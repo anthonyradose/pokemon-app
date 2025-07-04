@@ -1,19 +1,12 @@
 /* Font imports */
 
-
 /* Page-level layout styles only - component-specific styles moved to individual CSS modules */
 
-.pokemonPage {
+.page {
   width: 100%;
 }
 
-.pokemonContainer {
-  background-color: white;
-  width: 100%;
-  padding-bottom: 8%;
-}
-
-.pokemonDetailsLayout {
+.detailsLayout {
   width: 100%;
   margin: auto;
   max-width: 895px;
@@ -23,48 +16,48 @@
   margin-top: 16px;
 }
 
-.pokemonDetailsContainer {
+.detailsContainer {
   /* Container for the main content */
 }
 
-.pokemonDetailsMain {
+.detailsMain {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.pokemonVisualSection {
+.visualSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.pokemonInfoSection {
+.infoSection {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.pokemonMetaSection {
+.metaSection {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.pokemonBattleInfo {
+.battleInfo {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.pokemonTypeDiv {
+.typeSection {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.pokemonTypeHeading {
+.typeHeading {
   font-family: "Exo", sans-serif;
   color: #212121;
   font-weight: 500;
@@ -73,34 +66,34 @@
 
 /* Responsive design */
 @media (min-width: 900px) {
-  .pokemonDetailsMain {
+  .detailsMain {
     flex-direction: row;
     padding-top: 80px;
   }
   
-  .pokemonVisualSection {
+  .visualSection {
     flex: 1;
   }
   
-  .pokemonInfoSection {
+  .infoSection {
     flex: 1;
   }
 }
 
 @media (min-width: 461px) and (max-width: 900px) {
-  .pokemonDetailsLayout {
+  .detailsLayout {
     margin: 0 16px;
   }
 }
 
 @media (min-width: 310px) {
-  .pokemonDetailsLayout {
+  .detailsLayout {
     margin: 0 8px;
   }
 }
 
 @media (min-width: 218px) {
-  .pokemonDetailsLayout {
+  .detailsLayout {
     margin: 0 4px;
   }
 }

@@ -11,7 +11,7 @@ const PokemonInfo = ({ pokemonItem }) => {
   let category = pokemonItem.category.replace(POKEMON_SUFFIX, "");
 
   const abilities = pokemonItem.abilities?.map(({ ability }, index) => (
-    <span key={ability.name} className={`${styles.infoValue} ${styles.infoAbilities}`}>
+    <span key={ability.name} className={styles.abilityValue}>
       {ability?.name.replaceAll("-", " ")}
     </span>
   ));
@@ -21,7 +21,7 @@ const PokemonInfo = ({ pokemonItem }) => {
   };
 
   return (
-    <section className={styles.infoDiv} aria-label="Pokémon information">
+    <section className={styles.infoSection} aria-label="Pokémon information">
       <div className={styles.physicalTraits}>
         <ul className={styles.physicalTraitsList}>
           <li className={styles.traitItem}>
@@ -34,15 +34,15 @@ const PokemonInfo = ({ pokemonItem }) => {
           </li>
           <li className={styles.traitItem}>
             <span className={styles.traitLabel}>Gender</span>
-            <div className={styles.infoGenderDiv} aria-label="Gender options">
+            <div className={styles.genderContainer} aria-label="Gender options">
               {pokemonItem.canBeMale ? (
                 <span className={styles.traitValue} aria-label="Can be male">
-                  <MaleIcon className={styles.malePokemon} aria-hidden="true" />
+                  <MaleIcon className={styles.maleIcon} aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.canBeFemale ? (
                 <span className={styles.traitValue} aria-label="Can be female">
-                  <FemaleIcon className={styles.femalePokemon} aria-hidden="true" />
+                  <FemaleIcon className={styles.femaleIcon} aria-hidden="true" />
                 </span>
               ) : null}
               {pokemonItem.unknown ? (

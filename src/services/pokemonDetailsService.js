@@ -1,5 +1,5 @@
 import P from "./pokedexClient";
-import { TOTAL_POKEMON } from "../constants/pokemon";
+import { TOTAL_POKEMON } from "../constants/pokemonConfig";
 
 const getDetailedPokemonDetails = async (name) => {
   const item = await P.getPokemonByName(name);

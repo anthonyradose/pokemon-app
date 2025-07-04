@@ -35,17 +35,17 @@
   justify-content: space-around;
   padding-bottom: 3%;
 }
-.evolutionPokemonCard {
+.evolutionCard {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-content: center;
 }
-.evolutionPokemonHeader {
+.evolutionHeader {
   display: flex;
   align-items: center;
 }
-.evolutionPokemonName {
+.evolutionName {
   font-family: "Exo", arial, sans-serif;
   color: #fff;
   font-size: 125%;
@@ -57,7 +57,7 @@
   line-height: 125%;
   font-weight: 500;
 }
-.evolutionPokemonNumber {
+.evolutionNumber {
   font-family: "Exo", arial, sans-serif;
   color: #a4acaf;
   font-size: 20px;
@@ -69,7 +69,7 @@
   font-weight: 100;
   margin-left: 2.5%;
 }
-.evolutionPokemonImg {
+.evolutionImg {
   box-shadow: 0 4px 4px 0px #212121;
   background-color: #616161;
   border: 5px solid #fff;

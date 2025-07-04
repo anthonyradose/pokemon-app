@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { getPokemon, getAllPokemon, loadMore, getRandomPokemon } from "../services/pokemonListApi";
-import { TOTAL_POKEMON, INITIAL_POKEMON_COUNT, LOAD_MORE_COUNT } from "../constants/pokemon";
+import { getPokemon, getAllPokemon, loadMore, getRandomPokemon } from "../services/pokemonListService";
+import { TOTAL_POKEMON, INITIAL_POKEMON_COUNT, LOAD_MORE_COUNT } from "../constants/pokemonConfig";
 import { SORT_OPTIONS } from "../constants/sortOptions";
 
 const usePokemonList = () => {

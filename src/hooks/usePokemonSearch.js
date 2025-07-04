@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import P from "../services/pokedexClient";
 import { useNavigate } from "react-router-dom";
-import { TOTAL_POKEMON } from "../constants/pokemon";
+import { TOTAL_POKEMON } from "../constants/pokemonConfig";
 
 const useSearch = () => {
   const [pokemon, setPokemon] = useState([]);

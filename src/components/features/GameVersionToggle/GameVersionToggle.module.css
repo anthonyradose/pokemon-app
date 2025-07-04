@@ -1,17 +1,20 @@
-.pokemonVersionContainer {
+.versionSection {
   width: 100%;
   height: 25%;
 }
-.pokemonVersionContent {
+
+.versionContent {
   display: flex;
   flex-direction: column;
 }
-.pokemonVersionText {
+
+.versionText {
   font-family: "Exo", sans-serif;
   color: #212121;
   font-weight: 500;
 }
-.pokemonVersionHeading {
+
+.versionHeading {
   font-family: "Exo", sans-serif;
   color: #212121;
   font-weight: 500;
@@ -20,10 +23,12 @@
   align-items: center;
   gap: 8px;
 }
-.pokemonVersionToggle {
+
+.versionToggle {
   margin-left: 9px;
 }
-.pokemonVersionBlueBtn {
+
+.versionBlueBtn {
   border-radius: 50%;
   background-color: blue;
   width: 32px;
@@ -35,7 +40,8 @@
   align-items: center;
   justify-content: center;
 }
-.pokemonVersionRedBtn {
+
+.versionRedBtn {
   border-radius: 50%;
   background-color: red;
   width: 32px;

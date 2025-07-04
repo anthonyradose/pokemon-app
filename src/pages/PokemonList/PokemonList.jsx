@@ -2,7 +2,7 @@
 import React from "react"; // Import React and hooks for state and effects
 import PokemonCard from "../../components/features/PokemonCard"; // Import the PokemonCard component for displaying individual Pokemon
 import styles from "./PokemonList.module.css"; // Import styles for the PokemonList component
-import Pokeball from "../../components/common/Pokeball"; // Import a loading indicator component
+import PokeballLoader from "../../components/common/PokeballLoader"; // Import a loading indicator component
 import PokemonSearch from "../../components/features/PokemonSearch"; // Import the search component for filtering Pokemon
 import LoopRoundedIcon from "@mui/icons-material/LoopRounded"; // Import an icon for randomization button
 import usePokemonList from "../../hooks/usePokemonList"; // Import the custom hook
@@ -23,21 +23,21 @@ const PokemonList = () => {
   if (loading) {
     return (
       <div className="loading-screen">
-        <Pokeball />
+        <PokeballLoader />
       </div>
     );
   }
 
   // Render the component
   return (
-    <main className={styles.pokedexContainer} role="main" aria-label="Pokédex">
-      <div className={styles.pokedexTitleContainer}>
-        <h1 className={styles.pokedexTitle}>Pokédex</h1>
+    <main className={styles.container} role="main" aria-label="Pokédex">
+      <div className={styles.titleContainer}>
+        <h1 className={styles.title}>Pokédex</h1>
       </div>
       
       <PokemonSearch pokemonItem={pokemon} />
       
-      <div className={styles.pokedexFiltersContainer} role="toolbar" aria-label="Pokémon filters">
+      <div className={styles.filtersContainer} role="toolbar" aria-label="Pokémon filters">
         <button
           className={styles.shufflePokemonButton}
           type="button"
@@ -47,9 +47,9 @@ const PokemonList = () => {
           <LoopRoundedIcon aria-hidden="true" />
           Surprise Me!
         </button>
-        <div className={styles.pokedexSelectWrapper}>
+        <div className={styles.selectWrapper}>
           <select 
-            className={styles.pokedexSortOrder} 
+            className={styles.sortOrder} 
             onChange={handleSelectChange} 
             value={selectedSortOption}
             aria-label="Sort Pokémon"
@@ -62,22 +62,22 @@ const PokemonList = () => {
         </div>
       </div>
       
-      <div className={styles.pokedexResultsContainer}>
+      <div className={styles.resultsContainer}>
         {pokemon?.map((poke) => (
           <PokemonCard pokemonItem={poke} key={poke.name} />
         ))}
       </div>
       
-      <div className={styles.pokedexLoadMoreContainer}>
+      <div className={styles.loadMoreContainer}>
         <button
-          className={styles.pokedexLoadMoreButton}
+          className={styles.loadMoreButton}
           onClick={handleLoadMore}
           aria-label="Load more Pokémon"
         >
           Load More Pokémon
         </button>
         <button
-          className={styles.pokedexLoadAllButton}
+          className={styles.loadAllButton}
           onClick={handleGetAllPokemon}
           aria-label="Load all Pokémon"
         >

@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./PokemonCard.module.css";
-import { formatName, formatNumber, getTypeArray } from "../../../utils/formatters";
-import PokemonType from "../PokemonType/PokemonType";
+import { formatName, formatNumber, getTypeArray } from "../../../utils/pokemonFormatters";
+import PokemonTypeBadge from "../PokemonTypeBadge/PokemonTypeBadge";
 
 const PokemonCard = ({ pokemonItem }) => {
   let navigate = useNavigate();
@@ -13,23 +13,23 @@ const PokemonCard = ({ pokemonItem }) => {
 
   return (
     <button
-      className={styles.pokemonCardContainer}
+      className={styles.pokemonContainer}
       onClick={() => navigate(`/${pokemonItem.name}`)}
       type="button"
       aria-label={`View ${name} details`}
     >
       {pokemonImage && (
         <img
-          className={styles.pokemonCardImage}
+          className={styles.pokemonImage}
           alt={`${name} official artwork`}
           src={pokemonImage}
         />
       )}
-      <div className={styles.pokemonCardCopy}>
-        <span className={styles.pokemonCardId} aria-label="Pokémon number">{formatNumber(pokemonItem.id)}</span>
-        <h3 className={styles.pokemonCardName}>{name}</h3>
-        <div className={styles.pokemonCardTypeContainer} aria-label="Pokémon types">
-          <PokemonType isLarge={false} typesArray={typesArray} />
+      <div className={styles.pokemonCopy}>
+        <span className={styles.pokemonId} aria-label="Pokémon number">{formatNumber(pokemonItem.id)}</span>
+        <h3 className={styles.pokemonName}>{name}</h3>
+        <div className={styles.pokemonTypeContainer} aria-label="Pokémon types">
+          <PokemonTypeBadge isLarge={false} typesArray={typesArray} />
         </div>
       </div>
     </button>

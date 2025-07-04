@@ -1,17 +1,17 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./PokemonDetails.module.css";
-import Pokeball from "../../components/common/Pokeball";
+import PokeballLoader from "../../components/common/PokeballLoader";
 import PokemonTitle from "../../components/features/PokemonTitle";
-import PokemonType from "../../components/features/PokemonType";
-import Pagination from "../../components/common/Pagination";
+import PokemonTypeBadge from "../../components/features/PokemonTypeBadge";
+import PokemonPagination from "../../components/common/PokemonPagination";
 import PokemonStats from "../../components/features/PokemonStats";
 import PokemonImage from "../../components/features/PokemonImage";
 import PokemonInfo from "../../components/features/PokemonInfo";
-import EvolutionChart from "../../components/features/EvolutionChart";
-import PokemonVersion from "../../components/features/PokemonVersion";
-import PokemonWeakness from "../../components/features/PokemonWeakness";
-import { getTypeArray } from "../../utils/formatters";
+import EvolutionChain from "../../components/features/EvolutionChain";
+import GameVersionToggle from "../../components/features/GameVersionToggle";
+import WeaknessDisplay from "../../components/features/WeaknessDisplay";
+import { getTypeArray } from "../../utils/pokemonFormatters";
 import BackToHome from "../../components/common/BackToHome";
 import usePokemonDetails from "../../hooks/usePokemonDetails";
 
@@ -22,7 +22,7 @@ const PokemonDetails = () => {
   if (loading && !pageLoaded) {
     return (
       <div className="loading-screen">
-        <Pokeball />
+        <PokeballLoader />
       </div>
     );
   }
@@ -39,17 +39,17 @@ const PokemonDetails = () => {
   const typesArray = getTypeArray(pokemon.types);
 
   return (
-    <main className={styles.pokemonPage} role="main" aria-label={`${pokemon.name} details`}>
-      <Pagination pokemonItem={pokemon} />
+    <main className={styles.page} role="main" aria-label={`${pokemon.name} details`}>
+      <PokemonPagination pokemonItem={pokemon} />
       
       <PokemonTitle pokemonItem={pokemon} />
 
-      <div className={styles.pokemonDetailsLayout}>
-        <article className={styles.pokemonDetailsContainer}>
-          <section className={styles.pokemonDetailsMain} aria-labelledby="pokemon-details-main-content">
+      <div className={styles.detailsLayout}>
+        <article className={styles.detailsContainer}>
+          <section className={styles.detailsMain} aria-labelledby="pokemon-details-main-content">
             <h2 id="pokemon-details-main-content" className="sr-only">Pokémon Information</h2>
             
-            <div className={styles.pokemonVisualSection} role="complementary" aria-label="Pokémon visual information">
+            <div className={styles.visualSection} role="complementary" aria-label="Pokémon visual information">
               <figure aria-label={`${pokemon.name} official artwork`}>
                 <PokemonImage
                   src={
@@ -61,20 +61,20 @@ const PokemonDetails = () => {
               <PokemonStats pokemonItem={pokemon} />
             </div>
             
-            <div className={styles.pokemonInfoSection} role="complementary" aria-label="Pokémon details and characteristics">
-              <section className={styles.pokemonMetaSection} aria-labelledby="pokemon-details-versions-info">
+            <div className={styles.infoSection} role="complementary" aria-label="Pokémon details and characteristics">
+              <section className={styles.metaSection} aria-labelledby="pokemon-details-versions-info">
                 <h3 id="pokemon-details-versions-info" className="sr-only">Versions and Information</h3>
-                <PokemonVersion blue={blue} red={red} />
+                <GameVersionToggle blue={blue} red={red} />
                 <PokemonInfo pokemonItem={pokemon} />
               </section>
               
-              <section className={styles.pokemonBattleInfo} aria-labelledby="pokemon-details-type-weaknesses">
+              <section className={styles.battleInfo} aria-labelledby="pokemon-details-type-weaknesses">
                 <h3 id="pokemon-details-type-weaknesses" className="sr-only">Type and Weaknesses</h3>
-                <div className={styles.pokemonTypeDiv}>
-                  <h4 className={styles.pokemonTypeHeading}>Type</h4>
-                  <PokemonType typesArray={typesArray} isLarge={true} />
+                <div className={styles.typeSection}>
+                  <h4 className={styles.typeHeading}>Type</h4>
+                  <PokemonTypeBadge typesArray={typesArray} isLarge={true} />
                 </div>
-                <PokemonWeakness
+                <WeaknessDisplay
                   damageStuff1={damageStuff1}
                   damageStuff2={damageStuff2}
                   isLarge={true}
@@ -83,9 +83,9 @@ const PokemonDetails = () => {
             </div>
           </section>
 
-          <section aria-labelledby="pokemon-evolution-chart">
-            <h2 id="pokemon-evolution-chart" className="sr-only">Evolution Chart</h2>
-            <EvolutionChart pokemonItem={pokemon} />
+          <section aria-labelledby="pokemon-evolution-chain">
+            <h2 id="pokemon-evolution-chain" className="sr-only">Evolution Chain</h2>
+            <EvolutionChain pokemonItem={pokemon} />
           </section>
           
           <BackToHome />

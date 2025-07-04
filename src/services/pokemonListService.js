@@ -1,6 +1,6 @@
 import P from "./pokedexClient";
 import { getCachedPokemonDetails } from "./pokemonCache";
-import { TOTAL_POKEMON, RANDOM_POKEMON_COUNT, INITIAL_POKEMON_COUNT, LOAD_MORE_COUNT } from "../constants/pokemon";
+import { TOTAL_POKEMON, RANDOM_POKEMON_COUNT, INITIAL_POKEMON_COUNT, LOAD_MORE_COUNT } from "../constants/pokemonConfig";
 
 // Function to get basic information about a Pokemon by its name
 const getBasicPokemonDetails = async (pokemon) => {

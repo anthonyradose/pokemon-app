@@ -1,7 +1,7 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import OutsideClickHandler from "react-outside-click-handler";
-import useSearch from "../../../hooks/useSearch";
+import usePokemonSearch from "../../../hooks/usePokemonSearch";
 import styles from "./PokemonSearch.module.css";
 
 const PokemonSearch = () => {
@@ -12,13 +12,13 @@ const PokemonSearch = () => {
     handlePokemonSelect,
     handleSearch,
     clearResults,
-  } = useSearch();
+  } = usePokemonSearch();
 
   return (
     <section className={styles.searchContainer} aria-label="Pokémon search">
-      <div className={styles.conditionalSearchDiv}>
-        <div className={styles.searchInputSection}>
-          <div className={styles.searchInputContainerDiv}>
+      <div className={styles.searchWrapper}>
+        <div className={styles.inputSection}>
+          <div className={styles.inputWrapper}>
             <div className={styles.searchInputContainer}>
               <input
                 type="search"
@@ -41,11 +41,11 @@ const PokemonSearch = () => {
             </div>
             {foundPokemon && foundPokemon.length > 0 && (
               <OutsideClickHandler onOutsideClick={clearResults}>
-                <div className={styles.pokemonSearchList}>
-                  <ul className={styles.pokemonSearchResultsList} role="listbox">
+                <div className={styles.searchList}>
+                  <ul className={styles.searchResultsList} role="listbox">
                     {foundPokemon?.map((poke, index) => (
                       <li
-                        className={styles.pokemonSearchResultItem}
+                        className={styles.searchResultItem}
                         key={`${poke}-${index}`}
                         onClick={() => handlePokemonSelect(poke)}
                         onKeyDown={(event) => {
@@ -66,9 +66,9 @@ const PokemonSearch = () => {
             )}
           </div>
         </div>
-        <div className={styles.pokemonSearchResultsSection}>
-          <div className={styles.pokemonSearchBanner}>
-            <h3 id="search-instructions" className={styles.pokemonSearchText}>
+        <div className={styles.resultsSection}>
+          <div className={styles.searchBanner}>
+            <h3 id="search-instructions" className={styles.searchText}>
               Search for a Pokémon by name or using its National Pokédex number.
             </h3>
           </div>
