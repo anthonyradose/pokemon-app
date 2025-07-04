@@ -1,16 +1,16 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./PokemonDetails.module.css";
-import PokeballLoader from "../../components/common/PokeballLoader";
-import PokemonTitle from "../../components/features/PokemonTitle";
-import PokemonTypeBadge from "../../components/features/PokemonTypeBadge";
-import PokemonPagination from "../../components/common/PokemonPagination";
-import PokemonStats from "../../components/features/PokemonStats";
-import PokemonImage from "../../components/features/PokemonImage";
-import PokemonInfo from "../../components/features/PokemonInfo";
-import EvolutionChain from "../../components/features/EvolutionChain";
-import GameVersionToggle from "../../components/features/GameVersionToggle";
-import WeaknessDisplay from "../../components/features/WeaknessDisplay";
+import Loader from "../../components/common/Loader";
+import Title from "../../components/features/Title";
+import Type from "../../components/features/Type";
+import Pagination from "../../components/common/Pagination";
+import Stats from "../../components/features/Stats";
+import Image from "../../components/features/Image";
+import Info from "../../components/features/Info";
+import Evolution from "../../components/features/Evolution";
+import Version from "../../components/features/Version";
+import Weakness from "../../components/features/Weakness";
 import { getTypeArray } from "../../utils/pokemonFormatters";
 import BackToHome from "../../components/common/BackToHome";
 import usePokemonDetails from "../../hooks/usePokemonDetails";
@@ -22,7 +22,7 @@ const PokemonDetails = () => {
   if (loading && !pageLoaded) {
     return (
       <div className="loading-screen">
-        <PokeballLoader />
+        <Loader />
       </div>
     );
   }
@@ -40,9 +40,9 @@ const PokemonDetails = () => {
 
   return (
     <main className={styles.page} role="main" aria-label={`${pokemon.name} details`}>
-      <PokemonPagination pokemonItem={pokemon} />
+      <Pagination pokemonItem={pokemon} />
       
-      <PokemonTitle pokemonItem={pokemon} />
+      <Title pokemonItem={pokemon} />
 
       <div className={styles.detailsLayout}>
         <article className={styles.detailsContainer}>
@@ -51,30 +51,30 @@ const PokemonDetails = () => {
             
             <div className={styles.visualSection} role="complementary" aria-label="Pokémon visual information">
               <figure aria-label={`${pokemon.name} official artwork`}>
-                <PokemonImage
+                <Image
                   src={
                     pokemon.sprites?.other?.["official-artwork"]?.front_default
                   }
                   alt={`Official artwork of ${pokemon.name}`}
                 />
               </figure>
-              <PokemonStats pokemonItem={pokemon} />
+              <Stats pokemonItem={pokemon} />
             </div>
             
             <div className={styles.infoSection} role="complementary" aria-label="Pokémon details and characteristics">
               <section className={styles.metaSection} aria-labelledby="pokemon-details-versions-info">
                 <h3 id="pokemon-details-versions-info" className="sr-only">Versions and Information</h3>
-                <GameVersionToggle blue={blue} red={red} />
-                <PokemonInfo pokemonItem={pokemon} />
+                <Version blue={blue} red={red} />
+                <Info pokemonItem={pokemon} />
               </section>
               
               <section className={styles.battleInfo} aria-labelledby="pokemon-details-type-weaknesses">
                 <h3 id="pokemon-details-type-weaknesses" className="sr-only">Type and Weaknesses</h3>
                 <div className={styles.typeSection}>
                   <h4 className={styles.typeHeading}>Type</h4>
-                  <PokemonTypeBadge typesArray={typesArray} isLarge={true} />
+                  <Type typesArray={typesArray} isLarge={true} />
                 </div>
-                <WeaknessDisplay
+                <Weakness
                   damageStuff1={damageStuff1}
                   damageStuff2={damageStuff2}
                   isLarge={true}
@@ -85,7 +85,7 @@ const PokemonDetails = () => {
 
           <section aria-labelledby="pokemon-evolution-chain">
             <h2 id="pokemon-evolution-chain" className="sr-only">Evolution Chain</h2>
-            <EvolutionChain pokemonItem={pokemon} />
+            <Evolution pokemonItem={pokemon} />
           </section>
           
           <BackToHome />

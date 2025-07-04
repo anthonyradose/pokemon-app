@@ -1,9 +1,9 @@
 // Import necessary libraries and components
 import React from "react"; // Import React and hooks for state and effects
-import PokemonCard from "../../components/features/PokemonCard"; // Import the PokemonCard component for displaying individual Pokemon
+import Card from "../../components/features/Card"; // Import the Card component for displaying individual Pokemon
 import styles from "./PokemonList.module.css"; // Import styles for the PokemonList component
-import PokeballLoader from "../../components/common/PokeballLoader"; // Import a loading indicator component
-import PokemonSearch from "../../components/features/PokemonSearch"; // Import the search component for filtering Pokemon
+import Loader from "../../components/common/Loader"; // Import a loading indicator component
+import Search from "../../components/features/Search"; // Import the search component for filtering Pokemon
 import LoopRoundedIcon from "@mui/icons-material/LoopRounded"; // Import an icon for randomization button
 import usePokemonList from "../../hooks/usePokemonList"; // Import the custom hook
 import { SORT_LABELS } from "../../constants/sortOptions";
@@ -23,7 +23,7 @@ const PokemonList = () => {
   if (loading) {
     return (
       <div className="loading-screen">
-        <PokeballLoader />
+        <Loader />
       </div>
     );
   }
@@ -35,7 +35,7 @@ const PokemonList = () => {
         <h1 className={styles.title}>Pokédex</h1>
       </div>
       
-      <PokemonSearch pokemonItem={pokemon} />
+      <Search pokemonItem={pokemon} />
       
       <div className={styles.filtersContainer} role="toolbar" aria-label="Pokémon filters">
         <button
@@ -64,7 +64,7 @@ const PokemonList = () => {
       
       <div className={styles.resultsContainer}>
         {pokemon?.map((poke) => (
-          <PokemonCard pokemonItem={poke} key={poke.name} />
+          <Card pokemonItem={poke} key={poke.name} />
         ))}
       </div>
       
