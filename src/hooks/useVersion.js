@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useVersionToggle = (initialVersion = true) => {
+const useVersion = (initialVersion = true) => {
   const [showBlue, setShowBlue] = useState(initialVersion);
 
   const toggleToBlue = () => setShowBlue(true);
@@ -15,4 +15,4 @@ const useVersionToggle = (initialVersion = true) => {
   };
 };
 
-export default useVersionToggle; 
+export default useVersion; 

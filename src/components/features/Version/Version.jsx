@@ -1,10 +1,10 @@
 import React from "react";
 import CatchingPokemonIcon from "@mui/icons-material/CatchingPokemon";
-import useVersionToggle from "../../../hooks/useVersionToggle";
+import useVersion from "../../../hooks/useVersion";
 import styles from "./Version.module.css";
 
 const Version = ({ blue, red }) => {
-  const { showBlue, toggleToBlue, toggleToRed } = useVersionToggle(true);
+  const { showBlue, toggleToBlue, toggleToRed } = useVersion(true);
   return (
     <div className={styles.versionSection}>
       <div className={styles.versionContent}>

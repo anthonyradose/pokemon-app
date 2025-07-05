@@ -1,7 +1,7 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import OutsideClickHandler from "react-outside-click-handler";
-import usePokemonSearch from "../../../hooks/usePokemonSearch";
+import useSearch from "../../../hooks/useSearch";
 import styles from "./Search.module.css";
 
 const Search = () => {
@@ -12,7 +12,7 @@ const Search = () => {
     handlePokemonSelect,
     handleSearch,
     clearResults,
-  } = usePokemonSearch();
+  } = useSearch();
 
   return (
     <section className={styles.searchContainer} aria-label="Pokémon search">
