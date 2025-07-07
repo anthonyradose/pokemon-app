@@ -33,6 +33,13 @@
   gap: 16px;
 }
 
+.pokemonImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .infoSection {
   display: flex;
   flex-direction: column;
@@ -96,6 +103,25 @@
   .detailsLayout {
     margin: 0 4px;
   }
+}
+
+.backToHomeLink {
+  background-color: #ee6b2f;
+  color: #fff;
+  border-radius: 5px;
+  width: 25%;
+  cursor: pointer;
+  height: 50px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  font-family: "Exo", arial, sans-serif;
+  font-weight: 500;
+  font-size: 105%;
+  text-decoration: none;
 }
 
 /* Font imports */

@@ -19,6 +19,14 @@
   background: none;
   padding: 8px;
   gap: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.paginationPrev:hover,
+.paginationNext:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 .paginationName {

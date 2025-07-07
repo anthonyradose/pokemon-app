@@ -1,5 +1,5 @@
 @media (min-width: 0px) {
-  .pokemonContainer {
+  .pokemonCard {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,11 +9,11 @@
 }
 
 @media (min-width: 900px) {
-  .pokemonContainer {
+  .pokemonCard {
     display: flex;
   }
 }
-.pokemonContainer:hover {
+.pokemonCard:hover {
   animation-name: bounce;
   animation-duration: 0.2s;
   animation-iteration-count: 1;
@@ -31,7 +31,7 @@
   }
 }
 
-.pokemonCopy {
+.pokemonInfo {
   display: flex;
   width: 70%;
   flex-direction: column;

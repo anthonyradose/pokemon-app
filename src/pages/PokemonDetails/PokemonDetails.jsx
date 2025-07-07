@@ -1,18 +1,18 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import styles from "./PokemonDetails.module.css";
 import Loader from "../../components/common/Loader";
 import Title from "../../components/features/Title";
 import Type from "../../components/features/Type";
 import Pagination from "../../components/common/Pagination";
 import Stats from "../../components/features/Stats";
-import Image from "../../components/features/Image";
+
 import Info from "../../components/features/Info";
 import Evolution from "../../components/features/Evolution";
 import Version from "../../components/features/Version";
 import Weakness from "../../components/features/Weakness";
 import { getTypeArray } from "../../utils/pokemonFormatters";
-import BackToHome from "../../components/common/BackToHome";
+
 import usePokemonDetails from "../../hooks/usePokemonDetails";
 
 const PokemonDetails = () => {
@@ -51,11 +51,10 @@ const PokemonDetails = () => {
           
           <div className={styles.visualSection} role="complementary" aria-label="Pokémon visual information">
             <figure aria-label={`${pokemon.name} official artwork`}>
-              <Image
-                src={
-                  pokemon.sprites?.other?.["official-artwork"]?.front_default
-                }
+              <img
+                src={pokemon.sprites?.other?.["official-artwork"]?.front_default}
                 alt={`Official artwork of ${pokemon.name}`}
+                className={styles.pokemonImage}
               />
             </figure>
             <Stats pokemonItem={pokemon} />
@@ -89,7 +88,9 @@ const PokemonDetails = () => {
         </section>
         
         <section>
-          <BackToHome />
+          <Link to="/" className={styles.backToHomeLink}>
+            Explore More Pokémon
+          </Link>
         </section>
         </article>
       </div>
