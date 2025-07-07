@@ -47,48 +47,50 @@ const PokemonDetails = () => {
       <div className={styles.detailsLayout}>
         <article className={styles.detailsContainer}>
           <section className={styles.detailsMain} aria-labelledby="pokemon-details-main-content">
-            <h2 id="pokemon-details-main-content" className="sr-only">Pokémon Information</h2>
-            
-            <div className={styles.visualSection} role="complementary" aria-label="Pokémon visual information">
-              <figure aria-label={`${pokemon.name} official artwork`}>
-                <Image
-                  src={
-                    pokemon.sprites?.other?.["official-artwork"]?.front_default
-                  }
-                  alt={`Official artwork of ${pokemon.name}`}
-                />
-              </figure>
-              <Stats pokemonItem={pokemon} />
-            </div>
-            
-            <div className={styles.infoSection} role="complementary" aria-label="Pokémon details and characteristics">
-              <section className={styles.metaSection} aria-labelledby="pokemon-details-versions-info">
-                <h3 id="pokemon-details-versions-info" className="sr-only">Versions and Information</h3>
-                <Version blue={blue} red={red} />
-                <Info pokemonItem={pokemon} />
-              </section>
-              
-              <section className={styles.battleInfo} aria-labelledby="pokemon-details-type-weaknesses">
-                <h3 id="pokemon-details-type-weaknesses" className="sr-only">Type and Weaknesses</h3>
-                <div className={styles.typeSection}>
-                  <h4 className={styles.typeHeading}>Type</h4>
-                  <Type typesArray={typesArray} isLarge={true} />
-                </div>
-                <Weakness
-                  damageStuff1={damageStuff1}
-                  damageStuff2={damageStuff2}
-                  isLarge={true}
-                />
-              </section>
-            </div>
-          </section>
-
-          <section aria-labelledby="pokemon-evolution-chain">
-            <h2 id="pokemon-evolution-chain" className="sr-only">Evolution Chain</h2>
-            <Evolution pokemonItem={pokemon} />
-          </section>
+          <h2 id="pokemon-details-main-content" className="sr-only">Pokémon Information</h2>
           
+          <div className={styles.visualSection} role="complementary" aria-label="Pokémon visual information">
+            <figure aria-label={`${pokemon.name} official artwork`}>
+              <Image
+                src={
+                  pokemon.sprites?.other?.["official-artwork"]?.front_default
+                }
+                alt={`Official artwork of ${pokemon.name}`}
+              />
+            </figure>
+            <Stats pokemonItem={pokemon} />
+          </div>
+          
+          <div className={styles.infoSection} role="complementary" aria-label="Pokémon details and characteristics">
+            <section className={styles.metaSection} aria-labelledby="pokemon-details-versions-info">
+              <h3 id="pokemon-details-versions-info" className="sr-only">Versions and Information</h3>
+              <Version blue={blue} red={red} />
+              <Info pokemonItem={pokemon} />
+            </section>
+            
+            <section className={styles.battleInfo} aria-labelledby="pokemon-details-type-weaknesses">
+              <h3 id="pokemon-details-type-weaknesses" className="sr-only">Type and Weaknesses</h3>
+              <div className={styles.typeSection}>
+                <h4 className={styles.typeHeading}>Type</h4>
+                <Type typesArray={typesArray} isLarge={true} />
+              </div>
+              <Weakness
+                damageStuff1={damageStuff1}
+                damageStuff2={damageStuff2}
+                isLarge={true}
+              />
+            </section>
+          </div>
+        </section>
+
+        <section aria-labelledby="pokemon-evolution-chain">
+          <h2 id="pokemon-evolution-chain" className="sr-only">Evolution Chain</h2>
+          <Evolution pokemonItem={pokemon} />
+        </section>
+        
+        <section>
           <BackToHome />
+        </section>
         </article>
       </div>
     </main>
