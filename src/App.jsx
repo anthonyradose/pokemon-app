@@ -1,7 +1,7 @@
 import React from "react";
 import PokemonList from "./pages/PokemonList";
 import PokemonDetails from "./pages/PokemonDetails";
-import Nav from "./components/common/Nav";
+import Home from "./components/common/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
 
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <header role="banner">
-        <Nav />
+        <Home />
       </header>
       <Routes>
         <Route path="/" element={<PokemonList />} />
