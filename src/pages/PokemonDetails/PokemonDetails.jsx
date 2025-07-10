@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import styles from "./PokemonDetails.module.css";
 import Loader from "../../components/common/Loader";
 import Title from "../../components/features/Title";
-import Type from "../../components/features/Type";
+import Types from "../../components/features/Types";
 import Pagination from "../../components/common/Pagination";
 import Stats from "../../components/features/Stats";
 
@@ -71,7 +71,7 @@ const PokemonDetails = () => {
               <h3 id="pokemon-details-type-weaknesses" className="sr-only">Type and Weaknesses</h3>
               <div className={styles.typeSection}>
                 <h4 className={styles.typeHeading}>Type</h4>
-                <Type typesArray={typesArray} isLarge={true} />
+                <Types typesArray={typesArray} isLarge={true} />
               </div>
               <Weakness
                 damageStuff1={damageStuff1}

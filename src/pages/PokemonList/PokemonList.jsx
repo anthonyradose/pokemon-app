@@ -62,11 +62,13 @@ const PokemonList = () => {
         </div>
       </div>
       
-      <div className={styles.resultsContainer}>
+      <ul className={styles.resultsContainer}>
         {pokemon?.map((poke) => (
-          <Card pokemonItem={poke} key={poke.name} />
+          <li key={poke.name}>
+            <Card pokemonItem={poke} />
+          </li>
         ))}
-      </div>
+      </ul>
       
       <div className={styles.loadMoreContainer}>
         <button

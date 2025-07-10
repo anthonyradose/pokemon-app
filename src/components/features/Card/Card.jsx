@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 import { formatName, formatNumber, getTypeArray } from "../../../utils/pokemonFormatters";
-import Type from "../Type/Type";
+import Types from "../Types/Types";
 
 const Card = ({ pokemonItem }) => {
   const pokemonImage =
@@ -26,7 +26,7 @@ const Card = ({ pokemonItem }) => {
       <div className={styles.pokemonInfo}>
         <small className={styles.pokemonId} aria-label="Pokémon number">{formatNumber(pokemonItem.id)}</small>
         <strong className={styles.pokemonName}>{name}</strong>
-        <Type isLarge={false} typesArray={typesArray} />
+        <Types isLarge={false} typesArray={typesArray} />
       </div>
     </Link>
   );

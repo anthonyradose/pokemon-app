@@ -1,5 +1,5 @@
 import React from "react";
-import Type from "../Type/Type";
+import Types from "../Types/Types";
 import styles from "./Weakness.module.css";
 
 const Weakness = ({ damageStuff1, damageStuff2 }) => {
@@ -13,7 +13,7 @@ const Weakness = ({ damageStuff1, damageStuff2 }) => {
     <div className={styles.weaknessSection} role="region" aria-label="Pokémon type weaknesses">
       <h3 className={styles.weaknessTitle}>Weaknesses</h3>
       <div className={styles.weaknessContent}>
-        <Type typesArray={beta} isLarge={true} />
+        <Types typesArray={beta} isLarge={true} />
       </div>
     </div>
   );
