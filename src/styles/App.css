@@ -5,6 +5,10 @@
 @import "@fontsource/roboto/500.css";
 @import "@fontsource/roboto/700.css";
 
+*{
+  outline: 1px solid BLACK;
+}
+
 body {
   margin: 0%;
   background-color: #FF0000;

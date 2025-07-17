@@ -24,6 +24,16 @@ export const formatNumber = (number) => {
   return `${digitFormats.tripleDigit}${number}`;
 };
 
+export const formatStatName = (statName) => {
+  // Replicates the formatting logic from Stats.jsx
+  return (
+    statName.charAt(0) +
+    statName.slice(1, 8).replace("-", " ") +
+    statName.charAt(8) +
+    statName.slice(9)
+  );
+};
+
 export const getTypeArray = (typesArray) => {
   const typesStringsArray = typesArray.map((item) => item.type.name);
   return typesStringsArray;

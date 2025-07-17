@@ -21,7 +21,8 @@ const Info = ({ pokemonItem }) => {
   };
 
   return (
-    <section className={styles.infoSection} aria-label="Pokémon information">
+    <div className={styles.infoContainer}>
+    <div className={styles.infoContainer} aria-label="Pokémon information">
       <div className={styles.physicalTraits}>
         <ul className={styles.physicalTraitsList}>
           <li className={styles.traitItem}>
@@ -52,7 +53,7 @@ const Info = ({ pokemonItem }) => {
           </li>
         </ul>
       </div>
-      <div className={styles.pokemonCategory}>
+      <div className={styles.categoryTraits}>
         <ul className={styles.categoryTraitsList}>
           <li className={styles.traitItem}>
             <span className={styles.traitLabel}>Category</span>
@@ -66,7 +67,8 @@ const Info = ({ pokemonItem }) => {
           </li>
         </ul>
       </div>
-    </section>
+      </div>
+    </div>
   );
 };
 

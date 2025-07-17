@@ -1,12 +1,5 @@
-.weaknessSection {
+.weaknessContainer {
   margin-left: 4px;
-}
-
-.weaknessTitle {
-  width: 100%;
-  font-family: "Exo";
-  font-weight: 500;
-  font-size: 125%;
 }
 
 .weaknessContent {

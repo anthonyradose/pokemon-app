@@ -30,7 +30,7 @@ const Evolution = ({ pokemonItem }) => {
   ));
 
   return (
-    <div className={styles.evolutionSection}>
+    <div className={styles.evolutionContainer}>
       {pokemonItem.evoListItems.length <= 1 ? (
         <p className={styles.evolutionNone}>This Pokémon does not evolve</p>
       ) : null}

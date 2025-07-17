@@ -12,7 +12,7 @@ const Pagination = ({ pokemonItem }) => {
   const nextPokemonId = formatNumber(pokemonItem.nextPokemon.id);
 
   return (
-    <nav className={styles.pagination} role="navigation" aria-label="Pokémon navigation">
+    <nav className={styles.pagination} aria-label="Pokémon navigation">
       <Link
         className={styles.paginationPrev}
         to={`/${pokemonItem.prevPokemon.name}`}

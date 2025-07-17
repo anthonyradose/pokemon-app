@@ -1,6 +1,7 @@
 import styles from "./Stats.module.css";
 import React from "react";
 import { appLimits } from "../../../constants/appLimits";
+import { formatStatName } from "../../../utils/pokemonFormatters";
 
 const StatBar = ({ numOfBarsColored, statName }) => {
   const numThing = numOfBarsColored;
@@ -11,10 +12,10 @@ const StatBar = ({ numOfBarsColored, statName }) => {
     return <li key={i} className={styles.statBarSegment} style={{ backgroundColor: changeColor }} />;
   });
   return (
-    <div>
+    <>
       <ul className={styles.statBar} role="progressbar" aria-label={`${statsLabel} stat bar`} aria-valuenow={numThing} aria-valuemin="0" aria-valuemax={appLimits.statBarMax}>{liMapped}</ul>
       {statsLabel}
-    </div>
+    </>
   );
 };
 
@@ -27,15 +28,11 @@ const Stats = ({ pokemonItem }) => {
     numsArray.push(Math.round(nums / 17));
   }
   const statsMapped = statsArray.map((stats, index) => {
-    const statName =
-      stats.stat.name.charAt(0) +
-      stats.stat.name.slice(1, 8).replace("-", " ") +
-      stats.stat.name.charAt(8) +
-      stats.stat.name.slice(9);
+    const statName = formatStatName(stats.stat.name);
     return <span key={index} className={styles.statLabel}>{statName}</span>;
   });
   return (
-    <div className={styles.statsWrapper}>
+   
       <div className={styles.statsContent}>
         <h3 className={styles.statsHeader}>Stats</h3>
         <div className={styles.statsContainer}>
@@ -53,7 +50,7 @@ const Stats = ({ pokemonItem }) => {
           </ul>
         </div>
       </div>
-    </div>
+ 
   );
 };
 

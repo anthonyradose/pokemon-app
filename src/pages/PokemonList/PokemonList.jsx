@@ -31,13 +31,17 @@ const PokemonList = () => {
   // Render the component
   return (
     <main className={styles.container} role="main" aria-label="Pokédex">
-      <div className={styles.titleContainer}>
+      <section className={styles.titleContainer}>
+        <h1 className="sr-only">Pokédex Title</h1>
         <h1 className={styles.title}>Pokédex</h1>
-      </div>
+      </section>
+      <section className={styles.searchContainer} aria-label="Pokémon search">
+        <h2 className="sr-only">Search Pokémon</h2>
+        <Search pokemonItem={pokemon} />
+      </section>
       
-      <Search pokemonItem={pokemon} />
-      
-      <div className={styles.filtersContainer} role="toolbar" aria-label="Pokémon filters">
+      <nav className={styles.filtersContainer} role="toolbar" aria-label="Pokémon filters">
+        <h2 className="sr-only">Filter and Sort Pokémon</h2>
         <button
           className={styles.shufflePokemonButton}
           type="button"
@@ -48,44 +52,51 @@ const PokemonList = () => {
           Surprise Me!
         </button>
         <div className={styles.selectWrapper}>
+          <label htmlFor="sort-order" className="sr-only">Sort Pokémon</label>
           <select 
             className={styles.sortOrder} 
             onChange={handleSelectChange} 
             value={selectedSortOption}
-            aria-label="Sort Pokémon"
+            id="sort-order"
           >
-                    <option value="numberAsc">{sortLabels.numberAsc}</option>
-        <option value="numberDesc">{sortLabels.numberDesc}</option>
-        <option value="nameAsc">{sortLabels.nameAsc}</option>
-        <option value="nameDesc">{sortLabels.nameDesc}</option>
+            <option value="numberAsc">{sortLabels.numberAsc}</option>
+            <option value="numberDesc">{sortLabels.numberDesc}</option>
+            <option value="nameAsc">{sortLabels.nameAsc}</option>
+            <option value="nameDesc">{sortLabels.nameDesc}</option>
           </select>
         </div>
-      </div>
-      
-      <ul className={styles.resultsContainer}>
-        {pokemon?.map((poke) => (
-          <li key={poke.name}>
-            <Card pokemonItem={poke} />
-          </li>
-        ))}
-      </ul>
-      
-      <div className={styles.loadMoreContainer}>
-        <button
-          className={styles.loadMoreButton}
-          onClick={handleLoadMore}
-          aria-label="Load more Pokémon"
-        >
-          Load More Pokémon
-        </button>
-        <button
-          className={styles.loadAllButton}
-          onClick={handleGetAllPokemon}
-          aria-label="Load all Pokémon"
-        >
-          Load All Pokémon
-        </button>
-      </div>
+      </nav>
+      <section   aria-label="Pokémon results">
+        <h2 className="sr-only">Pokémon Results</h2>
+        <ul className={styles.resultsContainer}>
+          {pokemon?.map((poke) => (
+            <li key={poke.name}>
+              <Card pokemonItem={poke} />
+            </li>
+          ))}
+        </ul>
+        <div className={styles.loadMoreContainer}>
+          <label htmlFor="load-more" className="sr-only">Load more Pokémon</label>
+          <button
+            type="button"
+            className={styles.loadMoreButton}
+            onClick={handleLoadMore}
+            aria-label="Load more Pokémon"
+            id="load-more"
+          >
+            Load More Pokémon
+          </button>
+          <button
+            className={styles.loadAllButton}
+            type="button"
+            onClick={handleGetAllPokemon}
+            aria-label="Load all Pokémon"
+            id="load-all"
+          >
+            Load All Pokémon
+          </button>
+        </div>
+      </section>
     </main>
   );
 };

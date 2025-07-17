@@ -6,7 +6,7 @@ import styles from "./Version.module.css";
 const Version = ({ blue, red }) => {
   const { showBlue, toggleToBlue, toggleToRed } = useVersion(true);
   return (
-    <div className={styles.versionSection}>
+    <div className={styles.versionContainer}>
       <div className={styles.versionContent}>
         <div>
           <p className={styles.versionText}>{showBlue ? blue : red} </p>

@@ -1,4 +1,4 @@
-.infoSection {
+.infoContainer {
   display: flex;
   box-sizing: border-box;
   width: 100%;
@@ -38,7 +38,7 @@
   color: #d81b60;
 }
 .physicalTraits,
-.pokemonCategory {
+.categoryTraits {
   margin-bottom: 16px;
 }
 .physicalTraitsList,

@@ -10,8 +10,7 @@ const Weakness = ({ damageStuff1, damageStuff2 }) => {
   const beta = [...new Set(alpha)];
 
   return (
-    <div className={styles.weaknessSection} role="region" aria-label="Pokémon type weaknesses">
-      <h3 className={styles.weaknessTitle}>Weaknesses</h3>
+    <div className={styles.weaknessContainer} role="region" aria-label="Pokémon type weaknesses">
       <div className={styles.weaknessContent}>
         <Types typesArray={beta} isLarge={true} />
       </div>
