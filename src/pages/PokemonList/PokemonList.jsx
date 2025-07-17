@@ -31,8 +31,7 @@ const PokemonList = () => {
   // Render the component
   return (
     <main className={styles.container} role="main" aria-label="Pokédex">
-      <section className={styles.titleContainer}>
-        <h1 className="sr-only">Pokédex Title</h1>
+      <section className={styles.titleSection}>
         <h1 className={styles.title}>Pokédex</h1>
       </section>
       <section className={styles.searchContainer} aria-label="Pokémon search">

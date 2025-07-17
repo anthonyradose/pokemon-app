@@ -14,4 +14,37 @@
   width: 100%;
   height: 50%;
   justify-content: flex-start;
+}
+
+/* =========================
+   Responsive Breakpoints
+   ========================= */
+/* Mobile */
+@media (min-width: 375px) {
+  /* Add responsive styles here */
+}
+
+/* Large mobile/Small tablet */
+@media (min-width: 576px) {
+  /* Add responsive styles here */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* Add responsive styles here */
+}
+
+/* Small desktop/Laptop */
+@media (min-width: 992px) {
+  /* Add responsive styles here */
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  /* Add responsive styles here */
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  /* Add responsive styles here */
 } 

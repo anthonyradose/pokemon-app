@@ -50,14 +50,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 475px) {
-  .pokemonImage {
-    width: 85%;
-  }
-  .pokemonCopy {
-    width: 85%;
-  }
-}
+
 
 /* =========================
    Card Text Styles
@@ -76,6 +69,44 @@
   margin-top: 3%;
   font-weight: 500;
   color: #313131;
+}
+
+/* =========================
+   Responsive Breakpoints
+   ========================= */
+/* Mobile */
+@media (min-width: 375px) {
+  /* Add responsive styles here */
+}
+
+/* Large mobile/Small tablet */
+@media (min-width: 576px) {
+  .pokemonImage {
+    width: 85%;
+  }
+  .pokemonCopy {
+    width: 85%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* Add responsive styles here */
+}
+
+/* Small desktop/Laptop */
+@media (min-width: 992px) {
+  /* Add responsive styles here */
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  /* Add responsive styles here */
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  /* Add responsive styles here */
 }
 
  

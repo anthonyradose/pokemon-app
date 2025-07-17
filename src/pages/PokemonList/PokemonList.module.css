@@ -1,4 +1,30 @@
 /* =========================
+   Imports & Font Faces
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap");
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+
+/* =========================
+   Title Section
+   ========================= */
+.titleSection {
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+
+/* =========================
    Results Grid Container
    ========================= */
 .resultsContainer {
@@ -11,23 +37,16 @@
 }
 
 /* =========================
-   Responsive: Results Grid
+   Title
    ========================= */
-@media (min-width: 768px) {
-  .resultsContainer {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (min-width: 992px) {
-  .resultsContainer {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1024px) {
-  .resultsContainer {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
+.title {
+  font-family: "Pokemon";
+  text-shadow: -4px 1px 1px #3E558B;
+  color: #EDC20C;
+} 
+
+
+
 
 /* =========================
    Filters & Select
@@ -49,18 +68,7 @@
   width: 80%;
 }
 
-@media (min-width: 992px) {
-  .filtersContainer {
-    justify-content: space-between;
-    padding: 32px 0 0;
-    flex-direction: unset;
-    align-items: unset;
-  }
-  .selectWrapper {
-    width: 40%;
-    margin-right: 18px;
-  }
-}
+
 
 .sortOrder {
   background-color: #313131;
@@ -110,20 +118,7 @@
   max-width: 895px;
 }
 
-@media (min-width: 992px) {
-  .loadMoreContainer {
-    flex-direction: unset;
-    justify-content: space-between;
-  }
-  .loadMoreButton {
-    width: 40%;
-    margin-left: 18px;
-  }
-  .loadAllButton {
-    width: 40%;
-    margin-right: 18px;
-  }
-}
+
 
 .loadMoreButton {
   display: inline-block;
@@ -166,4 +161,80 @@
 }
 .loadAllButton:hover {
   background-color: #d85a1f;
+}
+
+/* =========================
+   Responsive Breakpoints
+   ========================= */
+/* Mobile */
+@media (min-width: 375px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+/* Large mobile/Small tablet */
+@media (min-width: 576px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+  .resultsContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small desktop/Laptop */
+@media (min-width: 992px) {
+  .title {
+    font-size: 3rem;
+  }
+  .resultsContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .filtersContainer {
+    justify-content: space-between;
+    padding: 32px 0 0;
+    flex-direction: unset;
+    align-items: unset;
+  }
+  .selectWrapper {
+    width: 40%;
+    margin-right: 18px;
+  }
+  .loadMoreContainer {
+    flex-direction: unset;
+    justify-content: space-between;
+  }
+  .loadMoreButton {
+    width: 40%;
+    margin-left: 18px;
+  }
+  .loadAllButton {
+    width: 40%;
+    margin-right: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .title {
+    font-size: 3.25rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  .title {
+    font-size: 3.5rem;
+  }
+  .resultsContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 } 

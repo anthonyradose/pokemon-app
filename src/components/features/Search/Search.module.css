@@ -152,8 +152,24 @@
 }
 
 /* =========================
-   Responsive: Tablet Styles
+   Responsive Breakpoints
    ========================= */
+/* Mobile */
+@media (min-width: 375px) {
+  /* Add responsive styles here */
+}
+
+/* Large mobile/Small tablet */
+@media (min-width: 576px) {
+  /* Add responsive styles here */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* Add responsive styles here */
+}
+
+/* Small desktop/Laptop */
 @media (min-width: 992px) {
   .searchContainer {
     height: 150px;
@@ -197,10 +213,8 @@
   }
 }
 
-/* =========================
-   Responsive: Desktop Styles
-   ========================= */
-@media (min-width: 1024px) {
+/* Desktop */
+@media (min-width: 1200px) {
   .searchWrapper {
     display: flex;
     flex-direction: row;
@@ -223,4 +237,9 @@
     width: 30%;
     max-width: 300px;
   }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  /* Add responsive styles here */
 } 

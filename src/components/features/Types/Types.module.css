@@ -79,10 +79,36 @@ dragon    { background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%); color
 dark      { background-color: #707070; color: white; }
 
 /* =========================
-   Responsive Adjustments
+   Responsive Breakpoints
    ========================= */
+/* Mobile */
+@media (min-width: 375px) {
+  /* Add responsive styles here */
+}
+
+/* Large mobile/Small tablet */
+@media (min-width: 576px) {
+  /* Add responsive styles here */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* Add responsive styles here */
+}
+
+/* Small desktop/Laptop */
 @media (min-width: 992px) {
   .typeBadgeLarge {
     padding: 0;
   }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  /* Add responsive styles here */
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  /* Add responsive styles here */
 } 
