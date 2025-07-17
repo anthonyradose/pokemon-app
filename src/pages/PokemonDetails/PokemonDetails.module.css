@@ -1,7 +1,6 @@
-/* Font imports */
-
-/* Page-level layout styles only - component-specific styles moved to individual CSS modules */
-
+/* =========================
+   Layout Containers
+   ========================= */
 .page {
   width: 100%;
 }
@@ -20,6 +19,9 @@
   /* Container for the main content */
 }
 
+/* =========================
+   Main, Visual, Info, Meta, Battle, Type Sections
+   ========================= */
 .detailsMain {
   display: flex;
   flex-direction: column;
@@ -71,40 +73,9 @@
   font-size: 18px;
 }
 
-/* Responsive design */
-@media (min-width: 900px) {
-  .detailsMain {
-    flex-direction: row;
-    padding-top: 80px;
-  }
-  
-  .visualSection {
-    flex: 1;
-  }
-  
-  .infoSection {
-    flex: 1;
-  }
-}
-
-@media (min-width: 461px) and (max-width: 900px) {
-  .detailsLayout {
-    margin: 0 16px;
-  }
-}
-
-@media (min-width: 310px) {
-  .detailsLayout {
-    margin: 0 8px;
-  }
-}
-
-@media (min-width: 218px) {
-  .detailsLayout {
-    margin: 0 4px;
-  }
-}
-
+/* =========================
+   Back to Home Link
+   ========================= */
 .backToHomeLink {
   background-color: #ee6b2f;
   color: #fff;
@@ -124,18 +95,37 @@
   text-decoration: none;
 }
 
-/* Font imports */
+/* =========================
+   Responsive Design
+   ========================= */
+@media (min-width: 992px) {
+  .detailsMain {
+    flex-direction: row;
+    padding-top: 80px;
+  }
+  .visualSection {
+    flex: 1;
+  }
+  .infoSection {
+    flex: 1;
+  }
+}
+
+@media (min-width: 320px) {
+  .detailsLayout {
+    margin: 0 8px;
+  }
+}
+
+/* =========================
+   Font Imports
+   ========================= */
 @font-face {
   font-family: "Pokemon";
   src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
-  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon")
-      format("svg");
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg");
 } 

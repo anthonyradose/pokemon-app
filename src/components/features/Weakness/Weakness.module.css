@@ -1,7 +1,13 @@
+/* =========================
+   Weakness Container
+   ========================= */
 .weaknessContainer {
   margin-left: 4px;
 }
 
+/* =========================
+   Weakness Content
+   ========================= */
 .weaknessContent {
   display: flex;
   flex-wrap: wrap;

@@ -1,3 +1,6 @@
+/* =========================
+   Evolution Container
+   ========================= */
 .evolutionContainer {
   color: black;
   display: flex;
@@ -18,21 +21,37 @@
   margin: auto;
   margin-bottom: 5%;
 }
+
+/* =========================
+   Evolution Content
+   ========================= */
 .evolutionContent {
   display: flex;
   justify-content: space-around;
   padding-bottom: 3%;
 }
+
+/* =========================
+   Evolution Card
+   ========================= */
 .evolutionCard {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-content: center;
 }
+
+/* =========================
+   Evolution Header
+   ========================= */
 .evolutionHeader {
   display: flex;
   align-items: center;
 }
+
+/* =========================
+   Evolution Name, Number, None
+   ========================= */
 .evolutionName {
   font-family: "Exo", arial, sans-serif;
   color: #fff;
@@ -45,18 +64,24 @@
   line-height: 125%;
   font-weight: 500;
 }
+
 .evolutionNumber {
   font-family: "Exo", arial, sans-serif;
   color: #a4acaf;
   font-size: 20px;
   font-weight: 100;
 }
+
 .evolutionNone {
   color: white;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   margin-left: 2.5%;
 }
+
+/* =========================
+   Evolution Image
+   ========================= */
 .evolutionImg {
   box-shadow: 0 4px 4px 0px #212121;
   background-color: #616161;

@@ -1,3 +1,6 @@
+/* =========================
+   Pagination Container
+   ========================= */
 .pagination {
   height: 180px;
   background-color: white;
@@ -10,6 +13,9 @@
   font-size: 150%;
 }
 
+/* =========================
+   Navigation Links
+   ========================= */
 .paginationPrev,
 .paginationNext {
   display: flex;
@@ -23,12 +29,18 @@
   color: inherit;
 }
 
+/* =========================
+   Hover Effects
+   ========================= */
 .paginationPrev:hover,
 .paginationNext:hover {
   text-decoration: none;
   color: inherit;
 }
 
+/* =========================
+   Name & Number Styles
+   ========================= */
 .paginationName {
   font-size: 20px;
   margin-bottom: 5px;

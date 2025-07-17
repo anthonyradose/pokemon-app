@@ -1,3 +1,6 @@
+/* =========================
+   Home Link Container
+   ========================= */
 .homeLink {
   display: flex;
   flex-direction: column;
@@ -7,6 +10,9 @@
   text-decoration: none;
 }
 
+/* =========================
+   Home Icon Layers
+   ========================= */
 .homeIconOuter {
   height: 50px;
   width: 50px;
@@ -48,13 +54,18 @@
   transition: background-color 0.3s ease-in-out;
 }
 
+/* =========================
+   Home Link Label
+   ========================= */
 .homeLinkLabel {
   font-size: 16px;
   font-weight: 500;
   color: #fff;
 }
 
-/* 🔥 Hover effect: Applied to `.home` to light up everything inside */
+/* =========================
+   Hover Effects
+   ========================= */
 .homeLink:hover .homeIconOuter {
   box-shadow: 0 0 20px 5px rgba(48, 158, 228, 0.7),
     0 0 50px 10px rgba(48, 158, 228, 0.5);
@@ -66,10 +77,6 @@
 
 .homeLink:hover .homeIconCore {
   background-color: #2d86c0; /* Slightly brighter */
-}
-
-.homeLink:hover .homeIconReflection {
-  background-color: #4ca2e0; /* More vibrant */
 }
 
 .homeLink:hover .homeIconReflection {

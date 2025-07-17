@@ -1,3 +1,6 @@
+/* =========================
+   Version Container & Content
+   ========================= */
 .versionContainer {
   width: 100%;
   height: 25%;
@@ -8,6 +11,9 @@
   flex-direction: column;
 }
 
+/* =========================
+   Version Text & Heading
+   ========================= */
 .versionText {
   font-family: "Exo", sans-serif;
   color: #212121;
@@ -24,10 +30,16 @@
   gap: 8px;
 }
 
+/* =========================
+   Version Toggle
+   ========================= */
 .versionToggle {
   margin-left: 9px;
 }
 
+/* =========================
+   Version Buttons
+   ========================= */
 .versionBlueBtn {
   border-radius: 50%;
   background-color: blue;

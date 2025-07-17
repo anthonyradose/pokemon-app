@@ -1,3 +1,6 @@
+/* =========================
+   Info Container
+   ========================= */
 .infoContainer {
   display: flex;
   box-sizing: border-box;
@@ -8,6 +11,10 @@
   margin-top: 32px;
   justify-content: space-around;
 }
+
+/* =========================
+   Value & Ability Styles
+   ========================= */
 .infoValue {
   font-family: "Exo", arial, sans-serif;
   color: #212121;
@@ -17,6 +24,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 .abilityValue {
   font-family: "Exo", arial, sans-serif;
   color: #212121;
@@ -26,38 +34,55 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+/* =========================
+   Gender Icons
+   ========================= */
 .genderContainer {
   display: flex;
   gap: 8px;
   align-items: center;
 }
+
 .maleIcon {
   color: #1976d2;
 }
+
 .femaleIcon {
   color: #d81b60;
 }
+
+/* =========================
+   Traits Lists
+   ========================= */
 .physicalTraits,
 .categoryTraits {
   margin-bottom: 16px;
 }
+
 .physicalTraitsList,
 .categoryTraitsList {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
+/* =========================
+   Trait Items, Labels, and Values
+   ========================= */
 .traitItem {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
 }
+
 .traitLabel {
   font-weight: 500;
   color: #212121;
   min-width: 80px;
   font-family: "Roboto", sans-serif;
 }
+
 .traitValue {
   color: #616161;
   margin-left: 8px;

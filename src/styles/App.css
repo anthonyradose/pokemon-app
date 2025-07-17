@@ -1,3 +1,6 @@
+/* =========================
+   Imports & Font Faces
+   ========================= */
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&display=swap");
 @import "@fontsource/roboto/300.css";
@@ -5,12 +8,41 @@
 @import "@fontsource/roboto/500.css";
 @import "@fontsource/roboto/700.css";
 
-*{
-  outline: 1px solid BLACK;
+@font-face {
+  font-family: "Pokemon";
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
+  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon") format("svg");
 }
 
+/* =========================
+   CSS Reset & Utilities
+   ========================= */
+* {
+  outline: 1px solid BLACK; /* Debug: Remove for production */
+}
+
+.sr-only {
+  /* Screen reader only utility for accessibility */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================
+   Layout
+   ========================= */
 body {
-  margin: 0%;
+  margin: 0;
   background-color: #FF0000;
   overflow-x: hidden;
   display: flex;
@@ -21,12 +53,12 @@ body {
   min-height: 100vh;
 }
 
-header{
+header {
   width: 100%;
 }
 
-/* Apply routes container styles to main elements */
 main {
+  /* Main app container */
   display: flex;
   max-width: 1280px;
   width: 100%;
@@ -35,18 +67,24 @@ main {
   align-items: center;
 }
 
-.title-h1{
+/* =========================
+   Typography
+   ========================= */
+.title-h1 {
   font-family: "Pokemon";
   text-shadow: -4px 1px 1px #3E558B;
   color: #EDC20C;
   font-size: 3rem;
 }
 
-.title-container{
+.title-container {
   background-color: #FF0000;
 }
 
-/* Loading screen styles - used across multiple components */
+/* =========================
+   Components
+   ========================= */
+/* Loading Screen Overlay */
 .loading-screen {
   display: flex;
   align-items: center;
@@ -58,33 +96,5 @@ main {
   top: 0;
   left: 0;
   z-index: 9999;
-}
-
-@font-face {
-  font-family: "Pokemon";
-  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
-  src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.svg#Pokemon")
-      format("svg");
-}
-
-/* Screen reader only class for accessibility */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
