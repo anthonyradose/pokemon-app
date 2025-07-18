@@ -5,10 +5,10 @@
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background-color: #30a7d7;
-  padding-top: 3%;
-  margin-top: 32px;
+  padding-top: 1.875rem;
+  margin-top: 2rem;
   justify-content: space-around;
 }
 
@@ -19,7 +19,7 @@
   font-family: "Exo", arial, sans-serif;
   color: #212121;
   font-weight: 500;
-  font-size: 125%;
+  font-size: 1.25rem;
   white-space: normal;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -29,7 +29,7 @@
   font-family: "Exo", arial, sans-serif;
   color: #212121;
   font-weight: 500;
-  font-size: 125%;
+  font-size: 1.25rem;
   white-space: normal;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -40,7 +40,7 @@
    ========================= */
 .genderContainer {
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: center;
 }
 
@@ -57,7 +57,7 @@
    ========================= */
 .physicalTraits,
 .categoryTraits {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .physicalTraitsList,
@@ -71,7 +71,7 @@
    Trait Items, Labels, and Values
    ========================= */
 .traitItem {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
 }
@@ -79,13 +79,13 @@
 .traitLabel {
   font-weight: 500;
   color: #212121;
-  min-width: 80px;
+  min-width: 5rem;
   font-family: "Roboto", sans-serif;
 }
 
 .traitValue {
   color: #616161;
-  margin-left: 8px;
+  margin-left: 0.5rem;
   font-family: "Exo", sans-serif;
 }
 

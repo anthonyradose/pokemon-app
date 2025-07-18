@@ -21,8 +21,15 @@
 /* =========================
    CSS Reset & Utilities
    ========================= */
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 * {
-  outline: 1px solid BLACK; /* Debug: Remove for production */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .sr-only {
@@ -51,20 +58,24 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  max-width: 100vw;
 }
 
 header {
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
   /* Main app container */
   display: flex;
-  max-width: 1280px;
+  max-width: 80rem;
   width: 100%;
   background-color: #CC0000;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -76,7 +87,7 @@ main {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: white;
   position: fixed;
   top: 0;
@@ -88,32 +99,50 @@ main {
    Responsive Breakpoints
    ========================= */
 /* Mobile */
-@media (min-width: 375px) {
-  /* Add responsive styles here */
+@media (max-width: 374px) {
+  main {
+    max-width: 100vw;
+    padding: 0 0.5rem;
+  }
 }
 
 /* Large mobile/Small tablet */
-@media (min-width: 576px) {
-  /* Add responsive styles here */
+@media (min-width: 375px) and (max-width: 575px) {
+  main {
+    max-width: 100vw;
+    padding: 0 1rem;
+  }
 }
 
 /* Tablet */
-@media (min-width: 768px) {
-  /* Add responsive styles here */
+@media (min-width: 576px) and (max-width: 767px) {
+  main {
+    max-width: 100vw;
+    padding: 0 1.5rem;
+  }
 }
 
 /* Small desktop/Laptop */
-@media (min-width: 992px) {
-  /* Add responsive styles here */
+@media (min-width: 768px) and (max-width: 991px) {
+  main {
+    max-width: 100vw;
+    padding: 0 2rem;
+  }
 }
 
 /* Desktop */
-@media (min-width: 1200px) {
-  /* Add responsive styles here */
+@media (min-width: 992px) and (max-width: 1199px) {
+  main {
+    max-width: 80rem;
+    padding: 0 2.5rem;
+  }
 }
 
 /* Large desktop */
-@media (min-width: 1440px) {
-  /* Add responsive styles here */
+@media (min-width: 1200px) {
+  main {
+    max-width: 80rem;
+    padding: 0 3rem;
+  }
 }
 

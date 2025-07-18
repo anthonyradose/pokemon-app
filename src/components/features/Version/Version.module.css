@@ -24,17 +24,17 @@
   font-family: "Exo", sans-serif;
   color: #212121;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 /* =========================
    Version Toggle
    ========================= */
 .versionToggle {
-  margin-left: 9px;
+  margin-left: 0.5625rem;
 }
 
 /* =========================
@@ -43,8 +43,8 @@
 .versionBlueBtn {
   border-radius: 50%;
   background-color: blue;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   color: white;
   cursor: pointer;
   border: none;
@@ -56,8 +56,8 @@
 .versionRedBtn {
   border-radius: 50%;
   background-color: red;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   color: white;
   cursor: pointer;
   border: none;

@@ -3,16 +3,14 @@
    ========================= */
 .searchContainer {
   background-color: #313131;
-  max-width: 1280px;
-  height: 300px;
   flex-direction: column;
   width: 90%;
   margin: auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .searchWrapper {
-  height: 100%;
-  max-width: 895px;
   margin: auto;
 }
 
@@ -20,8 +18,7 @@
    Input & Results Sections
    ========================= */
 .inputSection {
-  width: 100%;
-  height: 50%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,8 +26,7 @@
 }
 
 .resultsSection {
-  width: 100%;
-  height: 50%;
+
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -42,8 +38,7 @@
 .searchBanner {
   background: #4dad5b;
   width: 80%;
-  height: 70%;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,14 +48,14 @@
 }
 
 .searchText {
-  font-size: 120%;
+  font-size: 1.2rem;
   width: 90%;
   font-weight: 400;
 }
 
 .searchTitle {
   font-family: "Exo", arial, sans-serif;
-  font-size: 167.5%;
+  font-size: 1.675rem;
   font-weight: 100;
   color: white;
 }
@@ -77,10 +72,10 @@
 }
 
 .searchInput {
-  padding: 5px 15px;
+  padding: 0.3125rem 0.9375rem;
   width: 85%;
   font-family: Exo;
-  font-size: 16px;
+  font-size: 1rem;
   border: 3px solid #616161;
 }
 
@@ -93,15 +88,17 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  max-height: 150px;
   background: white;
   overflow: hidden;
   width: 68%;
+  max-width: 18.75rem;
   color: #999;
   z-index: 3;
   list-style: none;
   padding: 0;
   margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .searchResultsList {
@@ -109,7 +106,7 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  max-height: 150px;
+  max-height: 9.375rem;
   background: white;
   overflow: hidden;
   width: 68%;
@@ -118,14 +115,16 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .searchResultItem {
   width: 100%;
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 0.5rem 0.75rem;
   text-transform: capitalize;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Exo;
   border: none;
   background: none;
@@ -142,7 +141,7 @@
 .buttonResult {
   background-color: #ee6b2f;
   color: white;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   border: none;
   width: 15%;
   cursor: pointer;
@@ -172,7 +171,6 @@
 /* Small desktop/Laptop */
 @media (min-width: 992px) {
   .searchContainer {
-    height: 150px;
     justify-content: space-between;
     flex-direction: row;
     align-items: unset;
@@ -182,19 +180,14 @@
     flex-direction: row;
     align-items: unset;
     width: 90%;
-    height: 100%;
     justify-content: space-between;
   }
   .inputSection {
     width: 40%;
-    height: 100%;
-    margin-left: 18px;
     align-items: unset;
   }
   .resultsSection {
     width: 40%;
-    height: 100%;
-    margin-right: 18px;
     align-items: center;
   }
   .inputWrapper {
@@ -222,20 +215,13 @@
     height: 100%;
     justify-content: space-between;
   }
-  .inputSection {
-    margin-left: 18px;
-  }
-  .resultsSection {
-    margin-right: 18px;
-  }
+
   .searchList > div,
   .searchList > ul {
     width: 30%;
-    max-width: 300px;
   }
   .searchResultsList {
     width: 30%;
-    max-width: 300px;
   }
 }
 

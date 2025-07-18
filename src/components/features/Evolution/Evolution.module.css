@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 25%;
   text-transform: capitalize;
   background: transparent url("https://assets.pokemon.com/static2/_ui/img/chrome/body_gray_bg.png");
   background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/body_gray_bg.png");
@@ -17,9 +16,9 @@
   background-origin: initial;
   background-clip: initial;
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   margin: auto;
-  margin-bottom: 5%;
+  margin-bottom: 3.125rem;
 }
 
 /* =========================
@@ -28,7 +27,7 @@
 .evolutionContent {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 3%;
+  padding-bottom: 1.875rem;
 }
 
 /* =========================
@@ -55,20 +54,20 @@
 .evolutionName {
   font-family: "Exo", arial, sans-serif;
   color: #fff;
-  font-size: 125%;
+  font-size: 1.25rem;
   clear: both;
   float: left;
-  margin: 0.75em 0;
+  margin: 0.75rem 0;
   text-align: center;
   width: 100%;
-  line-height: 125%;
+  line-height: 1.25;
   font-weight: 500;
 }
 
 .evolutionNumber {
   font-family: "Exo", arial, sans-serif;
   color: #a4acaf;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 100;
 }
 
@@ -76,7 +75,7 @@
   color: white;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  margin-left: 2.5%;
+  margin-left: 1.5625rem;
 }
 
 /* =========================
@@ -87,8 +86,6 @@
   background-color: #616161;
   border: 5px solid #fff;
   border-radius: 50%;
-  max-height: 100px;
-  max-width: 100px;
 }
 
 /* =========================

@@ -8,11 +8,11 @@
 .detailsLayout {
   width: 100%;
   margin: auto;
-  max-width: 895px;
+  max-width: 55.9375rem;
   margin-bottom: 10%;
-  padding-top: 8px;
+  padding-top: 0.5rem;
   background-color: white;
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
 .detailsContainer {
@@ -25,52 +25,52 @@
 .detailsMain {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .visualSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .pokemonImage {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .infoSection {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .metaSection {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .battleInfo {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .typeSection {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .typeHeading {
   font-family: "Exo", sans-serif;
   color: #212121;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 /* =========================
@@ -79,19 +79,18 @@
 .backToHomeLink {
   background-color: #ee6b2f;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   width: 25%;
   cursor: pointer;
-  height: 50px;
   float: right;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 24px;
-  margin-bottom: 24px;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
   font-family: "Exo", arial, sans-serif;
   font-weight: 500;
-  font-size: 105%;
+  font-size: 1.05rem;
   text-decoration: none;
 }
 
@@ -117,7 +116,7 @@
 @media (min-width: 992px) {
   .detailsMain {
     flex-direction: row;
-    padding-top: 80px;
+    padding-top: 5rem;
   }
   .visualSection {
     flex: 1;
