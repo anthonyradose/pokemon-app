@@ -3,72 +3,36 @@
    ========================= */
 .searchContainer {
   background-color: #313131;
+  display: flex;
   flex-direction: column;
   width: 90%;
   margin: auto;
   position: relative;
   overflow: hidden;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  align-items: center;
 }
 
-.searchWrapper {
-  margin: auto;
-}
+
 
 /* =========================
-   Input & Results Sections
+   Text
    ========================= */
-.inputSection {
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.resultsSection {
-
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-/* =========================
-   Banner & Text
-   ========================= */
-.searchBanner {
-  background: #4dad5b;
-  width: 80%;
-  border-radius: 0.3125rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: "Exo";
-  overflow: auto;
-}
-
 .searchText {
   font-size: 1.2rem;
-  width: 90%;
+  width: 100%;
   font-weight: 400;
-}
-
-.searchTitle {
-  font-family: "Exo", arial, sans-serif;
-  font-size: 1.675rem;
-  font-weight: 100;
+  text-align: center;
   color: white;
 }
 
 /* =========================
-   Input & Input Container
+   Input Container
    ========================= */
-.inputWrapper {
-  width: 80%;
-}
-
 .searchInputContainer {
   display: flex;
+  width: 100%;
 }
 
 .searchInput {
@@ -77,30 +41,20 @@
   font-family: Exo;
   font-size: 1rem;
   border: 3px solid #616161;
-}
-
-/* =========================
-   Results List & Items
-   ========================= */
-.searchList > div,
-.searchList > ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
   background: white;
-  overflow: hidden;
-  width: 68%;
-  max-width: 18.75rem;
-  color: #999;
-  z-index: 3;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  color: #333;
+  outline: none;
+}
+.searchInput {
+  height: 2.5rem;
 }
 
+.searchButton {
+  height: 2.5rem;
+}
+/* =========================
+   Results List
+   ========================= */
 .searchResultsList {
   display: flex;
   flex-direction: column;
@@ -138,7 +92,7 @@
 /* =========================
    Button Styles
    ========================= */
-.buttonResult {
+.searchButton {
   background-color: #ee6b2f;
   color: white;
   border-radius: 0.3125rem;
@@ -148,6 +102,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.3125rem;
+  font-size: 1rem;
+  outline: none;
 }
 
 /* =========================
@@ -155,17 +112,27 @@
    ========================= */
 /* Mobile */
 @media (min-width: 375px) {
-  /* Add responsive styles here */
+
+  
+  
+  
 }
 
 /* Large mobile/Small tablet */
 @media (min-width: 576px) {
-  /* Add responsive styles here */
+
 }
 
 /* Tablet */
 @media (min-width: 768px) {
-  /* Add responsive styles here */
+  .searchInputContainer {
+    width: 80%;
+  }
+  
+  .searchText {
+    width: 80%;
+  }
+  
 }
 
 /* Small desktop/Laptop */
@@ -173,59 +140,31 @@
   .searchContainer {
     justify-content: space-between;
     flex-direction: row;
-    align-items: unset;
-  }
-  .searchWrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: unset;
-    width: 90%;
-    justify-content: space-between;
-  }
-  .inputSection {
-    width: 40%;
-    align-items: unset;
-  }
-  .resultsSection {
-    width: 40%;
     align-items: center;
+    gap: 2rem;
   }
-  .inputWrapper {
-    width: 100%;
-  }
-  .searchList > div,
-  .searchList > ul {
-    width: 30.5%;
-  }
+
   .searchResultsList {
     width: 30.5%;
   }
-  .searchBanner {
-    width: 100%;
-    height: 50%;
+  .searchInputContainer {
+    width: 50%;
+  }
+  .searchText {
+    width: 50%;
   }
 }
 
 /* Desktop */
 @media (min-width: 1200px) {
-  .searchWrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: unset;
-    height: 100%;
-    justify-content: space-between;
-  }
-
-  .searchList > div,
-  .searchList > ul {
-    width: 30%;
-  }
   .searchResultsList {
     width: 30%;
   }
+  
+
 }
 
 /* Large desktop */
 @media (min-width: 1440px) {
-  /* Add responsive styles here */
+
 } 

@@ -43,7 +43,7 @@ const Search = () => {
           aria-describedby="search-instructions"
         />
         <button
-          className={styles.buttonResult}
+          className={styles.searchButton}
           type="submit"
           aria-label="Search"
         >
@@ -59,8 +59,8 @@ const Search = () => {
         handleResultKeyDown={handleResultKeyDown}
       />
 
-      <h3 id="search-instructions" className={styles.searchText}>
-        Search for a Pokémon by name or using its National Pokédex number.
+      <h3 className={styles.searchText}>
+        Search Pokémon by name or National Pokédex number.
       </h3>
     </div>
   );

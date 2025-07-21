@@ -11,15 +11,15 @@
 /* =========================
    Title Section
    ========================= */
-.titleSection {
-  width: 100%;
-  text-align: center;
-}
 
+.titleSection {
+    padding: 2rem 0;  /* Vertical space around the section */
+}
 .title {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
+  text-align: center; 
 }
 
 
@@ -56,12 +56,12 @@
   justify-content: space-around;
   background-color: white;
   padding-bottom: 1.75rem;
-  max-width: 55.9375rem;
   padding-top: 2rem;
   flex-direction: column;
   align-items: center;
   width: 90%;
-  margin: auto;
+  margin: 1.5rem auto;
+  
 }
 
 .selectWrapper {
@@ -115,7 +115,6 @@
   background-color: white;
   flex-direction: column;
   align-items: center;
-  max-width: 55.9375rem;
 }
 
 
